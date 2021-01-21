@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Louper
+GenericName=Text Magnification App
+Comment=Magnify the copied text
+Categories=Utility;TextTools;Accessibility;
+Exec=com.github.ryonakano.louper
+Icon=com.github.ryonakano.louper
+Terminal=false
+Type=Application
+Keywords=Zoom;Copy;

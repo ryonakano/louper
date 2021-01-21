@@ -38,7 +38,7 @@ public class MainWindow : Hdy.ApplicationWindow {
                                                     cssprovider,
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
-        result_label = new Gtk.Label ("Result") {
+        result_label = new Gtk.Label (null) {
             selectable = true
         };
         result_label.get_style_context ().add_class ("result-text");
