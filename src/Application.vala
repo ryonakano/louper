@@ -43,6 +43,7 @@ public class Application : Gtk.Application {
 
     public static int main (string[] args) {
         Gdk.init (ref args);
+        Hdy.init ();
         return new Application ().run ();
     }
 }
