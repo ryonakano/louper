@@ -71,17 +71,13 @@ public class MainWindow : Hdy.ApplicationWindow {
     }
 
     protected override bool key_press_event (Gdk.EventKey key) {
-        if (Gdk.ModifierType.CONTROL_MASK in key.state) {
-            switch (key.keyval) {
-                case Gdk.Key.c:
-                    Application.clibboard.set_text (result_label.label, -1);
-                    break;
-            }
-
-            return Gdk.EVENT_PROPAGATE;
-        }
-
         switch (key.keyval) {
+            case Gdk.Key.c:
+                if (Gdk.ModifierType.CONTROL_MASK in key.state) {
+                    Application.clibboard.set_text (result_label.label, -1);
+                }
+
+                break;
             case Gdk.Key.Escape:
                 destroy ();
                 break;
