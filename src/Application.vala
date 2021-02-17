@@ -16,6 +16,7 @@
 */
 
 public class Application : Gtk.Application {
+    public static Gdk.Display display;
     public static Gtk.Clipboard clibboard;
 
     private MainWindow window;
@@ -28,7 +29,8 @@ public class Application : Gtk.Application {
     }
 
     static construct {
-        clibboard = Gtk.Clipboard.get_default (Gdk.Display.get_default ());
+        display = Gdk.Display.get_default ();
+        clibboard = Gtk.Clipboard.get_default (display);
     }
 
     protected override void activate () {

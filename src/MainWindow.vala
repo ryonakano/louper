@@ -16,6 +16,17 @@
 */
 
 public class MainWindow : Hdy.ApplicationWindow {
+    /*
+     * Get the area that we can draw windows.
+     * display width * (display height - height of wingpanel, 30px)
+     * e.g. If you're using 1920 * 1080 display, we can get 1920 * 1050
+     */
+    public static Gdk.Rectangle? primary_monitor_workarea {
+        get {
+            Gdk.Monitor? monitor = Application.display.get_primary_monitor ();
+            return monitor.workarea;
+        }
+    }
     private const string CSS_DATA = """
     .result-text {
         font-size: 128px;
@@ -27,7 +38,9 @@ public class MainWindow : Hdy.ApplicationWindow {
 
     public MainWindow () {
         Object (
-            resizable: false
+            resizable: false,
+            default_width: primary_monitor_workarea.width / 2,
+            default_height: primary_monitor_workarea.height / 4
         );
     }
 
@@ -39,7 +52,8 @@ public class MainWindow : Hdy.ApplicationWindow {
                                                     Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         result_label = new Gtk.Label (null) {
-            selectable = true
+            selectable = true,
+            wrap = true
         };
         result_label.get_style_context ().add_class ("result-text");
 
