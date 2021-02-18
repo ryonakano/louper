@@ -45,12 +45,6 @@ public class MainWindow : Hdy.ApplicationWindow {
     }
 
     construct {
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_data (CSS_DATA, -1);
-        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                    cssprovider,
-                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
         result_label = new Gtk.Label (null) {
             selectable = true,
             wrap = true
@@ -69,9 +63,26 @@ public class MainWindow : Hdy.ApplicationWindow {
         grid.attach (result_label, 0, 0);
 
         add (grid);
-        set_position (Gtk.WindowPosition.CENTER_ALWAYS);
 
+        set_position (Gtk.WindowPosition.CENTER_ALWAYS);
         add_events (Gdk.EventMask.FOCUS_CHANGE_MASK);
+
+        var cssprovider = new Gtk.CssProvider ();
+        cssprovider.load_from_data (CSS_DATA, -1);
+        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                    cssprovider,
+                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        // Follow elementary OS-wide dark preference
+        var granite_settings = Granite.Settings.get_default ();
+        var gtk_settings = Gtk.Settings.get_default ();
+
+        gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+        });
+
         focus_out_event.connect ((event) => {
             /* Hide first and then destroy
              * because just destroying sometimes seems to cause the wm crashes

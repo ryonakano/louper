@@ -17,6 +17,7 @@ Louper is a text magnification app designed for elementary OS. Prototype for htt
 
 You'll need the following dependencies to build:
 
+* libgranite-dev (>= 5.4.0)
 * libgtk-3.0-dev
 * libhandy-1-dev
 * meson
