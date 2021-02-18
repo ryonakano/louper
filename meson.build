@@ -13,6 +13,7 @@ add_project_arguments(
 
 executable(
     meson.project_name(),
+    'src/Settings/CustomShortcutSettings.vala',
     'src/Application.vala',
     'src/MainWindow.vala',
     dependencies: [

@@ -19,11 +19,13 @@ public class Application : Gtk.Application {
     public static Gdk.Display display;
     public static Gtk.Clipboard clibboard;
 
+    private const string APP_ID = "com.github.ryonakano.louper";
+
     private MainWindow window;
 
     public Application () {
         Object (
-            application_id: "com.github.ryonakano.louper",
+            application_id: APP_ID,
             flags: ApplicationFlags.FLAGS_NONE
         );
     }
@@ -41,6 +43,27 @@ public class Application : Gtk.Application {
         window = new MainWindow ();
         window.set_application (this);
         window.show_all ();
+
+        /*
+         * Make it possible to launch the app with shortcut Super+Q.
+         * Borrowed from https://github.com/cassidyjames/ideogram/blob/main/src/Application.vala
+         */
+        CustomShortcutSettings.init ();
+        bool has_shortcut = false;
+        foreach (var shortcut in CustomShortcutSettings.list_custom_shortcuts ()) {
+            if (shortcut.command == APP_ID) {
+                has_shortcut = true;
+                return;
+            }
+        }
+
+        if (!has_shortcut) {
+            var shortcut = CustomShortcutSettings.create_shortcut ();
+            if (shortcut != null) {
+                CustomShortcutSettings.edit_shortcut (shortcut, "<Super>q");
+                CustomShortcutSettings.edit_command (shortcut, APP_ID);
+            }
+        }
     }
 
     public static int main (string[] args) {
