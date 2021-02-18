@@ -13,7 +13,7 @@
     <p>Workflow:</p>
     <ul>
       <li>Copy some text</li>
-      <li>Launch the app</li>
+      <li>Launch the app with Super+Q</li>
       <li>Press Ctrl+C to copy the text showing</li>
       <li>Press Esc or unfocus the window to close the app</li>
     </ul>

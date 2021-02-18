@@ -6,7 +6,7 @@ Louper is a text magnification app designed for elementary OS. Prototype for htt
 
 ## Usage
 1. Copy some text
-2. Launch the app (TODO: with some shortcut key)
+2. Launch the app with `Super+Q`
 3. The app shows the copied text with huge size
 4. Press `Ctrl+C` to copy the text showing
 5. Press `Esc` or unfocus the window to close the app
