@@ -68,10 +68,14 @@ public class MainWindow : Hdy.ApplicationWindow {
         add_events (Gdk.EventMask.FOCUS_CHANGE_MASK);
 
         var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_data (CSS_DATA, -1);
-        Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                    cssprovider,
-                                                    Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        try {
+            cssprovider.load_from_data (CSS_DATA, -1);
+            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
+                                                        cssprovider,
+                                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        } catch (GLib.Error e) {
+            warning (e.message);
+        }
 
         // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
