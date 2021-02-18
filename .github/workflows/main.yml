@@ -12,6 +12,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: |
+        apt update
+        apt install -y libhandy-1-dev
     - name: Build
       env:
         DESTDIR: out
