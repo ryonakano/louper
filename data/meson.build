@@ -1,5 +1,14 @@
+icon_sizes = ['16', '24', '32', '48', '64', '128']
+
+foreach i : icon_sizes
+    install_data(
+        join_paths('icons', i, app_nickname + '.svg'),
+        install_dir: join_paths(get_option('datadir'), 'icons', 'hicolor', i + 'x' + i, 'apps')
+    )
+endforeach
+
 i18n.merge_file(
-    input: 'louper.desktop.in',
+    input: app_nickname + '.desktop.in',
     output: meson.project_name() + '.desktop',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     type: 'desktop',
@@ -8,7 +17,7 @@ i18n.merge_file(
 )
 
 i18n.merge_file(
-    input: 'louper.appdata.xml.in',
+    input: app_nickname + '.appdata.xml.in',
     output: meson.project_name() + '.appdata.xml',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,

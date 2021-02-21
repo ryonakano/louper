@@ -4,6 +4,8 @@ project(
     version: '0.1.0'
 )
 
+app_nickname = 'louper'
+
 i18n = import('i18n')
 
 add_project_arguments(
