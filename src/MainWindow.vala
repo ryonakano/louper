@@ -88,8 +88,10 @@ public class MainWindow : Hdy.ApplicationWindow {
         });
 
         focus_out_event.connect ((event) => {
-            /* Hide first and then destroy
-             * because just destroying sometimes seems to cause the wm crashes
+            /*
+             * Hide first and then destroy
+             * because just destroying sometimes seems to cause the wm crashes.
+             * Borrowed from https://github.com/elementary/shortcut-overlay/blob/master/src/Application.vala
              */
             hide ();
             Timeout.add (500, () => {

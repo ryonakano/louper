@@ -31,6 +31,7 @@ public class Application : Gtk.Application {
     }
 
     static construct {
+        // We want the content of the clipboard when the app launches so initializing here
         display = Gdk.Display.get_default ();
         clibboard = Gtk.Clipboard.get_default (display);
     }
@@ -67,6 +68,7 @@ public class Application : Gtk.Application {
     }
 
     public static int main (string[] args) {
+        // We need to explicity init Gdk because we're initializing it in the static constructor.
         Gdk.init (ref args);
         Hdy.init ();
         return new Application ().run ();
