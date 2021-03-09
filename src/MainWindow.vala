@@ -45,24 +45,30 @@ public class MainWindow : Hdy.ApplicationWindow {
     }
 
     construct {
+        var no_content_view = new Granite.Widgets.AlertView (
+            _("No Text in the Clipboard"),
+            _("Open the app after copying some text."),
+            ""
+        );
+
         result_label = new Gtk.Label (null) {
             selectable = true,
             wrap = true
         };
         result_label.get_style_context ().add_class ("result-text");
 
-        Application.clibboard.request_text ((clipboard, text) => {
-            result_label.label = text;
-        });
-
-        var grid = new Gtk.Grid () {
+        var main_view = new Gtk.Grid () {
             margin = 24,
             halign = Gtk.Align.CENTER,
             valign = Gtk.Align.CENTER
         };
-        grid.attach (result_label, 0, 0);
+        main_view.attach (result_label, 0, 0);
 
-        add (grid);
+        var stack = new Gtk.Stack ();
+        stack.add (no_content_view);
+        stack.add (main_view);
+
+        add (stack);
 
         set_position (Gtk.WindowPosition.CENTER_ALWAYS);
         add_events (Gdk.EventMask.FOCUS_CHANGE_MASK);
@@ -85,6 +91,15 @@ public class MainWindow : Hdy.ApplicationWindow {
 
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+        });
+
+        Application.clibboard.request_text ((clipboard, text) => {
+            if (text == null || text == "") {
+                stack.visible_child = no_content_view;
+            } else {
+                stack.visible_child = main_view;
+                result_label.label = text;
+            }
         });
 
         focus_out_event.connect ((event) => {
