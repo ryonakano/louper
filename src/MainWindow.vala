@@ -23,7 +23,7 @@ public class MainWindow : Hdy.ApplicationWindow {
      */
     public static Gdk.Rectangle? primary_monitor_workarea {
         get {
-            Gdk.Monitor? monitor = Application.display.get_primary_monitor ();
+            Gdk.Monitor? monitor = Gdk.Display.get_default ().get_primary_monitor ();
             return monitor.workarea;
         }
     }
@@ -46,8 +46,8 @@ public class MainWindow : Hdy.ApplicationWindow {
 
     construct {
         var no_content_view = new Granite.Widgets.AlertView (
-            _("No Text in the Clipboard"),
-            _("Open the app after copying some text."),
+            _("No Text is Selected"),
+            _("Open the app after selecting some text."),
             ""
         );
 

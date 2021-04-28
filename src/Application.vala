@@ -16,7 +16,6 @@
 */
 
 public class Application : Gtk.Application {
-    public static Gdk.Display display;
     public static Gtk.Clipboard clibboard;
 
     private const string APP_ID = "com.github.ryonakano.louper";
@@ -31,9 +30,8 @@ public class Application : Gtk.Application {
     }
 
     static construct {
-        // We want the content of the clipboard when the app launches so initializing here
-        display = Gdk.Display.get_default ();
-        clibboard = Gtk.Clipboard.get_default (display);
+        // We want the content of the selection when the app launches so initializing here
+        clibboard = Gtk.Clipboard.get (Gdk.SELECTION_PRIMARY);
     }
 
     protected override void activate () {

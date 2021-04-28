@@ -5,14 +5,14 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0</project_license>
   <name>Louper</name>
-  <summary>Magnify the copied text</summary>
+  <summary>Magnify the selected text</summary>
   <description>
     <p>
-      A text magnification app that helps you zoom the copied text.
+      A text magnification app that helps you zoom the selected text.
     </p>
     <p>Workflow:</p>
     <ul>
-      <li>Copy some text</li>
+      <li>Select some text</li>
       <li>Launch the app with Super+Q</li>
       <li>Press Ctrl+C to copy the text showing</li>
       <li>Press Esc or unfocus the window to close the app</li>
