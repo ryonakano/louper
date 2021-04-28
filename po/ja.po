@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-28 01:51+0000\n"
-"PO-Revision-Date: 2021-04-20 09:22+0900\n"
+"PO-Revision-Date: 2021-04-28 10:53+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -18,11 +18,9 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: src/MainWindow.vala:49
-#, fuzzy
 msgid "No Text is Selected"
-msgstr "クリップボードにテキストがありません"
+msgstr "テキストが選択されていません"
 
 #: src/MainWindow.vala:50
-#, fuzzy
 msgid "Open the app after selecting some text."
-msgstr "テキストをコピーしてからこのアプリを開いてください。"
+msgstr "テキストを選択してからこのアプリを開いてください。"

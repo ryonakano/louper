@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-04-28 01:51+0000\n"
-"PO-Revision-Date: 2021-02-18 09:41+0900\n"
+"PO-Revision-Date: 2021-04-28 10:52+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -22,23 +22,20 @@ msgid "Louper"
 msgstr "Louper"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:5
-#, fuzzy
 msgid "Magnify the selected text"
-msgstr "コピーしたテキストを拡大します"
+msgstr "選択したテキストを拡大します"
 
 #: data/louper.appdata.xml.in:10
-#, fuzzy
 msgid "A text magnification app that helps you zoom the selected text."
-msgstr "コピーしたテキストを拡大するのに役立つ、テキスト拡大アプリです。"
+msgstr "選択したテキストを拡大するのに役立つ、テキスト拡大アプリです。"
 
 #: data/louper.appdata.xml.in:13
 msgid "Workflow:"
 msgstr "手順:"
 
 #: data/louper.appdata.xml.in:15
-#, fuzzy
 msgid "Select some text"
-msgstr "テキストをコピーします"
+msgstr "テキストを選択します"
 
 #: data/louper.appdata.xml.in:16
 msgid "Launch the app with Super+Q"
@@ -71,6 +68,3 @@ msgstr "com.github.ryonakano.louper"
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "ズーム;コピー;Zoom;Copy;"
-
-#~ msgid "Magnify the copied text"
-#~ msgstr "コピーしたテキストを拡大します"
