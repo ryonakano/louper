@@ -93,7 +93,7 @@ public class MainWindow : Hdy.ApplicationWindow {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
 
-        Application.clibboard.request_text ((clipboard, text) => {
+        Application.clipboard.request_text ((clipboard, text) => {
             if (text == null || text == "") {
                 stack.visible_child = no_content_view;
             } else {
@@ -120,7 +120,7 @@ public class MainWindow : Hdy.ApplicationWindow {
         switch (key.keyval) {
             case Gdk.Key.c:
                 if (Gdk.ModifierType.CONTROL_MASK in key.state) {
-                    Application.clibboard.set_text (result_label.label, -1);
+                    Application.clipboard.set_text (result_label.label, -1);
                 }
 
                 break;
