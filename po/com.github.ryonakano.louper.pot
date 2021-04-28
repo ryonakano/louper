@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-20 09:20+0900\n"
+"POT-Creation-Date: 2021-04-28 01:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,9 +18,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/MainWindow.vala:49
-msgid "No Text in the Clipboard"
+msgid "No Text is Selected"
 msgstr ""
 
 #: src/MainWindow.vala:50
-msgid "Open the app after copying some text."
+msgid "Open the app after selecting some text."
 msgstr ""

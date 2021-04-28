@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-02-18 04:44+0000\n"
+"POT-Creation-Date: 2021-04-28 01:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,12 +21,12 @@ msgstr ""
 msgid "Louper"
 msgstr ""
 
-#: data/louper.appdata.xml.in:8 data/louper.desktop.in:5
-msgid "Magnify the copied text"
+#: data/louper.appdata.xml.in:8
+msgid "Magnify the selected text"
 msgstr ""
 
 #: data/louper.appdata.xml.in:10
-msgid "A text magnification app that helps you zoom the copied text."
+msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 
 #: data/louper.appdata.xml.in:13
@@ -34,7 +34,7 @@ msgid "Workflow:"
 msgstr ""
 
 #: data/louper.appdata.xml.in:15
-msgid "Copy some text"
+msgid "Select some text"
 msgstr ""
 
 #: data/louper.appdata.xml.in:16
@@ -59,6 +59,10 @@ msgstr ""
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
+msgstr ""
+
+#: data/louper.desktop.in:5
+msgid "Magnify the copied text"
 msgstr ""
 
 #: data/louper.desktop.in:8
