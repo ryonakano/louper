@@ -42,7 +42,8 @@ msgstr "Selecteer tekst"
 msgid ""
 "Launch the app (it is recommended to assign a shortcut key in Keyboard "
 "Settings). The app shows the selected text in huge size"
-msgstr ""
+msgstr "Start de toepassing (het is aanbevolen om een sneltoets in te stellen in de "
+"toetsenbordinstellingen). De toepassing vergroot vervolgens de geselecteerde tekst."
 
 #: data/louper.appdata.xml.in:18
 msgid "Press Ctrl+C to copy the text showing"
