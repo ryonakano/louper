@@ -22,11 +22,12 @@ public class MainWindow : Hdy.ApplicationWindow {
      * e.g. If you're using 1920 * 1080 display, we can get 1920 * 1050
      */
     public static Gdk.Rectangle? primary_monitor_workarea {
-        get {
+        owned get {
             Gdk.Monitor? monitor = Gdk.Display.get_default ().get_primary_monitor ();
             return monitor.workarea;
         }
     }
+
     private const string CSS_DATA = """
     .result-text {
         font-size: 128px;
