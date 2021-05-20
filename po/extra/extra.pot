@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-28 01:51+0000\n"
+"POT-Creation-Date: 2021-05-20 12:55+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,43 +17,45 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/louper.appdata.xml.in:7 data/louper.desktop.in:3
+#: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
 msgstr ""
 
-#: data/louper.appdata.xml.in:8 data/louper.desktop.in:5
+#: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
 msgid "Magnify the selected text"
 msgstr ""
 
-#: data/louper.appdata.xml.in:10
+#: data/louper.appdata.xml.in:11
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 
-#: data/louper.appdata.xml.in:13
+#: data/louper.appdata.xml.in:14
 msgid "Workflow:"
 msgstr ""
 
-#: data/louper.appdata.xml.in:15
+#: data/louper.appdata.xml.in:16
 msgid "Select some text"
 msgstr ""
 
-#: data/louper.appdata.xml.in:16
-msgid "Launch the app with Super+Q"
-msgstr ""
-
 #: data/louper.appdata.xml.in:17
-msgid "Press Ctrl+C to copy the text showing"
+msgid ""
+"Launch the app (it is recommended to assign a shortcut key in Keyboard "
+"Settings). The app shows the selected text in huge size"
 msgstr ""
 
 #: data/louper.appdata.xml.in:18
+msgid "Press Ctrl+C to copy the text showing"
+msgstr ""
+
+#: data/louper.appdata.xml.in:19
 msgid "Press Esc or unfocus the window to close the app"
 msgstr ""
 
-#: data/louper.appdata.xml.in:61
+#: data/louper.appdata.xml.in:62
 msgid "Initial release"
 msgstr ""
 
-#: data/louper.appdata.xml.in:67
+#: data/louper.appdata.xml.in:68
 msgid "Ryo Nakano"
 msgstr ""
 
