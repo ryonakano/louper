@@ -7,54 +7,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-28 01:51+0000\n"
+"POT-Creation-Date: 2021-05-20 22:00+0900\n"
 "PO-Revision-Date: 2021-05-20 14:31+0200\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
+"Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.4.2\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: nl\n"
 
-#: data/louper.appdata.xml.in:7 data/louper.desktop.in:3
+#: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Vergrootglas"
 
-#: data/louper.appdata.xml.in:8 data/louper.desktop.in:5
+#: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
 msgid "Magnify the selected text"
 msgstr "Vergroot geselecteerde tekst"
 
-#: data/louper.appdata.xml.in:10
+#: data/louper.appdata.xml.in:11
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr "Een vergrootglastoepassing om geselecteerde tekst mee te vergroten."
 
-#: data/louper.appdata.xml.in:13
+#: data/louper.appdata.xml.in:14
 msgid "Workflow:"
 msgstr "Werkmethode:"
 
-#: data/louper.appdata.xml.in:15
+#: data/louper.appdata.xml.in:16
 msgid "Select some text"
 msgstr "Selecteer tekst"
 
-#: data/louper.appdata.xml.in:16
-msgid "Launch the app with Super+Q"
-msgstr "Open de toepassing met Super+Q"
-
 #: data/louper.appdata.xml.in:17
+msgid ""
+"Launch the app (it is recommended to assign a shortcut key in Keyboard "
+"Settings). The app shows the selected text in huge size"
+msgstr ""
+
+#: data/louper.appdata.xml.in:18
 msgid "Press Ctrl+C to copy the text showing"
 msgstr "Druk op Ctrl+C om de getoonde tekst te kopiëren"
 
-#: data/louper.appdata.xml.in:18
+#: data/louper.appdata.xml.in:19
 msgid "Press Esc or unfocus the window to close the app"
 msgstr "Druk op Esc of klik buiten het venster om de toepassing te sluiten"
 
-#: data/louper.appdata.xml.in:61
+#: data/louper.appdata.xml.in:62
 msgid "Initial release"
 msgstr "Initiële uitgave"
 
-#: data/louper.appdata.xml.in:67
+#: data/louper.appdata.xml.in:68
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -69,3 +71,6 @@ msgstr "com.github.ryonakano.louper"
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "Zoom;Kopiëren;Vergroten;Loep;"
+
+#~ msgid "Launch the app with Super+Q"
+#~ msgstr "Open de toepassing met Super+Q"
