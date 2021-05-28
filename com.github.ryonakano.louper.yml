@@ -4,10 +4,11 @@ runtime-version: 'daily'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.louper
 finish-args:
-  - --socket=wayland
-  - --socket=fallback-x11
+  - '--share=ipc'
+  - '--socket=wayland'
+  - '--socket=fallback-x11'
   # needed for perfers-color-scheme
-  - --system-talk-name=org.freedesktop.Accounts
+  - '--system-talk-name=org.freedesktop.Accounts'
 modules:
   - name: louper
     buildsystem: meson
