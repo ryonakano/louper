@@ -1,15 +1,19 @@
 # Louper
 
-![](data/Screenshot.png)
+![app screenshot](data/Screenshot.png)
 
 Louper is a text magnification app designed for elementary OS. Prototype for https://github.com/elementary/wingpanel-indicator-a11y/issues/35
 
 ## Usage
 
 1. Select some text
-2. Launch the app (it is recommended to assign a shortcut key in Keyboard Settings). The app shows the selected text in huge size
+2. Launch the app. The app shows the selected text in huge size
 3. Press `Ctrl+C` to copy the text showing
 4. Press `Esc` or unfocus the window to close the app
+
+It is recommended to assign a shortcut key to launch the app for daily use. Go to **System Settings→Keyboard→Shortcuts→Custom**, click the `+` button at the bottom of the right pane, and set `flatpak run com.github.ryonakano.louper` as a triggered command.
+
+![assign shortcut](data/assign-shortcut.png)
 
 ## Installation
 
