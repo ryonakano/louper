@@ -11,13 +11,12 @@
     <p>
       A text magnification app that helps you zoom the selected text.
     </p>
-    <p>Workflow:</p>
-    <ul>
-      <li>Select some text</li>
-      <li>Launch the app (it is recommended to assign a shortcut key in Keyboard Settings). The app shows the selected text in huge size</li>
-      <li>Press Ctrl+C to copy the text showing</li>
-      <li>Press Esc or unfocus the window to close the app</li>
-    </ul>
+    <p>
+      Select the text you want to magnify and just launch the app! The app shows the selected text in huge size.
+    </p>
+    <p>
+      Press Ctrl+C to copy the text showing. Press Esc or unfocus the window to close the app.
+    </p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -72,7 +71,7 @@
   <url type="translate">https://github.com/ryonakano/louper</url>
   
   <custom>
-    <value key="x-appcenter-color-primary">#0d52bf</value>
-    <value key="x-appcenter-color-primary-text">#ffffff</value>
+    <value key="x-appcenter-color-primary">#fafafa</value>
+    <value key="x-appcenter-color-primary-text">#1a1a1a</value>
   </custom>
 </component>
