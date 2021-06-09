@@ -17,7 +17,11 @@ It is recommended to assign a shortcut key to launch the app for daily use. Go t
 
 ## Installation
 
-**Louper will be published to AppCenter when elementary OS 6 is out.** This is because a dependency (libhandy-1) is not available on elementary OS 5.x. For now you can test the app by building and installing from source.
+### For Users
+
+On elementary OS? Click the button to get Louper on AppCenter:
+
+[![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.louper)
 
 ### For Developers
 
