@@ -1,7 +1,8 @@
 project(
     'com.github.ryonakano.louper',
     'vala', 'c',
-    version: '0.1.0'
+    version: '0.1.0',
+    meson_version: '>=0.49.0'
 )
 
 i18n = import('i18n')
@@ -12,19 +13,23 @@ add_project_arguments(
 )
 
 config_data = configuration_data()
-config_data.set_quoted('LOCALEDIR', join_paths(get_option('prefix'), get_option('localedir')))
+config_data.set_quoted('LOCALEDIR', get_option('prefix') / get_option('localedir'))
 config_data.set_quoted('GETTEXT_PACKAGE', meson.project_name())
 config_file = configure_file(
-    input: 'src/Config.vala.in',
+    input: 'src' / 'Config.vala.in',
     output: '@BASENAME@',
     configuration: config_data
+)
+
+sources = files(
+    'src' / 'Application.vala',
+    'src' / 'MainWindow.vala'
 )
 
 executable(
     meson.project_name(),
     config_file,
-    'src/Application.vala',
-    'src/MainWindow.vala',
+    sources,
     dependencies: [
         dependency('gdk-3.0'),
         dependency('granite', version: '>= 5.4.0'),
@@ -37,4 +42,4 @@ executable(
 subdir('data')
 subdir('po')
 
-meson.add_install_script('meson/post_install.py')
+meson.add_install_script('meson' / 'post_install.py')
