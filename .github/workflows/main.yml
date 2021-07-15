@@ -18,7 +18,7 @@ jobs:
       - name: Build
         uses: bilelmoussaoui/flatpak-github-actions/flatpak-builder@v3
         with:
-          bundle: tasks.flatpak
+          bundle: loupter.flatpak
           manifest-path: com.github.ryonakano.loupter.yml
           repository-name: appcenter
           repository-url: https://flatpak.elementary.io/repo.flatpakrepo
