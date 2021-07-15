@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-20 12:55+0000\n"
+"POT-Creation-Date: 2021-07-15 14:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,32 +30,22 @@ msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 
 #: data/louper.appdata.xml.in:14
-msgid "Workflow:"
-msgstr ""
-
-#: data/louper.appdata.xml.in:16
-msgid "Select some text"
+msgid ""
+"Select the text you want to magnify and just launch the app! The app shows "
+"the selected text in huge size."
 msgstr ""
 
 #: data/louper.appdata.xml.in:17
 msgid ""
-"Launch the app (it is recommended to assign a shortcut key in Keyboard "
-"Settings). The app shows the selected text in huge size"
+"Press Ctrl+C to copy the text showing. Press Esc or unfocus the window to "
+"close the app."
 msgstr ""
 
-#: data/louper.appdata.xml.in:18
-msgid "Press Ctrl+C to copy the text showing"
-msgstr ""
-
-#: data/louper.appdata.xml.in:19
-msgid "Press Esc or unfocus the window to close the app"
-msgstr ""
-
-#: data/louper.appdata.xml.in:62
+#: data/louper.appdata.xml.in:61
 msgid "Initial release"
 msgstr ""
 
-#: data/louper.appdata.xml.in:68
+#: data/louper.appdata.xml.in:67
 msgid "Ryo Nakano"
 msgstr ""
 
