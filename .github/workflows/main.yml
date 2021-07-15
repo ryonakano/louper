@@ -40,13 +40,10 @@ jobs:
           GIT_USER_EMAIL: "builds@elementary.io"
 
   lint:
-    name: Lint
     runs-on: ubuntu-latest
-
     container:
       image: valalang/lint
-
     steps:
-      - name: Lint
-        uses: actions/checkout@v2
-        run: io.elementary.vala-lint -d .
+    - uses: actions/checkout@v2
+    - name: Lint
+      run: io.elementary.vala-lint -d .
