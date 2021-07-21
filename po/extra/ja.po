@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-15 14:21+0000\n"
-"PO-Revision-Date: 2021-04-28 10:52+0900\n"
+"PO-Revision-Date: 2021-07-21 20:45+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -34,13 +34,16 @@ msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキ"
+"ストを大きく表示してくれます。"
 
 #: data/louper.appdata.xml.in:17
-#, fuzzy
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc or unfocus the window to "
 "close the app."
-msgstr "Esc キーを押すかウィンドウを非アクティブにすると、アプリを終了します"
+msgstr ""
+"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc キーを押すか"
+"ウィンドウを非アクティブにすると、アプリを終了します。"
 
 #: data/louper.appdata.xml.in:61
 msgid "Initial release"
@@ -61,15 +64,3 @@ msgstr "com.github.ryonakano.louper"
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "ズーム;コピー;Zoom;Copy;"
-
-#~ msgid "Workflow:"
-#~ msgstr "手順:"
-
-#~ msgid "Select some text"
-#~ msgstr "テキストを選択します"
-
-#~ msgid "Press Ctrl+C to copy the text showing"
-#~ msgstr "Ctrl+C キーを押すと、表示されたテキストをコピーできます"
-
-#~ msgid "Launch the app with Super+Q"
-#~ msgstr "Super+Q キーを押して、アプリを起動します"
