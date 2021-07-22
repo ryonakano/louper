@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-20 22:00+0900\n"
+"POT-Creation-Date: 2021-07-15 14:21+0000\n"
 "PO-Revision-Date: 2021-05-20 14:31+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -30,33 +30,27 @@ msgid "A text magnification app that helps you zoom the selected text."
 msgstr "Een vergrootglastoepassing om geselecteerde tekst mee te vergroten."
 
 #: data/louper.appdata.xml.in:14
-msgid "Workflow:"
-msgstr "Werkmethode:"
-
-#: data/louper.appdata.xml.in:16
-msgid "Select some text"
-msgstr "Selecteer tekst"
+#, fuzzy
+msgid ""
+"Select the text you want to magnify and just launch the app! The app shows "
+"the selected text in huge size."
+msgstr ""
+"Start de toepassing (het is aanbevolen om een sneltoets in te stellen in de "
+"toetsenbordinstellingen). De toepassing vergroot vervolgens de geselecteerde "
+"tekst."
 
 #: data/louper.appdata.xml.in:17
+#, fuzzy
 msgid ""
-"Launch the app (it is recommended to assign a shortcut key in Keyboard "
-"Settings). The app shows the selected text in huge size"
-msgstr "Start de toepassing (het is aanbevolen om een sneltoets in te stellen in de "
-"toetsenbordinstellingen). De toepassing vergroot vervolgens de geselecteerde tekst."
-
-#: data/louper.appdata.xml.in:18
-msgid "Press Ctrl+C to copy the text showing"
-msgstr "Druk op Ctrl+C om de getoonde tekst te kopiëren"
-
-#: data/louper.appdata.xml.in:19
-msgid "Press Esc or unfocus the window to close the app"
+"Press Ctrl+C to copy the text showing. Press Esc or unfocus the window to "
+"close the app."
 msgstr "Druk op Esc of klik buiten het venster om de toepassing te sluiten"
 
-#: data/louper.appdata.xml.in:62
+#: data/louper.appdata.xml.in:61
 msgid "Initial release"
 msgstr "Initiële uitgave"
 
-#: data/louper.appdata.xml.in:68
+#: data/louper.appdata.xml.in:67
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -71,3 +65,12 @@ msgstr "com.github.ryonakano.louper"
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "Zoom;Kopiëren;Vergroten;Loep;"
+
+#~ msgid "Workflow:"
+#~ msgstr "Werkmethode:"
+
+#~ msgid "Select some text"
+#~ msgstr "Selecteer tekst"
+
+#~ msgid "Press Ctrl+C to copy the text showing"
+#~ msgstr "Druk op Ctrl+C om de getoonde tekst te kopiëren"
