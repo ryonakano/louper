@@ -125,6 +125,12 @@ public class MainWindow : Hdy.ApplicationWindow {
                 }
 
                 break;
+            case Gdk.Key.q:
+                if (Gdk.ModifierType.CONTROL_MASK in key.state) {
+                    destroy ();
+                }
+
+                break;
             case Gdk.Key.Escape:
                 destroy ();
                 break;
