@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 14:21+0000\n"
+"POT-Creation-Date: 2021-07-30 15:22+0900\n"
 "PO-Revision-Date: 2021-05-20 14:31+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -42,8 +42,8 @@ msgstr ""
 #: data/louper.appdata.xml.in:17
 #, fuzzy
 msgid ""
-"Press Ctrl+C to copy the text showing. Press Esc or unfocus the window to "
-"close the app."
+"Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
+"window to close the app."
 msgstr "Druk op Esc of klik buiten het venster om de toepassing te sluiten"
 
 #: data/louper.appdata.xml.in:61
