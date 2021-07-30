@@ -55,7 +55,7 @@
   </content_rating>
 
   <releases>
-    <release version="0.1.1" date="2021-07-30">
+    <release version="0.1.1" date="2021-07-30" urgency="low">
       <description>
         <ul>
           <li>Now you can quit the app with the shortcut key Ctrl+Q</li>
@@ -63,7 +63,7 @@
         </ul>
       </description>
     </release>
-    <release version="0.1.0" date="2021-06-09">
+    <release version="0.1.0" date="2021-06-09" urgency="medium">
       <description>
         <ul>
           <li>Initial release</li>
