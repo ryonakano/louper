@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-30 15:22+0900\n"
+"POT-Creation-Date: 2021-07-30 13:00+0000\n"
 "PO-Revision-Date: 2021-07-30 15:23+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
@@ -34,22 +34,30 @@ msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
-"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキ"
-"ストを大きく表示してくれます。"
+"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキス"
+"トを大きく表示してくれます。"
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
-"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを"
-"押すかウィンドウを非アクティブにすると、アプリを終了します。"
+"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを押"
+"すかウィンドウを非アクティブにすると、アプリを終了します。"
 
 #: data/louper.appdata.xml.in:61
+msgid "Now you can quit the app with the shortcut key Ctrl+Q"
+msgstr ""
+
+#: data/louper.appdata.xml.in:62
+msgid "Update Japanese translation"
+msgstr ""
+
+#: data/louper.appdata.xml.in:69
 msgid "Initial release"
 msgstr "最初のリリース"
 
-#: data/louper.appdata.xml.in:67
+#: data/louper.appdata.xml.in:75
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
