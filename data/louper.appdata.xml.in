@@ -55,6 +55,14 @@
   </content_rating>
 
   <releases>
+    <release version="0.1.1" date="2021-07-30">
+      <description>
+        <ul>
+          <li>Now you can quit the app with the shortcut key Ctrl+Q</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.0" date="2021-06-09">
       <description>
         <ul>
