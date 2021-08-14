@@ -1,0 +1,78 @@
+# French translations for extra package.
+# Copyright (C) 2021 THE extra'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the extra package.
+# Nathan Bonnemains (@NathanBnm), 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: extra\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-08-14 11:26+0000\n"
+"PO-Revision-Date: 2021-08-14 11:21+0000\n"
+"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
+"Language-Team: none\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
+msgid "Louper"
+msgstr "Louper"
+
+#: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
+msgid "Magnify the selected text"
+msgstr "Agrandissez le texte sélectionné"
+
+#: data/louper.appdata.xml.in:11
+msgid "A text magnification app that helps you zoom the selected text."
+msgstr ""
+"Une application d'agrandissement du texte qui vous aide à rendre le texte "
+"sélectionné plus visible."
+
+#: data/louper.appdata.xml.in:14
+msgid ""
+"Select the text you want to magnify and just launch the app! The app shows "
+"the selected text in huge size."
+msgstr ""
+"Sélectionnez le texte que vous souhaitez agrandir puis lancez "
+"l'application ! Elle vous montrera le texte sélectionné en grand."
+
+#: data/louper.appdata.xml.in:17
+msgid ""
+"Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
+"window to close the app."
+msgstr ""
+"Appuyez sur Ctrl + C pour copier le texte affiché. Appuyez sur Échap/Ctrl + "
+"Q ou cliquez en dehors de l'application pour la fermer."
+
+#: data/louper.appdata.xml.in:61
+msgid "Now you can quit the app with the shortcut key Ctrl+Q"
+msgstr ""
+"Désormais vous pouvez quitter l'application avec le raccourci clavier Ctrl + "
+"Q"
+
+#: data/louper.appdata.xml.in:62
+msgid "Update Japanese translation"
+msgstr "Mise à jour des traductions en Japonais"
+
+#: data/louper.appdata.xml.in:69
+msgid "Initial release"
+msgstr "Version initiale"
+
+#: data/louper.appdata.xml.in:75
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/louper.desktop.in:4
+msgid "Text Magnification App"
+msgstr "Application d'agrandissement du texte"
+
+#: data/louper.desktop.in:8
+msgid "com.github.ryonakano.louper"
+msgstr "com.github.ryonakano.louper"
+
+#: data/louper.desktop.in:11
+msgid "Zoom;Copy;"
+msgstr "Zoom;Agrandir;Copier;"
