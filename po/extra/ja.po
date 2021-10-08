@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-08 10:29+0000\n"
-"PO-Revision-Date: 2021-07-30 15:23+0900\n"
+"PO-Revision-Date: 2021-10-08 19:32+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -34,44 +34,44 @@ msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
-"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキス"
-"トを大きく表示してくれます。"
+"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキ"
+"ストを大きく表示してくれます。"
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
-"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを押"
-"すかウィンドウを非アクティブにすると、アプリを終了します。"
+"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを"
+"押すかウィンドウを非アクティブにすると、アプリを終了します。"
 
 #: data/louper.appdata.xml.in:61
 msgid "Make sure the window width is narrow than the display width"
-msgstr ""
+msgstr "ウィンドウ幅がディスプレイ幅よりも狭くなるように修正"
 
 #: data/louper.appdata.xml.in:62
 msgid "Fix wrong OARS data"
-msgstr ""
+msgstr "OARS データの間違いを修正"
 
 #: data/louper.appdata.xml.in:64
 msgid "Translation updates:"
-msgstr ""
+msgstr "翻訳の更新:"
 
 #: data/louper.appdata.xml.in:66
 msgid "Add Ainu translation"
-msgstr ""
+msgstr "アイヌ語翻訳を追加"
 
 #: data/louper.appdata.xml.in:67
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "フランス語翻訳を追加 (貢献者: NathanBnm)"
 
 #: data/louper.appdata.xml.in:68 data/louper.appdata.xml.in:76
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "日本語翻訳を更新"
 
 #: data/louper.appdata.xml.in:75
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr ""
+msgstr "ショートカットキー Ctrl+Q でアプリを終了できるように変更"
 
 #: data/louper.appdata.xml.in:83
 msgid "Initial release"
