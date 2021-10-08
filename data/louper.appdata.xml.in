@@ -55,6 +55,20 @@
   </content_rating>
 
   <releases>
+    <release version="1.0.0" date="2021-10-08" urgency="high">
+      <description>
+        <ul>
+          <li>Make sure the window width is narrow than the display width</li>
+          <li>Fix wrong OARS data</li>
+        </ul>
+        <p>Translation updates:</p>
+        <ul>
+          <li>Add Ainu translation</li>
+          <li>Add French translation (thanks to @NathanBnm)</li>
+          <li>Update Japanese translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="0.1.1" date="2021-07-30" urgency="low">
       <description>
         <ul>
