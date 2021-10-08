@@ -81,7 +81,7 @@ public class MainWindow : Hdy.ApplicationWindow {
             Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
                                                         cssprovider,
                                                         Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        } catch (GLib.Error e) {
+        } catch (Error e) {
             warning (e.message);
         }
 
