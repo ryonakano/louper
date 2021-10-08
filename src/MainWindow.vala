@@ -54,7 +54,8 @@ public class MainWindow : Hdy.ApplicationWindow {
 
         result_label = new Gtk.Label (null) {
             selectable = true,
-            wrap = true
+            wrap = true,
+            wrap_mode = Pango.WrapMode.WORD_CHAR
         };
         result_label.get_style_context ().add_class ("result-text");
 
