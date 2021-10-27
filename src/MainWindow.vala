@@ -104,27 +104,27 @@ public class MainWindow : Hdy.ApplicationWindow {
                 return Gdk.EVENT_PROPAGATE;
             });
         });
-    }
 
-    protected override bool key_press_event (Gdk.EventKey key) {
-        switch (key.keyval) {
-            case Gdk.Key.c:
-                if (Gdk.ModifierType.CONTROL_MASK in key.state) {
-                    Application.clipboard.set_text (result_label.label, -1);
-                }
+        key_press_event.connect ((key) => {
+            switch (key.keyval) {
+                case Gdk.Key.c:
+                    if (Gdk.ModifierType.CONTROL_MASK in key.state) {
+                        Application.clipboard.set_text (result_label.label, -1);
+                    }
 
-                break;
-            case Gdk.Key.q:
-                if (Gdk.ModifierType.CONTROL_MASK in key.state) {
+                    break;
+                case Gdk.Key.q:
+                    if (Gdk.ModifierType.CONTROL_MASK in key.state) {
+                        destroy ();
+                    }
+
+                    break;
+                case Gdk.Key.Escape:
                     destroy ();
-                }
+                    break;
+            }
 
-                break;
-            case Gdk.Key.Escape:
-                destroy ();
-                break;
-        }
-
-        return Gdk.EVENT_PROPAGATE;
+            return Gdk.EVENT_PROPAGATE;
+        });
     }
 }
