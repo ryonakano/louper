@@ -7,8 +7,6 @@ finish-args:
   - '--share=ipc'
   - '--socket=wayland'
   - '--socket=fallback-x11'
-  # needed for perfers-color-scheme
-  - '--system-talk-name=org.freedesktop.Accounts'
 modules:
   - name: louper
     buildsystem: meson
