@@ -1,3 +1,9 @@
+com.github.ryonakano.luper (1.0.1) focal; urgency=low
+
+  * Add Italian translation (thanks to @albanobattistella)
+
+ -- Ryo Nakano <ryonakaknock3@gmail.com>  Sat, 18 Dec 2021 10:33:17 +0900
+
 com.github.ryonakano.luper (0.1.0) bionic; urgency=low
 
   * Initial release.
