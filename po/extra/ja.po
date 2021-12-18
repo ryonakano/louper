@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-18 01:28+0000\n"
-"PO-Revision-Date: 2021-10-08 19:32+0900\n"
+"PO-Revision-Date: 2021-12-18 10:38+0900\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -34,25 +34,24 @@ msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
-"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキス"
-"トを大きく表示してくれます。"
+"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキ"
+"ストを大きく表示してくれます。"
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
-"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを押"
-"すかウィンドウを非アクティブにすると、アプリを終了します。"
+"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを"
+"押すかウィンドウを非アクティブにすると、アプリを終了します。"
 
 #: data/louper.appdata.xml.in:32 data/louper.appdata.xml.in:44
 msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
 #: data/louper.appdata.xml.in:34
-#, fuzzy
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "フランス語翻訳を追加 (貢献者: NathanBnm)"
+msgstr "イタリア語翻訳を追加 (貢献者: @albanobattistella)"
 
 #: data/louper.appdata.xml.in:41
 msgid "Make sure the window width is narrow than the display width"
