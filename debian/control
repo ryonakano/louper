@@ -3,10 +3,10 @@ Section: x11
 Priority: optional
 Maintainer: Ryo Nakano <ryonakaknock3@gmail.com>
 Build-Depends: debhelper (>= 10.5.1),
-               libgranite-dev,
+               libgranite-dev (>= 5.4.0),
                libgtk-3-dev,
                libhandy-1-dev,
-               meson,
+               meson (>= 0.49.0),
                valac
 Standards-Version: 4.5.0
 Homepage: https://github.com/ryonakano/louper
