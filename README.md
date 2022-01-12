@@ -23,7 +23,7 @@ On elementary OS? Click the button to get Louper on AppCenter:
 
 [![Get it on AppCenter](https://appcenter.elementary.io/badge.svg)](https://appcenter.elementary.io/com.github.ryonakano.louper)
 
-Community packages are available on the following distributions:
+Community packages maintained by volunteers are also available on some distributions:
 
 [![Packaging status](https://repology.org/badge/vertical-allrepos/louper.svg)](https://repology.org/project/louper/versions)
 
