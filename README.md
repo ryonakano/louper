@@ -31,9 +31,8 @@ Community packages maintained by volunteers are also available on some distribut
 
 You'll need the following dependencies to build:
 
-* libgranite-dev (>= 5.4.0)
-* libgtk-3.0-dev
-* libhandy-1-dev
+* libgranite-7-dev
+* libgtk4-dev
 * meson (>= 0.49.0)
 * valac
 

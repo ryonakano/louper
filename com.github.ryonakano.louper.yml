@@ -1,6 +1,6 @@
 app-id: com.github.ryonakano.louper
 runtime: io.elementary.Platform
-runtime-version: '6.1'
+runtime-version: 'daily'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.louper
 finish-args:
