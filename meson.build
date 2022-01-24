@@ -32,8 +32,7 @@ executable(
     sources,
     dependencies: [
         dependency('gtk4'),
-        dependency('granite-7'),
-        dependency('gtk4')
+        dependency('granite-7')
     ],
     install: true
 )
