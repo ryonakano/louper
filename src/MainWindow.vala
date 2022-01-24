@@ -4,29 +4,21 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
-    // Get the area where we can draw the app window
-    public Gdk.Monitor primary_monitor {
-        owned get {
-            return display.get_monitor_at_surface (new Gdk.Surface.toplevel (display));
-        }
+    private const string CSS_DATA = """
+    .result-text {
+        font-size: 128px;
+        font-weight: bold;
     }
-
-    //  private const string CSS_DATA = """
-    //  .result-text {
-    //      font-size: 128px;
-    //      font-weight: bold;
-    //  }
-    //  """;
-
-    public MainWindow () {
-        Object (
-            resizable: false,
-            default_width: primary_monitor.width_mm / 2,
-            default_height: primary_monitor.height_mm / 4
-        );
-    }
+    """;
 
     construct {
+        // Get the area where we can draw the app window
+        Gdk.Monitor primary_monitor = display.get_monitor_at_surface (new Gdk.Surface.toplevel (display));
+        Gdk.Rectangle primary_monitor_rectangle = primary_monitor.get_geometry ();
+        default_width = primary_monitor_rectangle.width / 2;
+        default_height = primary_monitor_rectangle.height / 4;
+        resizable = false;
+
         unowned var clipboard = get_primary_clipboard ();
         clipboard.read_text_async.begin (null, (obj, res) => {
             string? text;
@@ -49,7 +41,7 @@ public class MainWindow : Gtk.ApplicationWindow {
                     wrap = true,
                     wrap_mode = Pango.WrapMode.WORD_CHAR
                 };
-                //  result_label.get_style_context ().add_class ("result-text");
+                result_label.get_style_context ().add_class ("result-text");
                 child = result_label;
             }
         });
@@ -57,15 +49,10 @@ public class MainWindow : Gtk.ApplicationWindow {
         //  set_position (Gtk.WindowPosition.CENTER_ALWAYS);
         //  add_events (Gdk.EventMask.FOCUS_CHANGE_MASK);
 
-        //  var cssprovider = new Gtk.CssProvider ();
-        //  try {
-        //      cssprovider.load_from_data (CSS_DATA, -1);
-        //      Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-        //                                                  cssprovider,
-        //                                                  Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        //  } catch (Error e) {
-        //      warning (e.message);
-        //  }
+        var cssprovider = new Gtk.CssProvider ();
+        cssprovider.load_from_data (CSS_DATA.data);
+        Gtk.StyleContext.add_provider_for_display (display, cssprovider,
+                                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
