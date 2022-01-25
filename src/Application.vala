@@ -4,7 +4,7 @@
  */
 
 public class Application : Gtk.Application {
-    private Gtk.ApplicationWindow window;
+    private MainWindow window;
 
     public Application () {
         Object (
