@@ -73,17 +73,16 @@ public class MainWindow : Gtk.ApplicationWindow {
                 case Gdk.Key.q:
                     if (Gdk.ModifierType.CONTROL_MASK in state) {
                         destroy ();
+                        return true;
                     }
 
                     break;
                 case Gdk.Key.Escape:
                     destroy ();
-                    break;
-                default:
-                    return false;
+                    return true;
             }
 
-            return true;
+            return false;
         });
         /*
          * Gtk.Window inherits Gtk.Widget and Gtk.ShortcutManager
