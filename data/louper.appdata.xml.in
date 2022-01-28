@@ -27,16 +27,6 @@
   <content_rating type="oars-1.1" />
 
   <releases>
-    <release version="1.1.0" date="2022-01-28" urgency="medium">
-      <description>
-        <ul>
-          <li>Port to GTK 4</li>
-          <li>Fix opening the context menu crashes the app</li>
-          <li>No longer swallow Ctrl+C to make copying selected text possible</li>
-        </ul>
-        <p>Translation updates:</p>
-      </description>
-    </release>
     <release version="1.0.1" date="2021-12-18" urgency="low">
       <description>
         <p>Translation updates:</p>
