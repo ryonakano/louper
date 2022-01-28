@@ -67,40 +67,43 @@ public class MainWindow : Gtk.ApplicationWindow {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
 
-        //  key_press_event.connect ((key) => {
-        //      switch (key.keyval) {
-        //          case Gdk.Key.c:
-        //              if (Gdk.ModifierType.CONTROL_MASK in key.state) {
-        //                  Application.clipboard.set_text (result_label.label, -1);
-        //              }
+        var event_controller = new Gtk.EventControllerKey ();
+        event_controller.key_pressed.connect ((keyval, keycode, state) => {
+            switch (keyval) {
+                case Gdk.Key.q:
+                    if (Gdk.ModifierType.CONTROL_MASK in state) {
+                        destroy ();
+                    }
 
-        //              break;
-        //          case Gdk.Key.q:
-        //              if (Gdk.ModifierType.CONTROL_MASK in key.state) {
-        //                  destroy ();
-        //              }
+                    break;
+                case Gdk.Key.Escape:
+                    destroy ();
+                    break;
+                default:
+                    return false;
+            }
 
-        //              break;
-        //          case Gdk.Key.Escape:
-        //              destroy ();
-        //              break;
-        //      }
-
-        //      return Gdk.EVENT_PROPAGATE;
-        //  });
+            return true;
+        });
+        /*
+         * Gtk.Window inherits Gtk.Widget and Gtk.ShortcutManager
+         * and both of them overloads add_controller methods.
+         * So we need explicitly call the one in Gtk.Widget by casting
+         */
+        ((Gtk.Widget) this).add_controller (event_controller);
     }
 
-    /*
-    * Hide first and then destroy the app window when unfocused
-    * because just destroying sometimes seems to cause the wm crashing.
-    * Borrowed from elementary/shortcut-overlay, src/Application.vala
-    */
-    public override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
+    protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
         if (Gtk.StateFlags.BACKDROP in get_state_flags ()) {
+            /*
+            * Hide first and then destroy the app window when unfocused
+            * because just destroying sometimes seems to cause the wm crashing.
+            * Borrowed from elementary/shortcut-overlay, src/Application.vala
+            */
             hide ();
-            Timeout.add (500, () => {
+            Timeout.add (250, () => {
                 destroy ();
-                return Gdk.EVENT_PROPAGATE;
+                return false;
             });
         }
     }
