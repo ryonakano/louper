@@ -75,15 +75,13 @@ public class MainWindow : Gtk.ApplicationWindow {
                         destroy ();
                     }
 
-                    break;
+                    return true;
                 case Gdk.Key.Escape:
                     destroy ();
-                    break;
+                    return true;
                 default:
                     return false;
             }
-
-            return true;
         });
         /*
          * Gtk.Window inherits Gtk.Widget and Gtk.ShortcutManager
