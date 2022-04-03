@@ -2,9 +2,10 @@ project(
     'com.github.ryonakano.louper',
     'vala', 'c',
     version: '1.0.1',
-    meson_version: '>=0.49.0'
+    meson_version: '>=0.57.0'
 )
 
+gnome = import('gnome')
 i18n = import('i18n')
 
 add_project_arguments(
@@ -40,4 +41,6 @@ executable(
 subdir('data')
 subdir('po')
 
-meson.add_install_script('meson' / 'post_install.py')
+gnome.post_install(
+    gtk_update_icon_cache: true
+)
