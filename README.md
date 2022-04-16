@@ -67,4 +67,4 @@ Click the following graphs to get started:
 
 | Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
 | --- | --- |
-| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-main/multi-auto.svg)](https://hosted.weblate.org/engage/rosp/) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-extra/multi-auto.svg)](https://hosted.weblate.org/engage/rosp/) |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/louper-main) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-extra/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/louper-extra) |
