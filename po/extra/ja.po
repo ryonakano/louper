@@ -34,16 +34,16 @@ msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
-"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキ"
-"ストを大きく表示してくれます。"
+"拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキス"
+"トを大きく表示してくれます。"
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
-"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを"
-"押すかウィンドウを非アクティブにすると、アプリを終了します。"
+"Ctrl+C キーを押すと、表示されたテキストをコピーできます。Esc/Ctrl+Q キーを押"
+"すかウィンドウを非アクティブにすると、アプリを終了します。"
 
 #: data/louper.appdata.xml.in:32 data/louper.appdata.xml.in:44
 msgid "Translation updates:"
