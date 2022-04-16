@@ -60,6 +60,11 @@ Simply [create a new issue](https://github.com/ryonakano/louper/issues/new) desc
 
 We follow [the coding style of elementary OS](https://docs.elementary.io/develop/writing-apps/code-style) and [its Human Interface Guidelines](https://docs.elementary.io/hig/). Try to respect them.
 
-### Translating This App
+### Translaton
+We accept translations of this project through [Weblate](https://weblate.org/). We would appreciate it if you would join our translation work!
 
-I accept translations through Pull Requests. If you're not sure how to do, [the guideline I made](po/README.md) might be helpful.
+Click the following graphs to get started:
+
+| Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
+| --- | --- |
+| [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-main/multi-auto.svg)](https://hosted.weblate.org/engage/rosp/) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-extra/multi-auto.svg)](https://hosted.weblate.org/engage/rosp/) |
