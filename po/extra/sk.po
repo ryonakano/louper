@@ -2,91 +2,100 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
 # Ryo Nakano <ryonakaknock3@gmail.com>, 2022.
+# JohnDumpling <john_dumpling@protonmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-18 01:28+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-04-23 17:09+0000\n"
+"Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
+"Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/louper-extra/"
+"sk/>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Weblate 4.12.1-dev\n"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
-msgstr ""
+msgstr "Louper"
 
 #: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "Zväčšite vybraný text"
 
 #: data/louper.appdata.xml.in:11
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
+"Aplikácia s funkciou lupy, ktorá vám poslúži na zväčšenie vybraného textu."
 
 #: data/louper.appdata.xml.in:14
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"Označte text, ktorý chcete zväčšiť a potom len spustite aplikáciu! Aplikácia "
+"zobrazí označený text v dostatočne čitateľnej veľkosti."
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
+"Stlačte Ctrl+C na skopírovanie zobrazeného textu. Stlačte Esc/Ctrl+Q alebo "
+"kliknite mimo okna na zatvorenie aplikácie."
 
 #: data/louper.appdata.xml.in:32 data/louper.appdata.xml.in:44
 msgid "Translation updates:"
-msgstr ""
+msgstr "Aktualizácie prekladov:"
 
 #: data/louper.appdata.xml.in:34
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
+msgstr "Pridaný preklad do taliančiny (vďaka @albanobattistella)"
 
 #: data/louper.appdata.xml.in:41
 msgid "Make sure the window width is narrow than the display width"
-msgstr ""
+msgstr "Zabezpečené, že šírka okna je menšia ako šírka obrazovky"
 
 #: data/louper.appdata.xml.in:42
 msgid "Fix wrong OARS data"
-msgstr ""
+msgstr "Opravené nesprávne OARS údaje"
 
 #: data/louper.appdata.xml.in:46
 msgid "Add Ainu translation"
-msgstr ""
+msgstr "Pridaný preklad do jazyka ainu"
 
 #: data/louper.appdata.xml.in:47
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
 #: data/louper.appdata.xml.in:48 data/louper.appdata.xml.in:56
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "Aktualizácia prekladu do japončiny"
 
 #: data/louper.appdata.xml.in:55
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr ""
+msgstr "Teraz môžete ukončiť aplikáciu pomocou klávesovej skratky Ctrl+Q"
 
 #: data/louper.appdata.xml.in:63
 msgid "Initial release"
-msgstr ""
+msgstr "Prvé vydanie"
 
 #: data/louper.appdata.xml.in:69
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "Aplikácia na zväčšenie textu"
 
 #: data/louper.desktop.in:8
 msgid "com.github.ryonakano.louper"
-msgstr ""
+msgstr "com.github.ryonakano.louper"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "Priblížiť;Kopírovať;"
