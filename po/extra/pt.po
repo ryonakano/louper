@@ -7,86 +7,97 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-18 01:28+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-06-21 12:18+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
+"louper-extra/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.13.1-dev\n"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
-msgstr ""
+msgstr "Louper"
 
 #: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "Amplia o texto selecionado"
 
 #: data/louper.appdata.xml.in:11
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
+"Uma aplicação de ampliação de texto que o ajuda a ampliar o texto "
+"selecionado."
 
 #: data/louper.appdata.xml.in:14
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"Selecione o texto que deseja ampliar e inicie a aplicação! A aplicação "
+"mostra o texto selecionado em tamanho grande."
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
+"Prima Ctrl+C para copiar o texto apresentado. Prima Esc/Ctrl+Q ou desfoque a "
+"janela para fechar a aplicação."
 
 #: data/louper.appdata.xml.in:32 data/louper.appdata.xml.in:44
 msgid "Translation updates:"
-msgstr ""
+msgstr "Atualizações de tradução:"
 
 #: data/louper.appdata.xml.in:34
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
+msgstr "Tradução Italiana adicionada (obrigado a @albanobattistella)"
 
 #: data/louper.appdata.xml.in:41
 msgid "Make sure the window width is narrow than the display width"
 msgstr ""
+"Certifique-se de que a largura da janela é mais estreita do que a largura do "
+"ecrã"
 
 #: data/louper.appdata.xml.in:42
 msgid "Fix wrong OARS data"
-msgstr ""
+msgstr "Corrige dados OARS incorretos"
 
 #: data/louper.appdata.xml.in:46
 msgid "Add Ainu translation"
-msgstr ""
+msgstr "Tradução Ainu adicionada"
 
 #: data/louper.appdata.xml.in:47
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
 
 #: data/louper.appdata.xml.in:48 data/louper.appdata.xml.in:56
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "Tradução Japonesa atualizada"
 
 #: data/louper.appdata.xml.in:55
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr ""
+msgstr "Agora pode sair da aplicação com a tecla de atalho Ctrl+Q"
 
 #: data/louper.appdata.xml.in:63
 msgid "Initial release"
-msgstr ""
+msgstr "Versão inicial"
 
 #: data/louper.appdata.xml.in:69
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "Aplicação de ampliação de texto"
 
 #: data/louper.desktop.in:8
 msgid "com.github.ryonakano.louper"
-msgstr ""
+msgstr "com.github.ryonakano.louper"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "Zoom;Copy;Ampliar;Copiar;"
