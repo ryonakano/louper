@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-18 01:28+0000\n"
+"POT-Creation-Date: 2022-07-09 10:38+0900\n"
 "PO-Revision-Date: 2021-05-20 14:31+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
@@ -46,43 +46,51 @@ msgid ""
 "window to close the app."
 msgstr "Druk op Esc of klik buiten het venster om de toepassing te sluiten"
 
-#: data/louper.appdata.xml.in:32 data/louper.appdata.xml.in:44
-msgid "Translation updates:"
+#: data/louper.appdata.xml.in:33
+msgid "Update Flatpak runtime version"
 msgstr ""
 
 #: data/louper.appdata.xml.in:34
-msgid "Add Italian translation (thanks to @albanobattistella)"
+msgid "Update translations"
 msgstr ""
 
-#: data/louper.appdata.xml.in:41
-msgid "Make sure the window width is narrow than the display width"
+#: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
+msgid "Translation updates:"
 msgstr ""
 
 #: data/louper.appdata.xml.in:42
+msgid "Add Italian translation (thanks to @albanobattistella)"
+msgstr ""
+
+#: data/louper.appdata.xml.in:49
+msgid "Make sure the window width is narrow than the display width"
+msgstr ""
+
+#: data/louper.appdata.xml.in:50
 msgid "Fix wrong OARS data"
 msgstr ""
 
-#: data/louper.appdata.xml.in:46
+#: data/louper.appdata.xml.in:54
 msgid "Add Ainu translation"
 msgstr ""
 
-#: data/louper.appdata.xml.in:47
+#: data/louper.appdata.xml.in:55
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
-#: data/louper.appdata.xml.in:48 data/louper.appdata.xml.in:56
+#: data/louper.appdata.xml.in:56 data/louper.appdata.xml.in:64
 msgid "Update Japanese translation"
 msgstr ""
 
-#: data/louper.appdata.xml.in:55
+#: data/louper.appdata.xml.in:63
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr ""
 
-#: data/louper.appdata.xml.in:63
+#: data/louper.appdata.xml.in:71
 msgid "Initial release"
 msgstr "Initiële uitgave"
 
-#: data/louper.appdata.xml.in:69
+#: data/louper.appdata.xml.in:77
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -90,13 +98,12 @@ msgstr "Ryo Nakano"
 msgid "Text Magnification App"
 msgstr "Tekstvergrotingstoepassing"
 
-#: data/louper.desktop.in:8
-msgid "com.github.ryonakano.louper"
-msgstr "com.github.ryonakano.louper"
-
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "Zoom;Kopiëren;Vergroten;Loep;"
+
+#~ msgid "com.github.ryonakano.louper"
+#~ msgstr "com.github.ryonakano.louper"
 
 #~ msgid "Workflow:"
 #~ msgstr "Werkmethode:"
