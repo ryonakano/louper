@@ -31,6 +31,7 @@ Community packages maintained by volunteers are also available on some distribut
 
 You'll need the following dependencies to build:
 
+* libglib2.0-dev (>= 2.42)
 * libgranite-7-dev
 * libgtk-4-dev (>= 4.6)
 * meson (>= 0.57.0)

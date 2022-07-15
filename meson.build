@@ -37,6 +37,7 @@ executable(
     sources,
     dependencies: [
         dependency('gio-2.0'),
+        dependency('glib-2.0', version: '>= 2.42'),
         dependency('granite-7'),
         dependency('gtk4', version: '>= 4.6')
     ],
