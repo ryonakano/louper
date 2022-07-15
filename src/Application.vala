@@ -4,6 +4,8 @@
  */
 
 public class Application : Gtk.Application {
+    public static bool no_close_on_unfocus = false;
+
     private MainWindow window;
 
     public Application () {
@@ -18,6 +20,16 @@ public class Application : Gtk.Application {
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
+
+        // Set application options
+        OptionEntry[] options = {
+            {
+                "no-close-on-unfocus", 'n', OptionFlags.NONE, OptionArg.NONE, &no_close_on_unfocus,
+                _("Prevent the app window from closing automatically on unfocused"), null
+            },
+            { null } // This is a null-terminated list
+        };
+        add_main_option_entries (options);
     }
 
     protected override void activate () {
@@ -31,6 +43,6 @@ public class Application : Gtk.Application {
     }
 
     public static int main (string[] args) {
-        return new Application ().run ();
+        return new Application ().run (args);
     }
 }
