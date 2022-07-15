@@ -17,9 +17,9 @@
     <p>
       Other features include:
     </p>
-    <li>
-      <ul>Select some part of the magnified text and press Ctrl + C or perform secondary click to copy it</li>
-      <ul>Press Esc or Ctrl + Q or unfocus the window to close the app</li>
+    <ul>
+      <li>Select some part of the magnified text and press Ctrl + C or perform secondary click to copy it</li>
+      <li>Press Esc or Ctrl + Q or unfocus the window to close the app</li>
     </ul>
   </description>
   <screenshots>
