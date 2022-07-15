@@ -19,6 +19,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         default_height = primary_monitor_rectangle.height / 4;
         resizable = false;
         decorated = false;
+        title = "Louper";
 
         unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
         clipboard.read_text_async.begin (null, (obj, res) => {
