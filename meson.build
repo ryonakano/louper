@@ -36,7 +36,7 @@ executable(
     config_file,
     sources,
     dependencies: [
-        dependency('gtk4'),
+        dependency('gtk4', version: '>= 4.6'),
         dependency('granite-7')
     ],
     install: true

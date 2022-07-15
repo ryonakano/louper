@@ -32,7 +32,7 @@ Community packages maintained by volunteers are also available on some distribut
 You'll need the following dependencies to build:
 
 * libgranite-7-dev
-* libgtk4-dev
+* libgtk-4-dev (>= 4.6)
 * meson (>= 0.57.0)
 * valac
 

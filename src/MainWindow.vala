@@ -18,8 +18,15 @@ public class MainWindow : Gtk.ApplicationWindow {
         default_width = primary_monitor_rectangle.width / 2;
         default_height = primary_monitor_rectangle.height / 4;
         resizable = false;
-        decorated = false;
         title = "Louper";
+
+        var title_bar = new Gtk.HeaderBar () {
+            show_title_buttons = true,
+            // Create a dummy Gtk.Label for the blank title
+            title_widget = new Gtk.Label (null)
+        };
+        title_bar.get_style_context ().add_class (Granite.STYLE_CLASS_FLAT);
+        titlebar = title_bar;
 
         unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
         clipboard.read_text_async.begin (null, (obj, res) => {
