@@ -29,28 +29,17 @@ public class MainWindow : Gtk.ApplicationWindow {
                 warning (e.message);
             }
 
-            if (text == null || text == "") {
-                var no_content_view = new Granite.Placeholder (_("No Text is Selected")) {
-                    description = _("Open the app after selecting some text."),
-                    margin_top = 24,
-                    margin_bottom = 24,
-                    margin_start = 12,
-                    margin_end = 12
-                };
-                child = no_content_view;
-            } else {
-                var result_label = new Gtk.Label (text) {
-                    selectable = true,
-                    margin_top = 24,
-                    margin_bottom = 24,
-                    margin_start = 12,
-                    margin_end = 12,
-                    wrap = true,
-                    wrap_mode = Pango.WrapMode.WORD_CHAR
-                };
-                result_label.get_style_context ().add_class ("result-text");
-                child = result_label;
-            }
+            var result_label = new Gtk.Label (text) {
+                selectable = true,
+                margin_top = 24,
+                margin_bottom = 24,
+                margin_start = 12,
+                margin_end = 12,
+                wrap = true,
+                wrap_mode = Pango.WrapMode.WORD_CHAR
+            };
+            result_label.get_style_context ().add_class ("result-text");
+            child = result_label;
         });
 
         var cssprovider = new Gtk.CssProvider ();
