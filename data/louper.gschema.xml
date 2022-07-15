@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema path="/com/github/ryonakano/louper/" id="com.github.ryonakano.louper">
+    <key name="font-size" type="d">
+      <default>128</default>
+      <summary>The font size used for magnification.</summary>
+    </key>
+    <key name="font-weight" type="b">
+      <default>true</default>
+      <summary>Whether to use the bold font for magnification.</summary>
+    </key>
+  </schema>
+</schemalist>

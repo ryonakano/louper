@@ -4,6 +4,7 @@
  */
 
 public class Application : Gtk.Application {
+    public static Settings settings;
     private MainWindow window;
 
     public Application () {
@@ -18,6 +19,10 @@ public class Application : Gtk.Application {
         Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
         Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
         Intl.textdomain (GETTEXT_PACKAGE);
+    }
+
+    static construct {
+        settings = new Settings ("com.github.ryonakano.louper");
     }
 
     protected override void activate () {

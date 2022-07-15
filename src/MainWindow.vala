@@ -24,7 +24,9 @@ public class MainWindow : Gtk.ApplicationWindow {
             halign = Gtk.Align.END
         };
 
-        var font_size_spinbutton = new Gtk.SpinButton (null, 1, 1) {
+        var font_size_adjustment = new Gtk.Adjustment (0, 1, 240, 1, 10, 0);
+
+        var font_size_spinbutton = new Gtk.SpinButton (font_size_adjustment, 1, 0) {
             halign = Gtk.Align.FILL
         };
 
@@ -107,6 +109,9 @@ public class MainWindow : Gtk.ApplicationWindow {
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
+
+        Application.settings.bind ("font-size", font_size_spinbutton, "value", GLib.SettingsBindFlags.DEFAULT);
+        Application.settings.bind ("font-weight", font_weight_switch, "active", GLib.SettingsBindFlags.DEFAULT);
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_pressed.connect ((keyval, keycode, state) => {

@@ -36,8 +36,9 @@ executable(
     config_file,
     sources,
     dependencies: [
-        dependency('gtk4', version: '>= 4.6'),
-        dependency('granite-7')
+        dependency('gio-2.0'),
+        dependency('granite-7'),
+        dependency('gtk4', version: '>= 4.6')
     ],
     install: true
 )
@@ -46,5 +47,6 @@ subdir('data')
 subdir('po')
 
 gnome.post_install(
+    glib_compile_schemas: true,
     gtk_update_icon_cache: true
 )
