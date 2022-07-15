@@ -82,7 +82,8 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
-        if (Gtk.StateFlags.BACKDROP in get_state_flags ()) {
+        Gtk.StateFlags current_state_flags = get_state_flags ();
+        if (Gtk.StateFlags.BACKDROP in current_state_flags) {
             /*
             * Hide first and then destroy the app window when unfocused
             * because just destroying sometimes seems to cause the wm crashing.
