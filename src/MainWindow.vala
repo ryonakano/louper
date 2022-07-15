@@ -4,12 +4,8 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
-    private const string CSS_DATA = """
-    .result-text {
-        font-size: 128px;
-        font-weight: bold;
-    }
-    """;
+    private Gtk.CssProvider cssprovider = null;
+    private Gtk.Label result_label;
 
     construct {
         // Get the area where we can draw the app window
@@ -83,7 +79,7 @@ public class MainWindow : Gtk.ApplicationWindow {
                 warning (e.message);
             }
 
-            var result_label = new Gtk.Label (text) {
+            result_label = new Gtk.Label (text) {
                 selectable = true,
                 margin_top = 24,
                 margin_bottom = 24,
@@ -93,12 +89,10 @@ public class MainWindow : Gtk.ApplicationWindow {
                 wrap_mode = Pango.WrapMode.WORD_CHAR
             };
             result_label.get_style_context ().add_class ("result-text");
+            result_label_update_font_style ();
+
             child = result_label;
         });
-
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_data (CSS_DATA.data);
-        Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
@@ -112,6 +106,9 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         Application.settings.bind ("font-size", font_size_spinbutton, "value", GLib.SettingsBindFlags.DEFAULT);
         Application.settings.bind ("font-weight", font_weight_switch, "active", GLib.SettingsBindFlags.DEFAULT);
+
+        font_size_spinbutton.value_changed.connect (result_label_update_font_style);
+        font_weight_switch.notify["active"].connect (result_label_update_font_style);
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_pressed.connect ((keyval, keycode, state) => {
@@ -152,5 +149,29 @@ public class MainWindow : Gtk.ApplicationWindow {
                 return false;
             });
         }
+    }
+
+    private void result_label_update_font_style () {
+        string css_data = """
+        .result-text {
+            font-size: %dpx;
+            font-weight: %s;
+        }
+        """.printf (
+            (int) Application.settings.get_double ("font-size"),
+            get_font_weight ()
+        );
+
+        if (cssprovider == null) {
+            cssprovider = new Gtk.CssProvider ();
+            Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+        }
+
+        cssprovider.load_from_data (css_data.data);
+        queue_draw ();
+    }
+
+    private static string get_font_weight () {
+        return Application.settings.get_boolean ("font-weight") ? "bold" : "normal";
     }
 }
