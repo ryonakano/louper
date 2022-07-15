@@ -93,7 +93,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         if (Application.no_close_on_unfocus) {
             /*
             * Don't close the app window automatically if the app launched
-            * with the "--no-close-on-unfocus" (or "-n") option.
+            * with the option "--no-close-on-unfocus" or its abbreviation, "-n".
             */
             return;
         }
