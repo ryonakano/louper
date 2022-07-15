@@ -90,6 +90,14 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
+        if (Application.no_close_on_unfocus) {
+            /*
+            * Don't close the app window automatically if the app launched
+            * with the "--no-close-on-unfocus" (or "-n") option.
+            */
+            return;
+        }
+
         Gtk.StateFlags current_state_flags = get_state_flags ();
         if (Gtk.StateFlags.BACKDROP in current_state_flags) {
             /*
