@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-18 01:28+0000\n"
+"POT-Creation-Date: 2022-07-09 10:38+0900\n"
 "PO-Revision-Date: 2022-04-23 17:09+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/louper-extra/"
@@ -48,43 +48,55 @@ msgstr ""
 "Stlačte Ctrl+C na skopírovanie zobrazeného textu. Stlačte Esc/Ctrl+Q alebo "
 "kliknite mimo okna na zatvorenie aplikácie."
 
-#: data/louper.appdata.xml.in:32 data/louper.appdata.xml.in:44
+#: data/louper.appdata.xml.in:33
+#, fuzzy
+#| msgid "Update Japanese translation"
+msgid "Update Flatpak runtime version"
+msgstr "Aktualizácia prekladu do japončiny"
+
+#: data/louper.appdata.xml.in:34
+#, fuzzy
+#| msgid "Update Japanese translation"
+msgid "Update translations"
+msgstr "Aktualizácia prekladu do japončiny"
+
+#: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
 msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
-#: data/louper.appdata.xml.in:34
+#: data/louper.appdata.xml.in:42
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Pridaný preklad do taliančiny (vďaka @albanobattistella)"
 
-#: data/louper.appdata.xml.in:41
+#: data/louper.appdata.xml.in:49
 msgid "Make sure the window width is narrow than the display width"
 msgstr "Zabezpečené, že šírka okna je menšia ako šírka obrazovky"
 
-#: data/louper.appdata.xml.in:42
+#: data/louper.appdata.xml.in:50
 msgid "Fix wrong OARS data"
 msgstr "Opravené nesprávne OARS údaje"
 
-#: data/louper.appdata.xml.in:46
+#: data/louper.appdata.xml.in:54
 msgid "Add Ainu translation"
 msgstr "Pridaný preklad do jazyka ainu"
 
-#: data/louper.appdata.xml.in:47
+#: data/louper.appdata.xml.in:55
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/louper.appdata.xml.in:48 data/louper.appdata.xml.in:56
+#: data/louper.appdata.xml.in:56 data/louper.appdata.xml.in:64
 msgid "Update Japanese translation"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/louper.appdata.xml.in:55
+#: data/louper.appdata.xml.in:63
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr "Teraz môžete ukončiť aplikáciu pomocou klávesovej skratky Ctrl+Q"
 
-#: data/louper.appdata.xml.in:63
+#: data/louper.appdata.xml.in:71
 msgid "Initial release"
 msgstr "Prvé vydanie"
 
-#: data/louper.appdata.xml.in:69
+#: data/louper.appdata.xml.in:77
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -92,10 +104,9 @@ msgstr "Ryo Nakano"
 msgid "Text Magnification App"
 msgstr "Aplikácia na zväčšenie textu"
 
-#: data/louper.desktop.in:8
-msgid "com.github.ryonakano.louper"
-msgstr "com.github.ryonakano.louper"
-
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "Priblížiť;Kopírovať;"
+
+#~ msgid "com.github.ryonakano.louper"
+#~ msgstr "com.github.ryonakano.louper"

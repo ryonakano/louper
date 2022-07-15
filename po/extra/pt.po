@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-18 01:28+0000\n"
+"POT-Creation-Date: 2022-07-09 10:38+0900\n"
 "PO-Revision-Date: 2022-06-21 12:18+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
-"louper-extra/pt/>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/louper-"
+"extra/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -48,45 +48,57 @@ msgstr ""
 "Prima Ctrl+C para copiar o texto apresentado. Prima Esc/Ctrl+Q ou desfoque a "
 "janela para fechar a aplicação."
 
-#: data/louper.appdata.xml.in:32 data/louper.appdata.xml.in:44
+#: data/louper.appdata.xml.in:33
+#, fuzzy
+#| msgid "Update Japanese translation"
+msgid "Update Flatpak runtime version"
+msgstr "Tradução Japonesa atualizada"
+
+#: data/louper.appdata.xml.in:34
+#, fuzzy
+#| msgid "Update Japanese translation"
+msgid "Update translations"
+msgstr "Tradução Japonesa atualizada"
+
+#: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
 msgid "Translation updates:"
 msgstr "Atualizações de tradução:"
 
-#: data/louper.appdata.xml.in:34
+#: data/louper.appdata.xml.in:42
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Tradução Italiana adicionada (obrigado a @albanobattistella)"
 
-#: data/louper.appdata.xml.in:41
+#: data/louper.appdata.xml.in:49
 msgid "Make sure the window width is narrow than the display width"
 msgstr ""
 "Certifique-se de que a largura da janela é mais estreita do que a largura do "
 "ecrã"
 
-#: data/louper.appdata.xml.in:42
+#: data/louper.appdata.xml.in:50
 msgid "Fix wrong OARS data"
 msgstr "Corrige dados OARS incorretos"
 
-#: data/louper.appdata.xml.in:46
+#: data/louper.appdata.xml.in:54
 msgid "Add Ainu translation"
 msgstr "Tradução Ainu adicionada"
 
-#: data/louper.appdata.xml.in:47
+#: data/louper.appdata.xml.in:55
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
 
-#: data/louper.appdata.xml.in:48 data/louper.appdata.xml.in:56
+#: data/louper.appdata.xml.in:56 data/louper.appdata.xml.in:64
 msgid "Update Japanese translation"
 msgstr "Tradução Japonesa atualizada"
 
-#: data/louper.appdata.xml.in:55
+#: data/louper.appdata.xml.in:63
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr "Agora pode sair da aplicação com a tecla de atalho Ctrl+Q"
 
-#: data/louper.appdata.xml.in:63
+#: data/louper.appdata.xml.in:71
 msgid "Initial release"
 msgstr "Versão inicial"
 
-#: data/louper.appdata.xml.in:69
+#: data/louper.appdata.xml.in:77
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
@@ -94,10 +106,9 @@ msgstr "Ryo Nakano"
 msgid "Text Magnification App"
 msgstr "Aplicação de ampliação de texto"
 
-#: data/louper.desktop.in:8
-msgid "com.github.ryonakano.louper"
-msgstr "com.github.ryonakano.louper"
-
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "Zoom;Copy;Ampliar;Copiar;"
+
+#~ msgid "com.github.ryonakano.louper"
+#~ msgstr "com.github.ryonakano.louper"
