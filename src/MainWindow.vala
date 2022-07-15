@@ -20,12 +20,56 @@ public class MainWindow : Gtk.ApplicationWindow {
         resizable = false;
         title = "Louper";
 
+        var font_size_label = new Gtk.Label (_("Font Size:")) {
+            halign = Gtk.Align.END
+        };
+
+        var font_size_spinbutton = new Gtk.SpinButton (null, 1, 1) {
+            halign = Gtk.Align.FILL
+        };
+
+        var font_size_px_label = new Gtk.Label ("px") {
+            halign = Gtk.Align.START
+        };
+
+        var font_weight_label = new Gtk.Label (_("Use Bold Font:")) {
+            halign = Gtk.Align.END
+        };
+
+        var font_weight_switch = new Gtk.Switch () {
+            halign = Gtk.Align.START
+        };
+
+        var menu_grid = new Gtk.Grid () {
+            margin_top = 12,
+            margin_bottom = 12,
+            margin_start = 12,
+            margin_end = 12,
+            column_spacing = 6,
+            row_spacing = 6
+        };
+        menu_grid.attach (font_size_label, 0, 0);
+        menu_grid.attach (font_size_spinbutton, 1, 0);
+        menu_grid.attach (font_size_px_label, 2, 0);
+        menu_grid.attach (font_weight_label, 0, 1);
+        menu_grid.attach (font_weight_switch, 1, 1);
+
+        var menu_popover = new Gtk.Popover () {
+            child = menu_grid
+        };
+
+        var menu_button = new Gtk.MenuButton () {
+            icon_name = "open-menu",
+            popover = menu_popover
+        };
+
         var title_bar = new Gtk.HeaderBar () {
             show_title_buttons = true,
             // Create a dummy Gtk.Label for the blank title
             title_widget = new Gtk.Label (null)
         };
         title_bar.get_style_context ().add_class (Granite.STYLE_CLASS_FLAT);
+        title_bar.pack_end (menu_button);
         titlebar = title_bar;
 
         unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
