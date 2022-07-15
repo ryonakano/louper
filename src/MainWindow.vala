@@ -3,19 +3,7 @@
  * SPDX-FileCopyrightText: 2021 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class MainWindow : Hdy.ApplicationWindow {
-    /*
-     * Get the area that we can draw windows.
-     * display width * (display height - height of wingpanel, 30px)
-     * e.g. If you're using 1920 * 1080 display, we can get 1920 * 1050
-     */
-    public static Gdk.Rectangle? primary_monitor_workarea {
-        owned get {
-            Gdk.Monitor? monitor = Gdk.Display.get_default ().get_primary_monitor ();
-            return monitor.workarea;
-        }
-    }
-
+public class MainWindow : Gtk.ApplicationWindow {
     private const string CSS_DATA = """
     .result-text {
         font-size: 128px;
@@ -23,55 +11,40 @@ public class MainWindow : Hdy.ApplicationWindow {
     }
     """;
 
-    private Gtk.Label result_label;
-
-    public MainWindow () {
-        Object (
-            resizable: false,
-            default_width: primary_monitor_workarea.width / 2,
-            default_height: primary_monitor_workarea.height / 4
-        );
-    }
-
     construct {
-        var no_content_view = new Granite.Widgets.AlertView (
-            _("No Text is Selected"),
-            _("Open the app after selecting some text."),
-            ""
-        );
+        // Get the area where we can draw the app window
+        unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (new Gdk.Surface.toplevel (display));
+        unowned Gdk.Rectangle primary_monitor_rectangle = primary_monitor.get_geometry ();
+        default_width = primary_monitor_rectangle.width / 2;
+        default_height = primary_monitor_rectangle.height / 4;
+        resizable = false;
+        decorated = false;
 
-        result_label = new Gtk.Label (null) {
-            selectable = true,
-            wrap = true,
-            wrap_mode = Pango.WrapMode.WORD_CHAR
-        };
-        result_label.get_style_context ().add_class ("result-text");
+        unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
+        clipboard.read_text_async.begin (null, (obj, res) => {
+            string? text;
+            try {
+                text = clipboard.read_text_async.end (res);
+            } catch (Error e) {
+                warning (e.message);
+            }
 
-        var main_view = new Gtk.Grid () {
-            margin = 24,
-            halign = Gtk.Align.CENTER,
-            valign = Gtk.Align.CENTER
-        };
-        main_view.attach (result_label, 0, 0);
-
-        var stack = new Gtk.Stack ();
-        stack.add (no_content_view);
-        stack.add (main_view);
-
-        add (stack);
-
-        set_position (Gtk.WindowPosition.CENTER_ALWAYS);
-        add_events (Gdk.EventMask.FOCUS_CHANGE_MASK);
+            var result_label = new Gtk.Label (text) {
+                selectable = true,
+                margin_top = 24,
+                margin_bottom = 24,
+                margin_start = 12,
+                margin_end = 12,
+                wrap = true,
+                wrap_mode = Pango.WrapMode.WORD_CHAR
+            };
+            result_label.get_style_context ().add_class ("result-text");
+            child = result_label;
+        });
 
         var cssprovider = new Gtk.CssProvider ();
-        try {
-            cssprovider.load_from_data (CSS_DATA, -1);
-            Gtk.StyleContext.add_provider_for_screen (Gdk.Screen.get_default (),
-                                                        cssprovider,
-                                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-        } catch (Error e) {
-            warning (e.message);
-        }
+        cssprovider.load_from_data (CSS_DATA.data);
+        Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
@@ -83,48 +56,44 @@ public class MainWindow : Hdy.ApplicationWindow {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
 
-        Application.clipboard.request_text ((clipboard, text) => {
-            if (text == null || text == "") {
-                stack.visible_child = no_content_view;
-            } else {
-                stack.visible_child = main_view;
-                result_label.label = text;
-            }
-        });
-
-        focus_out_event.connect ((event) => {
-            /*
-             * Hide first and then destroy
-             * because just destroying sometimes seems to cause the wm crashes.
-             * Borrowed from elementary/shortcut-overlay, src/Application.vala
-             */
-            hide ();
-            Timeout.add (500, () => {
-                destroy ();
-                return Gdk.EVENT_PROPAGATE;
-            });
-        });
-
-        key_press_event.connect ((key) => {
-            switch (key.keyval) {
-                case Gdk.Key.c:
-                    if (Gdk.ModifierType.CONTROL_MASK in key.state) {
-                        Application.clipboard.set_text (result_label.label, -1);
-                    }
-
-                    break;
+        var event_controller = new Gtk.EventControllerKey ();
+        event_controller.key_pressed.connect ((keyval, keycode, state) => {
+            switch (keyval) {
                 case Gdk.Key.q:
-                    if (Gdk.ModifierType.CONTROL_MASK in key.state) {
+                    if (Gdk.ModifierType.CONTROL_MASK in state) {
                         destroy ();
+                        return true;
                     }
 
                     break;
                 case Gdk.Key.Escape:
                     destroy ();
-                    break;
+                    return true;
             }
 
-            return Gdk.EVENT_PROPAGATE;
+            return false;
         });
+        /*
+         * Gtk.Window inherits Gtk.Widget and Gtk.ShortcutManager
+         * and both of them overloads add_controller methods.
+         * So we need explicitly call the one in Gtk.Widget by casting
+         */
+        ((Gtk.Widget) this).add_controller (event_controller);
+    }
+
+    protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
+        Gtk.StateFlags current_state_flags = get_state_flags ();
+        if (Gtk.StateFlags.BACKDROP in current_state_flags) {
+            /*
+            * Hide first and then destroy the app window when unfocused
+            * because just destroying sometimes seems to cause the wm crashing.
+            * Borrowed from elementary/shortcut-overlay, src/Application.vala
+            */
+            hide ();
+            Timeout.add (250, () => {
+                destroy ();
+                return false;
+            });
+        }
     }
 }

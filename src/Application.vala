@@ -4,8 +4,6 @@
  */
 
 public class Application : Gtk.Application {
-    public static Gtk.Clipboard clipboard;
-
     private MainWindow window;
 
     public Application () {
@@ -22,11 +20,6 @@ public class Application : Gtk.Application {
         Intl.textdomain (GETTEXT_PACKAGE);
     }
 
-    static construct {
-        // We want the content of the selection when the app launches so initializing here
-        clipboard = Gtk.Clipboard.get (Gdk.SELECTION_PRIMARY);
-    }
-
     protected override void activate () {
         if (window != null) {
             return;
@@ -34,13 +27,10 @@ public class Application : Gtk.Application {
 
         window = new MainWindow ();
         window.set_application (this);
-        window.show_all ();
+        window.present ();
     }
 
     public static int main (string[] args) {
-        // We need to explicity init Gdk because we're initializing it in the static constructor.
-        Gdk.init (ref args);
-        Hdy.init ();
         return new Application ().run ();
     }
 }

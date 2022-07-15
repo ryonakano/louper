@@ -36,10 +36,8 @@ executable(
     config_file,
     sources,
     dependencies: [
-        dependency('gdk-3.0'),
-        dependency('granite', version: '>= 5.4.0'),
-        dependency('gtk+-3.0'),
-        dependency('libhandy-1')
+        dependency('gtk4'),
+        dependency('granite-7')
     ],
     install: true
 )
