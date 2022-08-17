@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-09 10:38+0900\n"
-"PO-Revision-Date: 2022-06-21 12:18+0000\n"
+"PO-Revision-Date: 2022-08-18 16:20+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/louper-"
-"extra/pt/>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
+"louper-extra/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.14-dev\n"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
@@ -49,16 +49,12 @@ msgstr ""
 "janela para fechar a aplicação."
 
 #: data/louper.appdata.xml.in:33
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Tradução Japonesa atualizada"
+msgstr "Atualização da versão em tempo de execução Flatpak"
 
 #: data/louper.appdata.xml.in:34
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update translations"
-msgstr "Tradução Japonesa atualizada"
+msgstr "Atualização de tradução"
 
 #: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
 msgid "Translation updates:"
