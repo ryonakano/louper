@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-09 10:38+0900\n"
-"PO-Revision-Date: 2022-07-11 08:19+0000\n"
+"PO-Revision-Date: 2022-09-03 07:16+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/"
 "louper-extra/it/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13.1-dev\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
@@ -55,7 +55,7 @@ msgstr "Aggiornata la versione runtime di Flatpak"
 
 #: data/louper.appdata.xml.in:34
 msgid "Update translations"
-msgstr "Aggiornate traduzioni"
+msgstr "Aggiornate le traduzioni"
 
 #: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
 msgid "Translation updates:"
