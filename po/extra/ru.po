@@ -7,90 +7,100 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-09 10:38+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-09-03 07:16+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/"
+"louper-extra/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
-msgstr ""
+msgstr "Louper"
 
 #: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "Увеличивает выделенный текст"
 
 #: data/louper.appdata.xml.in:11
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
+"Приложение для увеличения текста, которое поможет вам увеличить выделенный "
+"текст."
 
 #: data/louper.appdata.xml.in:14
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"Выберите текст, который хотите увеличить, и просто запустите приложение! "
+"Приложение показывает выделенный текст в огромном размере."
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
+"Нажмите Ctrl+C, чтобы скопировать отображаемый текст. Нажмите Esc/Ctrl+Q или "
+"расфокусируйте окно, чтобы закрыть приложение."
 
 #: data/louper.appdata.xml.in:33
 msgid "Update Flatpak runtime version"
-msgstr ""
+msgstr "Обновлена версия Flatpak runtime"
 
 #: data/louper.appdata.xml.in:34
 msgid "Update translations"
-msgstr ""
+msgstr "Обновлены переводы"
 
 #: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
 msgid "Translation updates:"
-msgstr ""
+msgstr "Обновления переводов:"
 
 #: data/louper.appdata.xml.in:42
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
+msgstr "Добавлен итальянский перевод (спасибо @albanobattistella)"
 
 #: data/louper.appdata.xml.in:49
 msgid "Make sure the window width is narrow than the display width"
-msgstr ""
+msgstr "Теперь ширина текста всегда меньше ширины дисплея"
 
 #: data/louper.appdata.xml.in:50
 msgid "Fix wrong OARS data"
-msgstr ""
+msgstr "Исправлены неправильные OARS данные"
 
 #: data/louper.appdata.xml.in:54
 msgid "Add Ainu translation"
-msgstr ""
+msgstr "Добавить айнский перевод"
 
 #: data/louper.appdata.xml.in:55
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
 
 #: data/louper.appdata.xml.in:56 data/louper.appdata.xml.in:64
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "Обновлён японский перевод"
 
 #: data/louper.appdata.xml.in:63
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr ""
+msgstr "Теперь вы можете выйти из приложения с помощью сочетания клавиш Ctrl+Q"
 
 #: data/louper.appdata.xml.in:71
 msgid "Initial release"
-msgstr ""
+msgstr "Начальный выпуск"
 
 #: data/louper.appdata.xml.in:77
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "Приложение для увеличения текста"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "Увеличение;Копирование;"
