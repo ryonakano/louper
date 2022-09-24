@@ -3,19 +3,22 @@
 # This file is distributed under the same license as the extra package.
 # Nathan Bonnemains (@NathanBnm), 2021.
 #
+# rene-coty <irenee.thirion@e.email>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-09 10:38+0900\n"
-"PO-Revision-Date: 2021-08-14 11:21+0000\n"
-"Last-Translator: Nathan Bonnemains (@NathanBnm)\n"
-"Language-Team: none\n"
+"PO-Revision-Date: 2022-09-25 10:22+0000\n"
+"Last-Translator: rene-coty <irenee.thirion@e.email>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/rosp/louper-extra/"
+"fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
@@ -48,20 +51,16 @@ msgstr ""
 "Q ou cliquez en dehors de l'application pour la fermer."
 
 #: data/louper.appdata.xml.in:33
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
-msgstr "Mise à jour des traductions en Japonais"
+msgstr "Mise à jour de la version de l’environnement d’exécution Flatpak"
 
 #: data/louper.appdata.xml.in:34
-#, fuzzy
-#| msgid "Update Japanese translation"
 msgid "Update translations"
-msgstr "Mise à jour des traductions en Japonais"
+msgstr "Mise à jour des traductions"
 
 #: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
 msgid "Translation updates:"
-msgstr ""
+msgstr "Mise à jour des traductions :"
 
 #: data/louper.appdata.xml.in:42
 msgid "Add Italian translation (thanks to @albanobattistella)"
@@ -82,11 +81,11 @@ msgstr "Mise à jour des traductions en Japonais"
 
 #: data/louper.appdata.xml.in:55
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
 
 #: data/louper.appdata.xml.in:56 data/louper.appdata.xml.in:64
 msgid "Update Japanese translation"
-msgstr "Mise à jour des traductions en Japonais"
+msgstr "Mise à jour de la traduction japonaise"
 
 #: data/louper.appdata.xml.in:63
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
