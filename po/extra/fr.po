@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-09 10:38+0900\n"
-"PO-Revision-Date: 2022-09-25 10:22+0000\n"
+"PO-Revision-Date: 2022-10-10 18:03+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/louper-extra/"
 "fr/>\n"
@@ -52,7 +52,7 @@ msgstr ""
 
 #: data/louper.appdata.xml.in:33
 msgid "Update Flatpak runtime version"
-msgstr "Mise à jour de la version de l’environnement d’exécution Flatpak"
+msgstr "Mise à jour de l’environnement d’exécution Flatpak"
 
 #: data/louper.appdata.xml.in:34
 msgid "Update translations"
@@ -64,7 +64,7 @@ msgstr "Mise à jour des traductions :"
 
 #: data/louper.appdata.xml.in:42
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
+msgstr "Ajout des traductions en italien (grâce à @albanobattistella)"
 
 #: data/louper.appdata.xml.in:49
 msgid "Make sure the window width is narrow than the display width"
@@ -72,7 +72,7 @@ msgstr ""
 
 #: data/louper.appdata.xml.in:50
 msgid "Fix wrong OARS data"
-msgstr ""
+msgstr "Correction des données OARS erronées"
 
 #: data/louper.appdata.xml.in:54
 #, fuzzy
