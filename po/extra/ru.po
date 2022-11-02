@@ -1,22 +1,23 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the extra package.
-# Hugo Carvalho <hugokarvalho@hotmail.com>, 2022.
+# lenemter <lenemter@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-07-09 10:38+0900\n"
-"PO-Revision-Date: 2022-08-18 16:20+0000\n"
-"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
-"louper-extra/pt/>\n"
-"Language: pt\n"
+"PO-Revision-Date: 2022-09-03 07:16+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
+"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/"
+"louper-extra/ru/>\n"
+"Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.14-dev\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1-dev\n"
 
 #: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
 msgid "Louper"
@@ -24,75 +25,73 @@ msgstr "Louper"
 
 #: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
 msgid "Magnify the selected text"
-msgstr "Amplia o texto selecionado"
+msgstr "Увеличивает выделенный текст"
 
 #: data/louper.appdata.xml.in:11
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
-"Uma aplicação de ampliação de texto que o ajuda a ampliar o texto "
-"selecionado."
+"Приложение для увеличения текста, которое поможет вам увеличить выделенный "
+"текст."
 
 #: data/louper.appdata.xml.in:14
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
-"Selecione o texto que deseja ampliar e inicie a aplicação! A aplicação "
-"mostra o texto selecionado em tamanho grande."
+"Выберите текст, который хотите увеличить, и просто запустите приложение! "
+"Приложение показывает выделенный текст в огромном размере."
 
 #: data/louper.appdata.xml.in:17
 msgid ""
 "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
 "window to close the app."
 msgstr ""
-"Prima Ctrl+C para copiar o texto apresentado. Prima Esc/Ctrl+Q ou desfoque a "
-"janela para fechar a aplicação."
+"Нажмите Ctrl+C, чтобы скопировать отображаемый текст. Нажмите Esc/Ctrl+Q или "
+"расфокусируйте окно, чтобы закрыть приложение."
 
 #: data/louper.appdata.xml.in:33
 msgid "Update Flatpak runtime version"
-msgstr "Atualização da versão em tempo de execução Flatpak"
+msgstr "Обновлена версия Flatpak runtime"
 
 #: data/louper.appdata.xml.in:34
 msgid "Update translations"
-msgstr "Atualização de tradução"
+msgstr "Обновлены переводы"
 
 #: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
 msgid "Translation updates:"
-msgstr "Atualizações de tradução:"
+msgstr "Обновления переводов:"
 
 #: data/louper.appdata.xml.in:42
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "Tradução Italiana adicionada (obrigado a @albanobattistella)"
+msgstr "Добавлен итальянский перевод (спасибо @albanobattistella)"
 
 #: data/louper.appdata.xml.in:49
 msgid "Make sure the window width is narrow than the display width"
-msgstr ""
-"Certifique-se de que a largura da janela é mais estreita do que a largura do "
-"ecrã"
+msgstr "Теперь ширина текста всегда меньше ширины дисплея"
 
 #: data/louper.appdata.xml.in:50
 msgid "Fix wrong OARS data"
-msgstr "Corrige dados OARS incorretos"
+msgstr "Исправлены неправильные OARS данные"
 
 #: data/louper.appdata.xml.in:54
 msgid "Add Ainu translation"
-msgstr "Tradução Ainu adicionada"
+msgstr "Добавить айнский перевод"
 
 #: data/louper.appdata.xml.in:55
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
 
 #: data/louper.appdata.xml.in:56 data/louper.appdata.xml.in:64
 msgid "Update Japanese translation"
-msgstr "Tradução Japonesa atualizada"
+msgstr "Обновлён японский перевод"
 
 #: data/louper.appdata.xml.in:63
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr "Agora pode sair da aplicação com a tecla de atalho Ctrl+Q"
+msgstr "Теперь вы можете выйти из приложения с помощью сочетания клавиш Ctrl+Q"
 
 #: data/louper.appdata.xml.in:71
 msgid "Initial release"
-msgstr "Versão inicial"
+msgstr "Начальный выпуск"
 
 #: data/louper.appdata.xml.in:77
 msgid "Ryo Nakano"
@@ -100,11 +99,8 @@ msgstr "Ryo Nakano"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr "Aplicação de ampliação de texto"
+msgstr "Приложение для увеличения текста"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr "Zoom;Copy;Ampliar;Copiar;"
-
-#~ msgid "com.github.ryonakano.louper"
-#~ msgstr "com.github.ryonakano.louper"
+msgstr "Увеличение;Копирование;"
