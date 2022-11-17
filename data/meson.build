@@ -17,8 +17,8 @@ i18n.merge_file(
 )
 
 i18n.merge_file(
-    input: 'louper.appdata.xml.in',
-    output: meson.project_name() + '.appdata.xml',
+    input: 'louper.metainfo.xml.in',
+    output: meson.project_name() + '.metainfo.xml',
     po_dir: meson.project_source_root() / 'po' / 'extra',
     install: true,
     install_dir: get_option('datadir') / 'metainfo'

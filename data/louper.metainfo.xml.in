@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2021-2022 Ryo Nakano -->
-<component type="desktop">
+<component type="desktop-application">
   <id>com.github.ryonakano.louper</id>
   <launchable type="desktop-id">com.github.ryonakano.louper.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
+
   <name>Louper</name>
   <summary>Magnify the selected text</summary>
   <description>
@@ -22,13 +23,33 @@
       <li>Press Esc or Ctrl + Q or unfocus the window to close the app</li>
     </ul>
   </description>
+
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/ryonakano/louper/main/data/Screenshot.png</image>
+      <caption>Zoom in what you like to read</caption>
+      <image>https://raw.githubusercontent.com/ryonakano/louper/1.0.2/data/Screenshot.png</image>
     </screenshot>
   </screenshots>
 
+  <branding>
+    <color type="primary">#fafafa</color>
+    <color type="primary" schema_preference="light">#d4d4d4</color>
+    <color type="primary" schema_preference="dark">#abacae</color>
+  </branding>
+
   <content_rating type="oars-1.1" />
+
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+  </supports>
+
+  <url type="homepage">https://github.com/ryonakano/louper</url>
+  <url type="bugtracker">https://github.com/ryonakano/louper/issues</url>
+  <url type="help">https://github.com/ryonakano/louper/discussions</url>
+  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
+
+  <developer_name>Ryo Nakano</developer_name>
 
   <releases>
     <release version="1.0.2" date="2022-06-18" urgency="low">
@@ -39,6 +60,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.1" date="2021-12-18" urgency="low">
       <description>
         <p>Translation updates:</p>
@@ -47,6 +69,7 @@
         </ul>
       </description>
     </release>
+
     <release version="1.0.0" date="2021-10-08" urgency="high">
       <description>
         <ul>
@@ -61,6 +84,7 @@
         </ul>
       </description>
     </release>
+
     <release version="0.1.1" date="2021-07-30" urgency="low">
       <description>
         <ul>
@@ -69,6 +93,7 @@
         </ul>
       </description>
     </release>
+
     <release version="0.1.0" date="2021-06-09" urgency="medium">
       <description>
         <ul>
@@ -78,14 +103,4 @@
     </release>
   </releases>
 
-  <developer_name>Ryo Nakano</developer_name>
-  <url type="homepage">https://github.com/ryonakano/louper</url>
-  <url type="bugtracker">https://github.com/ryonakano/louper/issues</url>
-  <url type="help">https://github.com/ryonakano/louper/discussions</url>
-  <url type="translate">https://hosted.weblate.org/projects/rosp</url>
-  
-  <custom>
-    <value key="x-appcenter-color-primary">#fafafa</value>
-    <value key="x-appcenter-color-primary-text">#1a1a1a</value>
-  </custom>
 </component>
