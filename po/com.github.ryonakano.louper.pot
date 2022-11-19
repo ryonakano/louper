@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-09 10:38+0900\n"
+"POT-Creation-Date: 2022-11-20 08:34+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/MainWindow.vala:38
-msgid "No Text is Selected"
-msgstr ""
-
-#: src/MainWindow.vala:39
-msgid "Open the app after selecting some text."
+#: src/Application.vala:28
+msgid "Prevent the app window from closing automatically on unfocused"
 msgstr ""
