@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-09 10:38+0900\n"
+"POT-Creation-Date: 2022-11-20 08:34+0900\n"
 "PO-Revision-Date: 2022-04-19 03:08+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/rosp/louper-main/"
@@ -18,10 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/MainWindow.vala:38
-msgid "No Text is Selected"
-msgstr "Kein Text ist ausgewählt"
+#: src/Application.vala:28
+msgid "Prevent the app window from closing automatically on unfocused"
+msgstr ""
 
-#: src/MainWindow.vala:39
-msgid "Open the app after selecting some text."
-msgstr "Öffnen Sie die Anwendung, nachdem Sie einen Text ausgewählt haben."
+#~ msgid "No Text is Selected"
+#~ msgstr "Kein Text ist ausgewählt"
+
+#~ msgid "Open the app after selecting some text."
+#~ msgstr "Öffnen Sie die Anwendung, nachdem Sie einen Text ausgewählt haben."
