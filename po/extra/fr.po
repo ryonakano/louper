@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-09 10:38+0900\n"
+"POT-Creation-Date: 2022-11-20 08:35+0900\n"
 "PO-Revision-Date: 2022-10-10 18:03+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/louper-extra/"
@@ -20,21 +20,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.14.1\n"
 
-#: data/louper.appdata.xml.in:8 data/louper.desktop.in:3
+#: data/louper.metainfo.xml.in:9 data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
-#: data/louper.appdata.xml.in:9 data/louper.desktop.in:5
+#: data/louper.metainfo.xml.in:10 data/louper.desktop.in:5
 msgid "Magnify the selected text"
 msgstr "Agrandissez le texte sélectionné"
 
-#: data/louper.appdata.xml.in:11
+#: data/louper.metainfo.xml.in:12
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 "Une application d'agrandissement du texte qui vous aide à rendre le texte "
 "sélectionné plus visible."
 
-#: data/louper.appdata.xml.in:14
+#: data/louper.metainfo.xml.in:15
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -42,64 +42,80 @@ msgstr ""
 "Sélectionnez le texte que vous souhaitez agrandir puis lancez "
 "l'application ! Elle vous montrera le texte sélectionné en grand."
 
-#: data/louper.appdata.xml.in:17
+#: data/louper.metainfo.xml.in:18
+msgid "Other features include:"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:22
 msgid ""
-"Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
-"window to close the app."
+"Select some part of the magnified text and press Ctrl + C or perform "
+"secondary click to copy it"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:23
+#, fuzzy
+#| msgid ""
+#| "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
+#| "window to close the app."
+msgid "Press Esc or Ctrl + Q or unfocus the window to close the app"
 msgstr ""
 "Appuyez sur Ctrl + C pour copier le texte affiché. Appuyez sur Échap/Ctrl + "
 "Q ou cliquez en dehors de l'application pour la fermer."
 
-#: data/louper.appdata.xml.in:33
+#: data/louper.metainfo.xml.in:29
+msgid "Zoom in what you like to read"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:52
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: data/louper.metainfo.xml.in:58
 msgid "Update Flatpak runtime version"
 msgstr "Mise à jour de l’environnement d’exécution Flatpak"
 
-#: data/louper.appdata.xml.in:34
+#: data/louper.metainfo.xml.in:59
 msgid "Update translations"
 msgstr "Mise à jour des traductions"
 
-#: data/louper.appdata.xml.in:40 data/louper.appdata.xml.in:52
+#: data/louper.metainfo.xml.in:66 data/louper.metainfo.xml.in:79
 msgid "Translation updates:"
 msgstr "Mise à jour des traductions :"
 
-#: data/louper.appdata.xml.in:42
+#: data/louper.metainfo.xml.in:68
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Ajout des traductions en italien (grâce à @albanobattistella)"
 
-#: data/louper.appdata.xml.in:49
+#: data/louper.metainfo.xml.in:76
 msgid "Make sure the window width is narrow than the display width"
 msgstr ""
 
-#: data/louper.appdata.xml.in:50
+#: data/louper.metainfo.xml.in:77
 msgid "Fix wrong OARS data"
 msgstr "Correction des données OARS erronées"
 
-#: data/louper.appdata.xml.in:54
+#: data/louper.metainfo.xml.in:81
 #, fuzzy
 msgid "Add Ainu translation"
 msgstr "Mise à jour des traductions en Japonais"
 
-#: data/louper.appdata.xml.in:55
+#: data/louper.metainfo.xml.in:82
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Ajout d’une traduction française (grâce à @NathanBnm)"
 
-#: data/louper.appdata.xml.in:56 data/louper.appdata.xml.in:64
+#: data/louper.metainfo.xml.in:83 data/louper.metainfo.xml.in:92
 msgid "Update Japanese translation"
 msgstr "Mise à jour de la traduction japonaise"
 
-#: data/louper.appdata.xml.in:63
+#: data/louper.metainfo.xml.in:91
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr ""
 "Désormais vous pouvez quitter l'application avec le raccourci clavier Ctrl + "
 "Q"
 
-#: data/louper.appdata.xml.in:71
+#: data/louper.metainfo.xml.in:100
 msgid "Initial release"
 msgstr "Version initiale"
-
-#: data/louper.appdata.xml.in:77
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
