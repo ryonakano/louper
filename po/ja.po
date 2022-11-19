@@ -1,25 +1,26 @@
 # Japanese translations for com.github.ryonakano.louper package.
 # Copyright (C) 2021 THE com.github.ryonakano.louper'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
-# Ryo Nakano <ryonakaknock3@gmail.com>, 2021.
-#
+# Ryo Nakano <ryonakaknock3@gmail.com>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 08:34+0900\n"
-"PO-Revision-Date: 2021-04-28 10:53+0900\n"
+"PO-Revision-Date: 2022-11-21 23:47+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: none\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/louper-app/"
+"ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.15-dev\n"
 
 #: src/Application.vala:28
 msgid "Prevent the app window from closing automatically on unfocused"
-msgstr ""
+msgstr "フォーカスが外れた際にアプリウィンドウが自動的に閉じないようにする"
 
 #~ msgid "No Text is Selected"
 #~ msgstr "テキストが選択されていません"
