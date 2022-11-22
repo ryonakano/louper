@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-11-20 08:35+0900\n"
-"PO-Revision-Date: 2022-11-21 23:47+0000\n"
+"PO-Revision-Date: 2022-11-23 18:48+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/"
 "louper-metadata/nl/>\n"
@@ -48,15 +48,17 @@ msgid ""
 "Select some part of the magnified text and press Ctrl + C or perform "
 "secondary click to copy it"
 msgstr ""
+"Selecteer een deel van de vergrote tekst en rechtsklik of gebruik Ctrl+C om "
+"de selectie te kopiëren"
 
 #: data/louper.metainfo.xml.in:23
-#, fuzzy
 msgid "Press Esc or Ctrl + Q or unfocus the window to close the app"
-msgstr "Druk op Esc of klik buiten het venster om de toepassing te sluiten"
+msgstr ""
+"Druk op Esc, Ctrl+Q of klik buiten het venster om de toepassing te sluiten"
 
 #: data/louper.metainfo.xml.in:29
 msgid "Zoom in what you like to read"
-msgstr ""
+msgstr "Zoom in op het te lezen deel"
 
 #: data/louper.metainfo.xml.in:52
 msgid "Ryo Nakano"
@@ -64,47 +66,47 @@ msgstr "Ryo Nakano"
 
 #: data/louper.metainfo.xml.in:58
 msgid "Update Flatpak runtime version"
-msgstr ""
+msgstr "Bijgewerkt: Flatpak-runtimeversie"
 
 #: data/louper.metainfo.xml.in:59
 msgid "Update translations"
-msgstr ""
+msgstr "Bijgewerkt: vertalingen"
 
 #: data/louper.metainfo.xml.in:66 data/louper.metainfo.xml.in:79
 msgid "Translation updates:"
-msgstr ""
+msgstr "Vertaalupdates:"
 
 #: data/louper.metainfo.xml.in:68
 msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
+msgstr "Nieuw: Italiaanse vertaling (met dank aan @albanobattistella)"
 
 #: data/louper.metainfo.xml.in:76
 msgid "Make sure the window width is narrow than the display width"
-msgstr ""
+msgstr "De vensterbreedte is voortaan kleiner dan de schermbreedte"
 
 #: data/louper.metainfo.xml.in:77
 msgid "Fix wrong OARS data"
-msgstr ""
+msgstr "Opgelost: onjuiste OARS-gegevens"
 
 #: data/louper.metainfo.xml.in:81
 msgid "Add Ainu translation"
-msgstr ""
+msgstr "Nieuw: Ainu-vertaling"
 
 #: data/louper.metainfo.xml.in:82
 msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
+msgstr "Nieuw: Franse vertaling (met dank aan @NathanBnm)"
 
 #: data/louper.metainfo.xml.in:83 data/louper.metainfo.xml.in:92
 msgid "Update Japanese translation"
-msgstr ""
+msgstr "Bijgewerkt: Japanse vertaling"
 
 #: data/louper.metainfo.xml.in:91
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr ""
+msgstr "Nieuw: sluit de toepassing af met Ctrl+Q"
 
 #: data/louper.metainfo.xml.in:100
 msgid "Initial release"
-msgstr "Initiële uitgave"
+msgstr "Eerste versie"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
