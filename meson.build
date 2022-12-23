@@ -37,8 +37,8 @@ executable(
     sources,
     dependencies: [
         dependency('glib-2.0', version: '>= 2.42'),
-        dependency('gtk4', version: '>= 4.6'),
-        dependency('granite-7')
+        dependency('gtk4'),
+        dependency('libadwaita-1')
     ],
     install: true
 )

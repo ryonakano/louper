@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class Application : Gtk.Application {
+public class Application : Adw.Application {
     public static bool no_close_on_unfocus = false;
 
     private MainWindow window;
@@ -36,6 +36,9 @@ public class Application : Gtk.Application {
         if (window != null) {
             return;
         }
+
+        var style_manager = Adw.StyleManager.get_default ();
+        style_manager.color_scheme = Adw.ColorScheme.PREFER_LIGHT;
 
         window = new MainWindow ();
         window.set_application (this);
