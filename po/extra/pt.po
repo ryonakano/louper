@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-20 08:35+0900\n"
+"POT-Creation-Date: 2022-12-23 22:02+0900\n"
 "PO-Revision-Date: 2022-12-14 22:48+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/"
-"louper-metadata/pt/>\n"
+"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/louper-"
+"metadata/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,48 +71,73 @@ msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
 #: data/louper.metainfo.xml.in:58
+msgid "Redesign to fit modern desktop environments"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:59
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:60
+msgid "Fix opening the context menu crashes the app"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:61
+msgid ""
+"No longer swallow Ctrl+C in the app, so that you can copy selected texts"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:62
+msgid "Correctly show the app name in the Multitasking View on Pantheon"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:63
+msgid "Show the close button in the app window"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:64 data/louper.metainfo.xml.in:73
 msgid "Update Flatpak runtime version"
 msgstr "Atualização da versão em tempo de execução Flatpak"
 
-#: data/louper.metainfo.xml.in:59
+#: data/louper.metainfo.xml.in:65 data/louper.metainfo.xml.in:74
 msgid "Update translations"
 msgstr "Atualização de tradução"
 
-#: data/louper.metainfo.xml.in:66 data/louper.metainfo.xml.in:79
+#: data/louper.metainfo.xml.in:81 data/louper.metainfo.xml.in:94
 msgid "Translation updates:"
 msgstr "Atualizações de tradução:"
 
-#: data/louper.metainfo.xml.in:68
+#: data/louper.metainfo.xml.in:83
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Tradução Italiana adicionada (obrigado a @albanobattistella)"
 
-#: data/louper.metainfo.xml.in:76
+#: data/louper.metainfo.xml.in:91
 msgid "Make sure the window width is narrow than the display width"
 msgstr ""
 "Certifique-se de que a largura da janela é mais estreita do que a largura do "
 "ecrã"
 
-#: data/louper.metainfo.xml.in:77
+#: data/louper.metainfo.xml.in:92
 msgid "Fix wrong OARS data"
 msgstr "Corrige dados OARS incorretos"
 
-#: data/louper.metainfo.xml.in:81
+#: data/louper.metainfo.xml.in:96
 msgid "Add Ainu translation"
 msgstr "Tradução Ainu adicionada"
 
-#: data/louper.metainfo.xml.in:82
+#: data/louper.metainfo.xml.in:97
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
 
-#: data/louper.metainfo.xml.in:83 data/louper.metainfo.xml.in:92
+#: data/louper.metainfo.xml.in:98 data/louper.metainfo.xml.in:107
 msgid "Update Japanese translation"
 msgstr "Tradução Japonesa atualizada"
 
-#: data/louper.metainfo.xml.in:91
+#: data/louper.metainfo.xml.in:106
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr "Agora pode sair da aplicação com a tecla de atalho Ctrl+Q"
 
-#: data/louper.metainfo.xml.in:100
+#: data/louper.metainfo.xml.in:115
 msgid "Initial release"
 msgstr "Versão inicial"
 
