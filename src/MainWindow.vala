@@ -20,6 +20,11 @@ public class MainWindow : Adw.ApplicationWindow {
         resizable = false;
         title = "Louper";
 
+        var cssprovider = new Gtk.CssProvider ();
+        cssprovider.load_from_data (CSS_DATA.data);
+        Gtk.StyleContext.add_provider_for_display (display, cssprovider,
+                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
         var title_bar = new Adw.HeaderBar () {
             show_start_title_buttons = true,
             show_end_title_buttons = true,
@@ -53,10 +58,6 @@ public class MainWindow : Adw.ApplicationWindow {
                 warning (e.message);
             }
         });
-
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_data (CSS_DATA.data);
-        Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_pressed.connect ((keyval, keycode, state) => {
