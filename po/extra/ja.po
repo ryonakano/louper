@@ -7,16 +7,16 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-23 22:02+0900\n"
-"PO-Revision-Date: 2022-11-23 18:48+0000\n"
+"PO-Revision-Date: 2022-12-23 13:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/louper-"
-"metadata/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"louper-metadata/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: data/louper.metainfo.xml.in:9 data/louper.desktop.in:3
 msgid "Louper"
@@ -65,28 +65,29 @@ msgstr "Ryo Nakano"
 
 #: data/louper.metainfo.xml.in:58
 msgid "Redesign to fit modern desktop environments"
-msgstr ""
+msgstr "最近のデスクトップ環境に合うように、デザインを変更"
 
 #: data/louper.metainfo.xml.in:59
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "GTK の最新バージョンである、GTK 4 に移行"
 
 #: data/louper.metainfo.xml.in:60
 msgid "Fix opening the context menu crashes the app"
-msgstr ""
+msgstr "コンテキストメニューを開くとアプリがクラッシュする不具合を修正"
 
 #: data/louper.metainfo.xml.in:61
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
-msgstr ""
+msgstr "アプリが Ctrl+C "
+"の押下を潰さなくなったため、選択したテキストをコピーできるようになりました"
 
 #: data/louper.metainfo.xml.in:62
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
-msgstr ""
+msgstr "Pantheon のマルチタスク画面に、アプリ名が適切に表示されるように修正"
 
 #: data/louper.metainfo.xml.in:63
 msgid "Show the close button in the app window"
-msgstr ""
+msgstr "アプリウィンドウに閉じるボタンを表示するように修正"
 
 #: data/louper.metainfo.xml.in:64 data/louper.metainfo.xml.in:73
 msgid "Update Flatpak runtime version"
