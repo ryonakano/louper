@@ -2,7 +2,7 @@
 
 ![app screenshot](data/Screenshot.png)
 
-Louper is a text magnification app designed for elementary OS. Prototype for https://github.com/elementary/wingpanel-indicator-a11y/issues/35
+Louper is a simple text magnification app. Originally designed for elementary OS as a prototype of the idea in https://github.com/elementary/wingpanel-indicator-a11y/issues/35
 
 ## Usage
 
