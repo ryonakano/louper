@@ -27,7 +27,7 @@
   <screenshots>
     <screenshot type="default">
       <caption>Zoom in what you like to read</caption>
-      <image>https://raw.githubusercontent.com/ryonakano/louper/1.0.2/data/Screenshot.png</image>
+      <image>https://raw.githubusercontent.com/ryonakano/louper/2.0.0/data/Screenshot.png</image>
     </screenshot>
   </screenshots>
 
@@ -52,6 +52,21 @@
   <developer_name>Ryo Nakano</developer_name>
 
   <releases>
+    <release version="2.0." date="2022-12-23" urgency="high">
+      <description>
+        <ul>
+          <li>Redesign to fit modern desktop environments</li>
+          <li>Migrate to GTK 4, the latest version of GTK</li>
+          <li>Fix opening the context menu crashes the app</li>
+          <li>No longer swallow Ctrl+C in the app, so that you can copy selected texts</li>
+          <li>Correctly show the app name in the Multitasking View on Pantheon</li>
+          <li>Show the close button in the app window</li>
+          <li>Update Flatpak runtime version</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="1.0.2" date="2022-06-18" urgency="low">
       <description>
         <ul>
