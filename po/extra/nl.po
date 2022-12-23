@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-23 22:02+0900\n"
+"POT-Creation-Date: 2022-12-23 22:10+0900\n"
 "PO-Revision-Date: 2022-11-23 18:48+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/louper-"
@@ -44,15 +44,21 @@ msgid "Other features include:"
 msgstr "Overige functies:"
 
 #: data/louper.metainfo.xml.in:22
+#, fuzzy
+#| msgid ""
+#| "Select some part of the magnified text and press Ctrl + C or perform "
+#| "secondary click to copy it"
 msgid ""
-"Select some part of the magnified text and press Ctrl + C or perform "
-"secondary click to copy it"
+"Select some part of the magnified text and press Ctrl+C or perform secondary "
+"click to copy it"
 msgstr ""
 "Selecteer een deel van de vergrote tekst en rechtsklik of gebruik Ctrl+C om "
 "de selectie te kopiëren"
 
 #: data/louper.metainfo.xml.in:23
-msgid "Press Esc or Ctrl + Q or unfocus the window to close the app"
+#, fuzzy
+#| msgid "Press Esc or Ctrl + Q or unfocus the window to close the app"
+msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
 "Druk op Esc, Ctrl+Q of klik buiten het venster om de toepassing te sluiten"
 
