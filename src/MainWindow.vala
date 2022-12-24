@@ -11,6 +11,16 @@ public class MainWindow : Adw.ApplicationWindow {
     }
     """;
 
+    [CCode (has_target = false)]
+    private delegate bool KeyPressHandler (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state);
+    private static Gee.HashMap<uint, KeyPressHandler> key_press_handler;
+
+    static construct {
+        key_press_handler = new Gee.HashMap<uint, KeyPressHandler> ();
+        key_press_handler[Gdk.Key.q] = key_press_handler_q;
+        key_press_handler[Gdk.Key.Escape] = key_press_handler_esc;
+    }
+
     construct {
         // Get the area where we can draw the app window
         unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (new Gdk.Surface.toplevel (display));
@@ -61,20 +71,13 @@ public class MainWindow : Adw.ApplicationWindow {
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_pressed.connect ((keyval, keycode, state) => {
-            switch (keyval) {
-                case Gdk.Key.q:
-                    if (Gdk.ModifierType.CONTROL_MASK in state) {
-                        destroy ();
-                        return true;
-                    }
-
-                    break;
-                case Gdk.Key.Escape:
-                    destroy ();
-                    return true;
+            var handler = key_press_handler[keyval];
+            // Unhandled key event
+            if (handler == null) {
+                return false;
             }
 
-            return false;
+            return handler (this, keyval, keycode, state);
         });
         /*
          * Gtk.Window inherits Gtk.Widget and Gtk.ShortcutManager
@@ -106,5 +109,19 @@ public class MainWindow : Adw.ApplicationWindow {
                 return false;
             });
         }
+    }
+
+    private static bool key_press_handler_esc (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+        window.destroy ();
+        return true;
+    }
+
+    private static bool key_press_handler_q (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
+            return false;
+        }
+
+        window.destroy ();
+        return true;
     }
 }

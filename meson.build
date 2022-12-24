@@ -36,6 +36,7 @@ executable(
     config_file,
     sources,
     dependencies: [
+        dependency('gee-0.8'),
         dependency('glib-2.0', version: '>= 2.42'),
         dependency('gtk4'),
         dependency('libadwaita-1')
