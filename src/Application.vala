@@ -5,6 +5,7 @@
 
 public class Application : Adw.Application {
     public static bool no_close_on_unfocus = false;
+    public static string text = "";
 
     private MainWindow window;
 
@@ -26,6 +27,10 @@ public class Application : Adw.Application {
             {
                 "no-close-on-unfocus", 'n', OptionFlags.NONE, OptionArg.NONE, &no_close_on_unfocus,
                 _("Prevent the app window from closing automatically on unfocused"), null
+            },
+            {
+                "text", 't', OptionFlags.NONE, OptionArg.STRING, &text,
+                _("The text to zoom in; the clipboard is used if none specified"), null
             },
             { null } // This is a null-terminated list
         };

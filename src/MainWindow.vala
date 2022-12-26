@@ -62,6 +62,12 @@ public class MainWindow : Adw.ApplicationWindow {
 
         unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
         clipboard.read_text_async.begin (null, (obj, res) => {
+            // Use the target text passed by the cmd option if specified
+            if (Application.text != "") {
+                result_label.label = Application.text;
+                return;
+            }
+
             try {
                 result_label.label = clipboard.read_text_async.end (res);
             } catch (Error e) {
