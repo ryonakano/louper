@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-23 22:10+0900\n"
-"PO-Revision-Date: 2022-11-21 23:47+0000\n"
-"Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
+"POT-Creation-Date: 2022-12-26 21:06+0900\n"
+"PO-Revision-Date: 2022-12-26 12:06+0000\n"
+"Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/louper-"
 "metadata/tr/>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: data/louper.metainfo.xml.in:9 data/louper.desktop.in:3
 msgid "Louper"
@@ -24,7 +24,7 @@ msgstr "Louper"
 
 #: data/louper.metainfo.xml.in:10 data/louper.desktop.in:5
 msgid "Magnify the selected text"
-msgstr "Seçili metni büyütün"
+msgstr "Seçili metni büyüt"
 
 #: data/louper.metainfo.xml.in:12
 msgid "A text magnification app that helps you zoom the selected text."
@@ -44,23 +44,17 @@ msgid "Other features include:"
 msgstr "Diğer özellikler şunlardır:"
 
 #: data/louper.metainfo.xml.in:22
-#, fuzzy
-#| msgid ""
-#| "Select some part of the magnified text and press Ctrl + C or perform "
-#| "secondary click to copy it"
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
-"Büyütülen metnin bir kısmını seçin ve kopyalamak için Ctrl + C tuşlarına "
-"basın veya ikinci kez tıklayın"
+"Büyütülen metnin bir kısmını seçin ve kopyalamak için Ctrl+C tuşlarına basın "
+"veya ikinci kez tıklayın"
 
 #: data/louper.metainfo.xml.in:23
-#, fuzzy
-#| msgid "Press Esc or Ctrl + Q or unfocus the window to close the app"
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
-"Uygulamayı kapatmak için Esc veya Ctrl + Q tuşlarına basın ya da pencerenin "
+"Uygulamayı kapatmak için Esc veya Ctrl+Q tuşlarına basın ya da pencerenin "
 "odağını kaldırın"
 
 #: data/louper.metainfo.xml.in:29
@@ -73,28 +67,29 @@ msgstr "Ryo Nakano"
 
 #: data/louper.metainfo.xml.in:58
 msgid "Redesign to fit modern desktop environments"
-msgstr ""
+msgstr "Modern masaüstü ortamlarına uyacak şekilde yeniden tasarlandı"
 
 #: data/louper.metainfo.xml.in:59
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "GTK'nın en son sürümü olan GTK 4'e geçiş yapıldı"
 
 #: data/louper.metainfo.xml.in:60
 msgid "Fix opening the context menu crashes the app"
-msgstr ""
+msgstr "Bağlam menüsü açarken uygulamanın çökertmesi düzeltildi"
 
 #: data/louper.metainfo.xml.in:61
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
 msgstr ""
+"Seçilen metinleri kopyalayabilmeniz için artık uygulamada Ctrl+C yutulmuyor"
 
 #: data/louper.metainfo.xml.in:62
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
-msgstr ""
+msgstr "Pantheon Çoklu Görev Görünümünde uygulama adını doğru şekilde göster"
 
 #: data/louper.metainfo.xml.in:63
 msgid "Show the close button in the app window"
-msgstr ""
+msgstr "Uygulama penceresinde kapat düğmesini göster"
 
 #: data/louper.metainfo.xml.in:64 data/louper.metainfo.xml.in:73
 msgid "Update Flatpak runtime version"

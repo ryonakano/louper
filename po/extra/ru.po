@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-23 22:10+0900\n"
-"PO-Revision-Date: 2022-11-21 23:47+0000\n"
+"POT-Creation-Date: 2022-12-26 21:06+0900\n"
+"PO-Revision-Date: 2022-12-26 12:06+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/rosp/louper-"
 "metadata/ru/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.15-dev\n"
+"X-Generator: Weblate 4.15.1-dev\n"
 
 #: data/louper.metainfo.xml.in:9 data/louper.desktop.in:3
 msgid "Louper"
@@ -46,20 +46,14 @@ msgid "Other features include:"
 msgstr "Другие функции включают в себя:"
 
 #: data/louper.metainfo.xml.in:22
-#, fuzzy
-#| msgid ""
-#| "Select some part of the magnified text and press Ctrl + C or perform "
-#| "secondary click to copy it"
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
-"Выберите какую-нибудь часть приближенного текста и нажмите Ctrl + C или "
-"выполните щелчёк второй кнопкой мыши, чтобы скопировать её"
+"Выберите какую-нибудь часть приближенного текста и нажмите Ctrl+C или "
+"выполните щелчок второй кнопкой мыши, чтобы скопировать её"
 
 #: data/louper.metainfo.xml.in:23
-#, fuzzy
-#| msgid "Press Esc or Ctrl + Q or unfocus the window to close the app"
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
 "Нажмите Esc, или Ctrl+Q, или расфокусируйте окно, чтобы закрыть приложение"

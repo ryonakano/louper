@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-23 22:02+0900\n"
+"POT-Creation-Date: 2022-12-26 21:06+0900\n"
 "PO-Revision-Date: 2022-04-19 03:08+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -18,8 +18,12 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.12-dev\n"
 
-#: src/Application.vala:28
+#: src/Application.vala:29
 msgid "Prevent the app window from closing automatically on unfocused"
+msgstr ""
+
+#: src/Application.vala:33
+msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 
 #~ msgid "No Text is Selected"
