@@ -33,7 +33,7 @@ You'll need the following dependencies to build:
 
 * libgee-0.8-dev
 * libglib2.0-dev (>= 2.42)
-* libadwaita-1-dev
+* libgranite-7-dev
 * libgtk-4-dev
 * meson (>= 0.57.0)
 * valac
