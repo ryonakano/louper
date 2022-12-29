@@ -33,8 +33,8 @@ You'll need the following dependencies to build:
 
 * libgee-0.8-dev
 * libglib2.0-dev (>= 2.42)
-* libadwaita-1-dev
-* libgtk-4-dev
+* libgranite-7-dev
+* libgtk-4-dev (>= 4.6)
 * meson (>= 0.57.0)
 * valac
 
@@ -70,6 +70,6 @@ We accept translations of this project through [Weblate](https://weblate.org/). 
 
 Click the following graphs to get started:
 
-| Main: Texts in the app itself | Metadata: Texts in the desktop entry and the software center |
+| Main: Texts in the app itself | Extra: Texts in the desktop entry and the software center |
 | --- | --- |
 | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-main/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/louper-main) | [![Translation status](https://hosted.weblate.org/widgets/rosp/-/louper-metadata/multi-auto.svg)](https://hosted.weblate.org/projects/rosp/louper-metadata) |

@@ -38,8 +38,8 @@ executable(
     dependencies: [
         dependency('gee-0.8'),
         dependency('glib-2.0', version: '>= 2.42'),
-        dependency('gtk4'),
-        dependency('libadwaita-1')
+        dependency('gtk4', version: '>= 4.6'),
+        dependency('granite-7')
     ],
     install: true
 )

@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2023 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-public class MainWindow : Adw.ApplicationWindow {
+public class MainWindow : Gtk.ApplicationWindow {
     private const string CSS_DATA = """
     .result-text {
         font-size: 128px;
@@ -30,49 +30,48 @@ public class MainWindow : Adw.ApplicationWindow {
         resizable = false;
         title = "Louper";
 
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_data (CSS_DATA.data);
-        Gtk.StyleContext.add_provider_for_display (display, cssprovider,
-                                        Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-        var title_bar = new Adw.HeaderBar () {
-            show_start_title_buttons = true,
-            show_end_title_buttons = true,
+        var title_bar = new Gtk.HeaderBar () {
+            show_title_buttons = true,
             // Create a dummy Gtk.Label for the blank title
             title_widget = new Gtk.Label (null)
         };
-        title_bar.add_css_class ("flat");
-
-        var result_label = new Gtk.Label (null) {
-            selectable = true,
-            margin_top = 24,
-            margin_bottom = 24,
-            margin_start = 12,
-            margin_end = 12,
-            wrap = true,
-            wrap_mode = Pango.WrapMode.WORD_CHAR
-        };
-        result_label.add_css_class ("result-text");
-
-        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-        main_box.append (title_bar);
-        main_box.append (result_label);
-
-        content = main_box;
+        title_bar.get_style_context ().add_class (Granite.STYLE_CLASS_FLAT);
+        titlebar = title_bar;
 
         unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
         clipboard.read_text_async.begin (null, (obj, res) => {
-            // Use the target text passed by the cmd option if specified
-            if (Application.text != "") {
-                result_label.label = Application.text;
-                return;
-            }
-
+            string? text;
             try {
-                result_label.label = clipboard.read_text_async.end (res);
+                text = clipboard.read_text_async.end (res);
             } catch (Error e) {
                 warning (e.message);
             }
+
+            var result_label = new Gtk.Label (text) {
+                selectable = true,
+                margin_top = 24,
+                margin_bottom = 24,
+                margin_start = 12,
+                margin_end = 12,
+                wrap = true,
+                wrap_mode = Pango.WrapMode.WORD_CHAR
+            };
+            result_label.get_style_context ().add_class ("result-text");
+            child = result_label;
+        });
+
+        var cssprovider = new Gtk.CssProvider ();
+        cssprovider.load_from_data (CSS_DATA.data);
+        Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
+        // Follow elementary OS-wide dark preference
+        var granite_settings = Granite.Settings.get_default ();
+        var gtk_settings = Gtk.Settings.get_default ();
+
+        gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
+
+        granite_settings.notify["prefers-color-scheme"].connect (() => {
+            gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
 
         var event_controller = new Gtk.EventControllerKey ();
