@@ -30,39 +30,49 @@ public class MainWindow : Gtk.ApplicationWindow {
         resizable = false;
         title = "Louper";
 
+        var cssprovider = new Gtk.CssProvider ();
+        cssprovider.load_from_data (CSS_DATA.data);
+        Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
+
         var title_bar = new Gtk.HeaderBar () {
             show_title_buttons = true,
             // Create a dummy Gtk.Label for the blank title
             title_widget = new Gtk.Label (null)
         };
-        title_bar.get_style_context ().add_class (Granite.STYLE_CLASS_FLAT);
-        titlebar = title_bar;
+        title_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
+        // The 'titlebar' property requires gtk4 >= 4.6, so use the setter function instead
+        set_titlebar (title_bar);
+
+        var result_label = new Gtk.Label (null) {
+            selectable = true,
+            margin_top = 24,
+            margin_bottom = 24,
+            margin_start = 12,
+            margin_end = 12,
+            wrap = true,
+            wrap_mode = Pango.WrapMode.WORD_CHAR
+        };
+        result_label.add_css_class ("result-text");
+
+        var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
+        main_box.append (result_label);
+
+        child = main_box;
 
         unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
         clipboard.read_text_async.begin (null, (obj, res) => {
-            string? text;
+            // Use the target text passed by the cmd option if specified
+            if (Application.text != "") {
+                result_label.label = Application.text;
+                return;
+            }
+
             try {
-                text = clipboard.read_text_async.end (res);
+                result_label.label = clipboard.read_text_async.end (res);
             } catch (Error e) {
                 warning (e.message);
             }
-
-            var result_label = new Gtk.Label (text) {
-                selectable = true,
-                margin_top = 24,
-                margin_bottom = 24,
-                margin_start = 12,
-                margin_end = 12,
-                wrap = true,
-                wrap_mode = Pango.WrapMode.WORD_CHAR
-            };
-            result_label.get_style_context ().add_class ("result-text");
-            child = result_label;
         });
-
-        var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_data (CSS_DATA.data);
-        Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         // Follow elementary OS-wide dark preference
         var granite_settings = Granite.Settings.get_default ();
