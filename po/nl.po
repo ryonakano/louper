@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-26 21:06+0900\n"
+"POT-Creation-Date: 2022-12-30 09:47+0900\n"
 "PO-Revision-Date: 2022-12-27 10:59+0000\n"
 "Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: Dutch <https://hosted.weblate.org/projects/rosp/louper-app/nl/"
@@ -19,7 +19,9 @@ msgstr ""
 "X-Generator: Weblate 4.15.1-dev\n"
 
 #: src/Application.vala:29
-msgid "Prevent the app window from closing automatically on unfocused"
+#, fuzzy
+#| msgid "Prevent the app window from closing automatically on unfocused"
+msgid "Keep the app window open when unfocused"
 msgstr "Voorkomen dat toepassingsvenster wordt gesloten als focus verdwijnt"
 
 #: src/Application.vala:33
