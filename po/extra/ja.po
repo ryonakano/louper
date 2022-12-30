@@ -7,10 +7,10 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-12-30 09:47+0900\n"
-"PO-Revision-Date: 2022-12-23 13:12+0000\n"
+"PO-Revision-Date: 2022-12-30 00:50+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/louper-"
-"metadata/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
+"louper-metadata/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -65,7 +65,7 @@ msgstr "Ryo Nakano"
 
 #: data/louper.metainfo.xml.in:58
 msgid "Fixes for publising to AppCenter"
-msgstr ""
+msgstr "AppCenter に公開するための修正"
 
 #: data/louper.metainfo.xml.in:65
 msgid "Redesign to fit modern desktop environments"
