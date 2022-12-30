@@ -49,9 +49,10 @@ To install, use `ninja install`, then execute with `com.github.ryonakano.louper`
     ninja install
     com.github.ryonakano.louper
 
-You can use the option `--no-close-on-unfocus` (or its abbreviation, `-n`), which is intended to be used to prevent the app window from closing automatically on unfocused while debugging or testing:
+You can also use the following command line options for debugging:
 
-    com.github.ryonakano.louper --no-close-on-unfocus
+    -k, --keep-open            Keep the app window open when unfocused
+    -t, --text=TEXT            The text to zoom in; the clipboard is used if none specified
 
 ## Contributing
 

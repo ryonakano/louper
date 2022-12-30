@@ -4,7 +4,7 @@
  */
 
 public class Application : Gtk.Application {
-    public static bool no_close_on_unfocus = false;
+    public static bool keep_open = false;
     public static string text = "";
 
     private MainWindow window;
@@ -25,12 +25,12 @@ public class Application : Gtk.Application {
         // Set application options
         OptionEntry[] options = {
             {
-                "no-close-on-unfocus", 'n', OptionFlags.NONE, OptionArg.NONE, &no_close_on_unfocus,
-                _("Prevent the app window from closing automatically on unfocused"), null
+                "keep-open", 'k', OptionFlags.NONE, OptionArg.NONE, &keep_open,
+                _("Keep the app window open when unfocused"), null
             },
             {
                 "text", 't', OptionFlags.NONE, OptionArg.STRING, &text,
-                _("The text to zoom in; the clipboard is used if none specified"), null
+                _("The text to zoom in; the clipboard is used if none specified"), "TEXT"
             },
             { null } // This is a null-terminated list
         };
