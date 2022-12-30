@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-26 21:06+0900\n"
+"POT-Creation-Date: 2022-12-30 09:47+0900\n"
 "PO-Revision-Date: 2022-04-23 17:09+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/louper-extra/"
@@ -69,75 +69,79 @@ msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
 #: data/louper.metainfo.xml.in:58
+msgid "Fixes for publising to AppCenter"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:65
 msgid "Redesign to fit modern desktop environments"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:59
+#: data/louper.metainfo.xml.in:66
 msgid "Migrate to GTK 4, the latest version of GTK"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:60
+#: data/louper.metainfo.xml.in:67
 msgid "Fix opening the context menu crashes the app"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:61
+#: data/louper.metainfo.xml.in:68
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:62
+#: data/louper.metainfo.xml.in:69
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:63
+#: data/louper.metainfo.xml.in:70
 msgid "Show the close button in the app window"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:64 data/louper.metainfo.xml.in:73
+#: data/louper.metainfo.xml.in:71 data/louper.metainfo.xml.in:80
 #, fuzzy
 #| msgid "Update Japanese translation"
 msgid "Update Flatpak runtime version"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/louper.metainfo.xml.in:65 data/louper.metainfo.xml.in:74
+#: data/louper.metainfo.xml.in:72 data/louper.metainfo.xml.in:81
 #, fuzzy
 #| msgid "Update Japanese translation"
 msgid "Update translations"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/louper.metainfo.xml.in:81 data/louper.metainfo.xml.in:94
+#: data/louper.metainfo.xml.in:88 data/louper.metainfo.xml.in:101
 msgid "Translation updates:"
 msgstr "Aktualizácie prekladov:"
 
-#: data/louper.metainfo.xml.in:83
+#: data/louper.metainfo.xml.in:90
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Pridaný preklad do taliančiny (vďaka @albanobattistella)"
 
-#: data/louper.metainfo.xml.in:91
+#: data/louper.metainfo.xml.in:98
 msgid "Make sure the window width is narrow than the display width"
 msgstr "Zabezpečené, že šírka okna je menšia ako šírka obrazovky"
 
-#: data/louper.metainfo.xml.in:92
+#: data/louper.metainfo.xml.in:99
 msgid "Fix wrong OARS data"
 msgstr "Opravené nesprávne OARS údaje"
 
-#: data/louper.metainfo.xml.in:96
+#: data/louper.metainfo.xml.in:103
 msgid "Add Ainu translation"
 msgstr "Pridaný preklad do jazyka ainu"
 
-#: data/louper.metainfo.xml.in:97
+#: data/louper.metainfo.xml.in:104
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Pridaný preklad do francúzštiny (vďaka @NathanBnm)"
 
-#: data/louper.metainfo.xml.in:98 data/louper.metainfo.xml.in:107
+#: data/louper.metainfo.xml.in:105 data/louper.metainfo.xml.in:114
 msgid "Update Japanese translation"
 msgstr "Aktualizácia prekladu do japončiny"
 
-#: data/louper.metainfo.xml.in:106
+#: data/louper.metainfo.xml.in:113
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr "Teraz môžete ukončiť aplikáciu pomocou klávesovej skratky Ctrl+Q"
 
-#: data/louper.metainfo.xml.in:115
+#: data/louper.metainfo.xml.in:122
 msgid "Initial release"
 msgstr "Prvé vydanie"
 

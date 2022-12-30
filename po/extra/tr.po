@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-26 21:06+0900\n"
+"POT-Creation-Date: 2022-12-30 09:47+0900\n"
 "PO-Revision-Date: 2022-12-26 12:06+0000\n"
 "Last-Translator: Sabri Ünal <libreajans@gmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/louper-"
@@ -66,72 +66,76 @@ msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
 #: data/louper.metainfo.xml.in:58
+msgid "Fixes for publising to AppCenter"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:65
 msgid "Redesign to fit modern desktop environments"
 msgstr "Modern masaüstü ortamlarına uyacak şekilde yeniden tasarlandı"
 
-#: data/louper.metainfo.xml.in:59
+#: data/louper.metainfo.xml.in:66
 msgid "Migrate to GTK 4, the latest version of GTK"
 msgstr "GTK'nın en son sürümü olan GTK 4'e geçiş yapıldı"
 
-#: data/louper.metainfo.xml.in:60
+#: data/louper.metainfo.xml.in:67
 msgid "Fix opening the context menu crashes the app"
 msgstr "Bağlam menüsü açarken uygulamanın çökertmesi düzeltildi"
 
-#: data/louper.metainfo.xml.in:61
+#: data/louper.metainfo.xml.in:68
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
 msgstr ""
 "Seçilen metinleri kopyalayabilmeniz için artık uygulamada Ctrl+C yutulmuyor"
 
-#: data/louper.metainfo.xml.in:62
+#: data/louper.metainfo.xml.in:69
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
 msgstr "Pantheon Çoklu Görev Görünümünde uygulama adını doğru şekilde göster"
 
-#: data/louper.metainfo.xml.in:63
+#: data/louper.metainfo.xml.in:70
 msgid "Show the close button in the app window"
 msgstr "Uygulama penceresinde kapat düğmesini göster"
 
-#: data/louper.metainfo.xml.in:64 data/louper.metainfo.xml.in:73
+#: data/louper.metainfo.xml.in:71 data/louper.metainfo.xml.in:80
 msgid "Update Flatpak runtime version"
 msgstr "Flatpak çalışma zamanı sürümü güncellendi"
 
-#: data/louper.metainfo.xml.in:65 data/louper.metainfo.xml.in:74
+#: data/louper.metainfo.xml.in:72 data/louper.metainfo.xml.in:81
 msgid "Update translations"
 msgstr "Çeviriler güncellendi"
 
-#: data/louper.metainfo.xml.in:81 data/louper.metainfo.xml.in:94
+#: data/louper.metainfo.xml.in:88 data/louper.metainfo.xml.in:101
 msgid "Translation updates:"
 msgstr "Çeviri güncellemeleri:"
 
-#: data/louper.metainfo.xml.in:83
+#: data/louper.metainfo.xml.in:90
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "İtalyanca çeviri eklendi (Teşekkürler @albanobattistella)"
 
-#: data/louper.metainfo.xml.in:91
+#: data/louper.metainfo.xml.in:98
 msgid "Make sure the window width is narrow than the display width"
 msgstr "Pencere genişliğinin ekran genişliğinden daha dar olduğundan emin ol"
 
-#: data/louper.metainfo.xml.in:92
+#: data/louper.metainfo.xml.in:99
 msgid "Fix wrong OARS data"
 msgstr "Yanlış OARS verileri düzeltildi"
 
-#: data/louper.metainfo.xml.in:96
+#: data/louper.metainfo.xml.in:103
 msgid "Add Ainu translation"
 msgstr "Ainu çevirisi eklendi"
 
-#: data/louper.metainfo.xml.in:97
+#: data/louper.metainfo.xml.in:104
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Fransızca çeviri eklendi (teşekkürler @NathanBnm)"
 
-#: data/louper.metainfo.xml.in:98 data/louper.metainfo.xml.in:107
+#: data/louper.metainfo.xml.in:105 data/louper.metainfo.xml.in:114
 msgid "Update Japanese translation"
 msgstr "Japonca çeviri güncellendi"
 
-#: data/louper.metainfo.xml.in:106
+#: data/louper.metainfo.xml.in:113
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr "Artık Ctrl+Q kısayol tuşu ile uygulamadan çıkabilirsiniz"
 
-#: data/louper.metainfo.xml.in:115
+#: data/louper.metainfo.xml.in:122
 msgid "Initial release"
 msgstr "İlk sürüm"
 
