@@ -12,13 +12,13 @@ public class MainWindow : Gtk.ApplicationWindow {
     """;
 
     [CCode (has_target = false)]
-    private delegate bool KeyPressHandler (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state);
-    private static Gee.HashMap<uint, KeyPressHandler> key_press_handler;
+    private delegate bool KeyPressHandler (Object obj, uint keyval, uint keycode, Gdk.ModifierType state);
+    private static Gee.HashMap<uint, KeyPressHandler> win_kp_handler;
 
     static construct {
-        key_press_handler = new Gee.HashMap<uint, KeyPressHandler> ();
-        key_press_handler[Gdk.Key.q] = key_press_handler_q;
-        key_press_handler[Gdk.Key.Escape] = key_press_handler_esc;
+        win_kp_handler = new Gee.HashMap<uint, KeyPressHandler> ();
+        win_kp_handler[Gdk.Key.q] = win_kp_handler_q;
+        win_kp_handler[Gdk.Key.Escape] = win_kp_handler_esc;
     }
 
     construct {
@@ -86,7 +86,7 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         var event_controller = new Gtk.EventControllerKey ();
         event_controller.key_pressed.connect ((keyval, keycode, state) => {
-            var handler = key_press_handler[keyval];
+            var handler = win_kp_handler[keyval];
             // Unhandled key event
             if (handler == null) {
                 return false;
@@ -122,12 +122,22 @@ public class MainWindow : Gtk.ApplicationWindow {
         }
     }
 
-    private static bool key_press_handler_esc (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+    // ESC key press handler for MainWindow
+    // obj must be "(typeof) MainWindow"
+    private static bool win_kp_handler_esc (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+        MainWindow window = obj as MainWindow;
+        assert (window is MainWindow);
+
         window.destroy ();
         return true;
     }
 
-    private static bool key_press_handler_q (MainWindow window, uint keyval, uint keycode, Gdk.ModifierType state) {
+    // Q key press handler for MainWindow
+    // obj must be "(typeof) MainWindow"
+    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+        MainWindow window = obj as MainWindow;
+        assert (window is MainWindow);
+
         if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
             return false;
         }
