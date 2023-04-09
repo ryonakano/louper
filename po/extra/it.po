@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-30 09:47+0900\n"
+"POT-Creation-Date: 2023-04-09 09:25+0000\n"
 "PO-Revision-Date: 2022-12-31 14:50+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
-"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/"
-"louper-metadata/it/>\n"
+"Language-Team: Italian <https://hosted.weblate.org/projects/rosp/louper-"
+"metadata/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,21 +19,21 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.15.1-dev\n"
 
-#: data/louper.metainfo.xml.in:9 data/louper.desktop.in:3
+#: data/louper.metainfo.xml.in:10 data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
-#: data/louper.metainfo.xml.in:10 data/louper.desktop.in:5
+#: data/louper.metainfo.xml.in:11 data/louper.desktop.in:5
 msgid "Magnify the selected text"
 msgstr "Ingrandisci il testo selezionato"
 
-#: data/louper.metainfo.xml.in:12
+#: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 "Un'app di ingrandimento del testo che ti aiuta a ingrandire il testo "
 "selezionato."
 
-#: data/louper.metainfo.xml.in:15
+#: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -41,11 +41,11 @@ msgstr ""
 "Seleziona il testo che desideri ingrandire e avvia l'app! L'app mostra il "
 "testo selezionato in grandi dimensioni."
 
-#: data/louper.metainfo.xml.in:18
+#: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
 msgstr "Altre funzionalità includono:"
 
-#: data/louper.metainfo.xml.in:22
+#: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
@@ -53,95 +53,97 @@ msgstr ""
 "Seleziona una parte del testo ingrandito e premi Ctrl+C o esegui un clic "
 "secondario per copiarlo"
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr "Premi Esc o Ctrl+Q o sfoca la finestra per chiudere l'app"
 
-#: data/louper.metainfo.xml.in:29
+#: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
 msgstr "Ingrandisci ciò che ti piace leggere"
 
-#: data/louper.metainfo.xml.in:52
+#: data/louper.metainfo.xml.in:53
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/louper.metainfo.xml.in:58
+#: data/louper.metainfo.xml.in:59 data/louper.metainfo.xml.in:82
+#: data/louper.metainfo.xml.in:91
+msgid "Update Flatpak runtime version"
+msgstr "Aggiornato la versione runtime di Flatpak"
+
+#: data/louper.metainfo.xml.in:60 data/louper.metainfo.xml.in:83
+#: data/louper.metainfo.xml.in:92
+msgid "Update translations"
+msgstr "Aggiornate le traduzioni"
+
+#: data/louper.metainfo.xml.in:68
 msgid "Fixes for publising to AppCenter"
 msgstr "Correzioni per la pubblicazione su App Center"
 
-#: data/louper.metainfo.xml.in:65
+#: data/louper.metainfo.xml.in:76
 msgid "Redesign to fit modern desktop environments"
 msgstr "Riprogettata per adattarsi ai moderni ambienti desktop"
 
-#: data/louper.metainfo.xml.in:66
+#: data/louper.metainfo.xml.in:77
 msgid "Migrate to GTK 4, the latest version of GTK"
 msgstr "Migrato a GTK 4, l'ultima versione di GTK"
 
-#: data/louper.metainfo.xml.in:67
+#: data/louper.metainfo.xml.in:78
 msgid "Fix opening the context menu crashes the app"
 msgstr ""
 "Risolto il problema con l'apertura del menu di scelta rapida che provoca "
 "l'arresto anomalo dell'app"
 
-#: data/louper.metainfo.xml.in:68
+#: data/louper.metainfo.xml.in:79
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
 msgstr ""
 "L'app non si interrompe più premendo Ctrl+C, consentendoti di copiare il "
 "testo selezionato"
 
-#: data/louper.metainfo.xml.in:69
+#: data/louper.metainfo.xml.in:80
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
 msgstr ""
 "Mostra correttamente il nome dell'app nella vista multitasking su Pantheon"
 
-#: data/louper.metainfo.xml.in:70
+#: data/louper.metainfo.xml.in:81
 msgid "Show the close button in the app window"
 msgstr "Mostra il pulsante di chiusura nella finestra dell'app"
 
-#: data/louper.metainfo.xml.in:71 data/louper.metainfo.xml.in:80
-msgid "Update Flatpak runtime version"
-msgstr "Aggiornato la versione runtime di Flatpak"
-
-#: data/louper.metainfo.xml.in:72 data/louper.metainfo.xml.in:81
-msgid "Update translations"
-msgstr "Aggiornate le traduzioni"
-
-#: data/louper.metainfo.xml.in:88 data/louper.metainfo.xml.in:101
+#: data/louper.metainfo.xml.in:99 data/louper.metainfo.xml.in:112
 msgid "Translation updates:"
 msgstr "Aggiornamenti di traduzione:"
 
-#: data/louper.metainfo.xml.in:90
+#: data/louper.metainfo.xml.in:101
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "Aggiunta traduzione italiana (grazie a @albanobattistella)"
 
-#: data/louper.metainfo.xml.in:98
+#: data/louper.metainfo.xml.in:109
 msgid "Make sure the window width is narrow than the display width"
 msgstr ""
 "Assicurati che la larghezza della finestra sia più stretta rispetto alla "
 "larghezza del display"
 
-#: data/louper.metainfo.xml.in:99
+#: data/louper.metainfo.xml.in:110
 msgid "Fix wrong OARS data"
 msgstr "corretti dati OARS errati"
 
-#: data/louper.metainfo.xml.in:103
+#: data/louper.metainfo.xml.in:114
 msgid "Add Ainu translation"
 msgstr "Aggiunta traduzione Ainu"
 
-#: data/louper.metainfo.xml.in:104
+#: data/louper.metainfo.xml.in:115
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "Aggiunta la traduzione francese (grazie a @NathanBnm)"
 
-#: data/louper.metainfo.xml.in:105 data/louper.metainfo.xml.in:114
+#: data/louper.metainfo.xml.in:116 data/louper.metainfo.xml.in:125
 msgid "Update Japanese translation"
 msgstr "Aggiornata traduzione giapponese"
 
-#: data/louper.metainfo.xml.in:113
+#: data/louper.metainfo.xml.in:124
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr "Ora puoi uscire dall'app con il tasto di scelta rapida Ctrl+Q"
 
-#: data/louper.metainfo.xml.in:122
+#: data/louper.metainfo.xml.in:133
 msgid "Initial release"
 msgstr "Versione iniziale"
 

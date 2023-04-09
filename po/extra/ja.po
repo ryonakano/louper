@@ -6,11 +6,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-30 09:47+0900\n"
+"POT-Creation-Date: 2023-04-09 09:25+0000\n"
 "PO-Revision-Date: 2022-12-30 00:50+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
-"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/"
-"louper-metadata/ja/>\n"
+"Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/louper-"
+"metadata/ja/>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.15.1-dev\n"
 
-#: data/louper.metainfo.xml.in:9 data/louper.desktop.in:3
+#: data/louper.metainfo.xml.in:10 data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
-#: data/louper.metainfo.xml.in:10 data/louper.desktop.in:5
+#: data/louper.metainfo.xml.in:11 data/louper.desktop.in:5
 msgid "Magnify the selected text"
 msgstr "選択したテキストを拡大します"
 
-#: data/louper.metainfo.xml.in:12
+#: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr "選択したテキストを拡大するのに役立つ、テキスト拡大アプリです。"
 
-#: data/louper.metainfo.xml.in:15
+#: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -38,11 +38,11 @@ msgstr ""
 "拡大したいテキストを選択してアプリを起動するだけ！　アプリが選択されたテキス"
 "トを大きく表示してくれます。"
 
-#: data/louper.metainfo.xml.in:18
+#: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
 msgstr "そのほかの機能:"
 
-#: data/louper.metainfo.xml.in:22
+#: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
@@ -50,91 +50,93 @@ msgstr ""
 "拡大したテキストの一部を選択して Ctrl+C キーを押すか副クリックすることで、コ"
 "ピーできます"
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
 "Esc/Ctrl+Q キーを押すかウィンドウを非アクティブにすると、アプリを終了します"
 
-#: data/louper.metainfo.xml.in:29
+#: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
 msgstr "読みたいテキストを拡大できます"
 
-#: data/louper.metainfo.xml.in:52
+#: data/louper.metainfo.xml.in:53
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/louper.metainfo.xml.in:58
+#: data/louper.metainfo.xml.in:59 data/louper.metainfo.xml.in:82
+#: data/louper.metainfo.xml.in:91
+msgid "Update Flatpak runtime version"
+msgstr "Flatpak ランタイムのバージョンを更新"
+
+#: data/louper.metainfo.xml.in:60 data/louper.metainfo.xml.in:83
+#: data/louper.metainfo.xml.in:92
+msgid "Update translations"
+msgstr "翻訳を更新"
+
+#: data/louper.metainfo.xml.in:68
 msgid "Fixes for publising to AppCenter"
 msgstr "AppCenter に公開するための修正"
 
-#: data/louper.metainfo.xml.in:65
+#: data/louper.metainfo.xml.in:76
 msgid "Redesign to fit modern desktop environments"
 msgstr "最近のデスクトップ環境に合うように、デザインを変更"
 
-#: data/louper.metainfo.xml.in:66
+#: data/louper.metainfo.xml.in:77
 msgid "Migrate to GTK 4, the latest version of GTK"
 msgstr "GTK の最新バージョンである、GTK 4 に移行"
 
-#: data/louper.metainfo.xml.in:67
+#: data/louper.metainfo.xml.in:78
 msgid "Fix opening the context menu crashes the app"
 msgstr "コンテキストメニューを開くとアプリがクラッシュする不具合を修正"
 
-#: data/louper.metainfo.xml.in:68
+#: data/louper.metainfo.xml.in:79
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
 msgstr ""
 "アプリが Ctrl+C の押下を潰さなくなったため、選択したテキストをコピーできるよ"
 "うになりました"
 
-#: data/louper.metainfo.xml.in:69
+#: data/louper.metainfo.xml.in:80
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
 msgstr "Pantheon のマルチタスク画面に、アプリ名が適切に表示されるように修正"
 
-#: data/louper.metainfo.xml.in:70
+#: data/louper.metainfo.xml.in:81
 msgid "Show the close button in the app window"
 msgstr "アプリウィンドウに閉じるボタンを表示するように修正"
 
-#: data/louper.metainfo.xml.in:71 data/louper.metainfo.xml.in:80
-msgid "Update Flatpak runtime version"
-msgstr "Flatpak ランタイムのバージョンを更新"
-
-#: data/louper.metainfo.xml.in:72 data/louper.metainfo.xml.in:81
-msgid "Update translations"
-msgstr "翻訳を更新"
-
-#: data/louper.metainfo.xml.in:88 data/louper.metainfo.xml.in:101
+#: data/louper.metainfo.xml.in:99 data/louper.metainfo.xml.in:112
 msgid "Translation updates:"
 msgstr "翻訳の更新:"
 
-#: data/louper.metainfo.xml.in:90
+#: data/louper.metainfo.xml.in:101
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr "イタリア語翻訳を追加 (貢献者: @albanobattistella)"
 
-#: data/louper.metainfo.xml.in:98
+#: data/louper.metainfo.xml.in:109
 msgid "Make sure the window width is narrow than the display width"
 msgstr "ウィンドウ幅がディスプレイ幅よりも狭くなるように修正"
 
-#: data/louper.metainfo.xml.in:99
+#: data/louper.metainfo.xml.in:110
 msgid "Fix wrong OARS data"
 msgstr "OARS データの間違いを修正"
 
-#: data/louper.metainfo.xml.in:103
+#: data/louper.metainfo.xml.in:114
 msgid "Add Ainu translation"
 msgstr "アイヌ語翻訳を追加"
 
-#: data/louper.metainfo.xml.in:104
+#: data/louper.metainfo.xml.in:115
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr "フランス語翻訳を追加 (貢献者: @NathanBnm)"
 
-#: data/louper.metainfo.xml.in:105 data/louper.metainfo.xml.in:114
+#: data/louper.metainfo.xml.in:116 data/louper.metainfo.xml.in:125
 msgid "Update Japanese translation"
 msgstr "日本語翻訳を更新"
 
-#: data/louper.metainfo.xml.in:113
+#: data/louper.metainfo.xml.in:124
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr "ショートカットキー Ctrl+Q でアプリを終了できるように変更"
 
-#: data/louper.metainfo.xml.in:122
+#: data/louper.metainfo.xml.in:133
 msgid "Initial release"
 msgstr "最初のリリース"
 
