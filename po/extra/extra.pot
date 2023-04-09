@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-12-30 09:47+0900\n"
+"POT-Creation-Date: 2023-04-09 09:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,116 +17,118 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/louper.metainfo.xml.in:9 data/louper.desktop.in:3
+#: data/louper.metainfo.xml.in:10 data/louper.desktop.in:3
 msgid "Louper"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:10 data/louper.desktop.in:5
+#: data/louper.metainfo.xml.in:11 data/louper.desktop.in:5
 msgid "Magnify the selected text"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:12
+#: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 
-#: data/louper.metainfo.xml.in:15
+#: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
 
-#: data/louper.metainfo.xml.in:18
+#: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:22
+#: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:29
+#: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:52
+#: data/louper.metainfo.xml.in:53
 msgid "Ryo Nakano"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:58
-msgid "Fixes for publising to AppCenter"
+#: data/louper.metainfo.xml.in:59 data/louper.metainfo.xml.in:82
+#: data/louper.metainfo.xml.in:91
+msgid "Update Flatpak runtime version"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:65
-msgid "Redesign to fit modern desktop environments"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:66
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:67
-msgid "Fix opening the context menu crashes the app"
+#: data/louper.metainfo.xml.in:60 data/louper.metainfo.xml.in:83
+#: data/louper.metainfo.xml.in:92
+msgid "Update translations"
 msgstr ""
 
 #: data/louper.metainfo.xml.in:68
+msgid "Fixes for publising to AppCenter"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:76
+msgid "Redesign to fit modern desktop environments"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:77
+msgid "Migrate to GTK 4, the latest version of GTK"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:78
+msgid "Fix opening the context menu crashes the app"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:79
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:69
+#: data/louper.metainfo.xml.in:80
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:70
+#: data/louper.metainfo.xml.in:81
 msgid "Show the close button in the app window"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:71 data/louper.metainfo.xml.in:80
-msgid "Update Flatpak runtime version"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:72 data/louper.metainfo.xml.in:81
-msgid "Update translations"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:88 data/louper.metainfo.xml.in:101
+#: data/louper.metainfo.xml.in:99 data/louper.metainfo.xml.in:112
 msgid "Translation updates:"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:90
+#: data/louper.metainfo.xml.in:101
 msgid "Add Italian translation (thanks to @albanobattistella)"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:98
+#: data/louper.metainfo.xml.in:109
 msgid "Make sure the window width is narrow than the display width"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:99
+#: data/louper.metainfo.xml.in:110
 msgid "Fix wrong OARS data"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:103
+#: data/louper.metainfo.xml.in:114
 msgid "Add Ainu translation"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:104
+#: data/louper.metainfo.xml.in:115
 msgid "Add French translation (thanks to @NathanBnm)"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:105 data/louper.metainfo.xml.in:114
+#: data/louper.metainfo.xml.in:116 data/louper.metainfo.xml.in:125
 msgid "Update Japanese translation"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:113
+#: data/louper.metainfo.xml.in:124
 msgid "Now you can quit the app with the shortcut key Ctrl+Q"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:122
+#: data/louper.metainfo.xml.in:133
 msgid "Initial release"
 msgstr ""
 
