@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:25+0000\n"
-"PO-Revision-Date: 2023-05-25 11:52+0000\n"
+"PO-Revision-Date: 2023-05-26 12:47+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/rosp/"
 "louper-metadata/sk/>\n"
@@ -42,27 +42,23 @@ msgstr ""
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
-msgstr ""
+msgstr "Ďalšie funkcie zahŕňajú:"
 
 #: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
+"Vyberte niektorú časť zväčšeného textu a stlačte Ctrl+C alebo ju skopírujte "
+"sekundárnym kliknutím"
 
 #: data/louper.metainfo.xml.in:24
-#, fuzzy
-#| msgid ""
-#| "Press Ctrl+C to copy the text showing. Press Esc/Ctrl+Q or unfocus the "
-#| "window to close the app."
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
-msgstr ""
-"Stlačte Ctrl+C na skopírovanie zobrazeného textu. Stlačte Esc/Ctrl+Q alebo "
-"kliknite mimo okna na zatvorenie aplikácie."
+msgstr "Stlačte Esc/Ctrl+Q alebo kliknite mimo okna na zatvorenie aplikácie"
 
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
-msgstr ""
+msgstr "Zväčšite si to, čo radi čítate"
 
 #: data/louper.metainfo.xml.in:53
 msgid "Ryo Nakano"
@@ -80,32 +76,35 @@ msgstr "Aktualizované preklady"
 
 #: data/louper.metainfo.xml.in:68
 msgid "Fixes for publising to AppCenter"
-msgstr ""
+msgstr "Opravy pri publikovaní do AppCentra"
 
 #: data/louper.metainfo.xml.in:76
 msgid "Redesign to fit modern desktop environments"
 msgstr ""
+"Prepracovanie dizajnu tak, aby vyhovoval moderným desktopovým prostrediam"
 
 #: data/louper.metainfo.xml.in:77
 msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
+msgstr "Migrácia na GTK 4, čo je najnovšia verzia GTK"
 
 #: data/louper.metainfo.xml.in:78
 msgid "Fix opening the context menu crashes the app"
-msgstr ""
+msgstr "Oprava pádu aplikácie pri otvorení kontextového menu"
 
 #: data/louper.metainfo.xml.in:79
 msgid ""
 "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
 msgstr ""
+"V aplikácii sa už neignoruje klávesová skratka Ctrl+C, takže môžete "
+"kopírovať vybrané texty"
 
 #: data/louper.metainfo.xml.in:80
 msgid "Correctly show the app name in the Multitasking View on Pantheon"
-msgstr ""
+msgstr "Správne zobrazenie názvu aplikácie v zobrazení úloh v Pantheone"
 
 #: data/louper.metainfo.xml.in:81
 msgid "Show the close button in the app window"
-msgstr ""
+msgstr "Zobrazenie tlačidla na zatvorenie v okne aplikácie"
 
 #: data/louper.metainfo.xml.in:99 data/louper.metainfo.xml.in:112
 msgid "Translation updates:"
