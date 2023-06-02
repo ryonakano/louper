@@ -4,6 +4,7 @@
  */
 
 public class Application : Gtk.Application {
+    // Store application options data
     public static bool keep_open = false;
     public static string text = "";
 
@@ -24,15 +25,28 @@ public class Application : Gtk.Application {
 
         // Set application options
         OptionEntry[] options = {
-            {
-                "keep-open", 'k', OptionFlags.NONE, OptionArg.NONE, &keep_open,
-                _("Keep the app window open when unfocused"), null
+            OptionEntry () {
+                long_name       = "keep-open",
+                short_name      = 'k',
+                flags           = OptionFlags.NONE,
+                arg             = OptionArg.NONE,
+                arg_data        = &keep_open,
+                description     = _("Keep the app window open when unfocused"),
+                arg_description = null,
             },
-            {
-                "text", 't', OptionFlags.NONE, OptionArg.STRING, &text,
-                _("The text to zoom in; the clipboard is used if none specified"), "TEXT"
+
+            OptionEntry () {
+                long_name       = "text",
+                short_name      = 't',
+                flags           = OptionFlags.NONE,
+                arg             = OptionArg.STRING,
+                arg_data        = &text,
+                description     = _("The text to zoom in; the clipboard is used if none specified"),
+                arg_description = "TEXT",
             },
-            { null } // This is a null-terminated list
+
+            // sentinel
+            { null }
         };
         add_main_option_entries (options);
     }
