@@ -45,4 +45,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Lint
-      run: valac --version && io.elementary.vala-lint -d . -c vala-lint.conf
+      run: io.elementary.vala-lint -d . -c vala-lint.conf
