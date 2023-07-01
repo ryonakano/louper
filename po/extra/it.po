@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-09 09:25+0000\n"
-"PO-Revision-Date: 2023-04-11 08:51+0000\n"
+"PO-Revision-Date: 2023-07-02 13:48+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: Italian <https://hosted.weblate.org/projects/rosp/"
 "louper-metadata/it/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.17-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: data/louper.metainfo.xml.in:10 data/louper.desktop.in:3
 msgid "Louper"
@@ -68,7 +68,7 @@ msgstr "Ryo Nakano"
 #: data/louper.metainfo.xml.in:59 data/louper.metainfo.xml.in:82
 #: data/louper.metainfo.xml.in:91
 msgid "Update Flatpak runtime version"
-msgstr "Aggiorna la versione runtime di Flatpak"
+msgstr "Aggiornato la versione runtime di Flatpak"
 
 #: data/louper.metainfo.xml.in:60 data/louper.metainfo.xml.in:83
 #: data/louper.metainfo.xml.in:92
