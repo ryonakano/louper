@@ -43,7 +43,7 @@ com.github.ryonakano.louper
 
 You can also use the following command line options for debugging:
 
-```bash
+```
 -k, --keep-open            Keep the app window open when unfocused
 -t, --text=TEXT            The text to zoom in; the clipboard is used if none specified
 ```
