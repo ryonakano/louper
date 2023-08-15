@@ -123,20 +123,18 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     // ESC key press handler for MainWindow
-    // obj must be "(typeof) MainWindow"
-    private static bool win_kp_handler_esc (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+    private static bool win_kp_handler_esc (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
+                                            requires (obj is MainWindow) {
         MainWindow window = obj as MainWindow;
-        assert (window is MainWindow);
 
         window.destroy ();
         return true;
     }
 
     // Q key press handler for MainWindow
-    // obj must be "(typeof) MainWindow"
-    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state) {
+    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
+                                            requires (obj is MainWindow) {
         MainWindow window = obj as MainWindow;
-        assert (window is MainWindow);
 
         if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
             return false;
