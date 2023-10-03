@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:25+0000\n"
+"POT-Creation-Date: 2023-10-03 21:43+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,81 +55,6 @@ msgstr ""
 
 #: data/louper.metainfo.xml.in:53
 msgid "Ryo Nakano"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:59 data/louper.metainfo.xml.in:82
-#: data/louper.metainfo.xml.in:91
-msgid "Update Flatpak runtime version"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:60 data/louper.metainfo.xml.in:83
-#: data/louper.metainfo.xml.in:92
-msgid "Update translations"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:68
-msgid "Fixes for publising to AppCenter"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:76
-msgid "Redesign to fit modern desktop environments"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:77
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:78
-msgid "Fix opening the context menu crashes the app"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:79
-msgid ""
-"No longer swallow Ctrl+C in the app, so that you can copy selected texts"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:80
-msgid "Correctly show the app name in the Multitasking View on Pantheon"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:81
-msgid "Show the close button in the app window"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:99 data/louper.metainfo.xml.in:112
-msgid "Translation updates:"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:101
-msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:109
-msgid "Make sure the window width is narrow than the display width"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:110
-msgid "Fix wrong OARS data"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:114
-msgid "Add Ainu translation"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:115
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:116 data/louper.metainfo.xml.in:125
-msgid "Update Japanese translation"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:124
-msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:133
-msgid "Initial release"
 msgstr ""
 
 #: data/louper.desktop.in:4
