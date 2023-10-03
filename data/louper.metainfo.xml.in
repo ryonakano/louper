@@ -54,7 +54,7 @@
 
   <releases>
     <release version="2.0.2" date="2023-04-15" urgency="low">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Update Flatpak runtime version</li>
           <li>Update translations</li>
@@ -63,7 +63,7 @@
     </release>
 
     <release version="2.0.1" date="2022-12-30" urgency="medium">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Fixes for publising to AppCenter</li>
         </ul>
@@ -71,7 +71,7 @@
     </release>
 
     <release version="2.0.0" date="2022-12-27" urgency="high">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Redesign to fit modern desktop environments</li>
           <li>Migrate to GTK 4, the latest version of GTK</li>
@@ -86,7 +86,7 @@
     </release>
 
     <release version="1.0.2" date="2022-06-18" urgency="low">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Update Flatpak runtime version</li>
           <li>Update translations</li>
@@ -95,7 +95,7 @@
     </release>
 
     <release version="1.0.1" date="2021-12-18" urgency="low">
-      <description>
+      <description translatable="no">
         <p>Translation updates:</p>
         <ul>
           <li>Add Italian translation (thanks to @albanobattistella)</li>
@@ -104,7 +104,7 @@
     </release>
 
     <release version="1.0.0" date="2021-10-08" urgency="high">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Make sure the window width is narrow than the display width</li>
           <li>Fix wrong OARS data</li>
@@ -119,7 +119,7 @@
     </release>
 
     <release version="0.1.1" date="2021-07-30" urgency="low">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Now you can quit the app with the shortcut key Ctrl+Q</li>
           <li>Update Japanese translation</li>
@@ -128,7 +128,7 @@
     </release>
 
     <release version="0.1.0" date="2021-06-09" urgency="medium">
-      <description>
+      <description translatable="no">
         <ul>
           <li>Initial release</li>
         </ul>
