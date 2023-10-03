@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-09 09:25+0000\n"
+"POT-Creation-Date: 2023-10-03 21:43+0900\n"
 "PO-Revision-Date: 2023-01-04 18:49+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/rosp/louper-"
@@ -65,82 +65,6 @@ msgstr "Okumak istediklerinizi yakınlaştırın"
 msgid "Ryo Nakano"
 msgstr "Ryo Nakano"
 
-#: data/louper.metainfo.xml.in:59 data/louper.metainfo.xml.in:82
-#: data/louper.metainfo.xml.in:91
-msgid "Update Flatpak runtime version"
-msgstr "Flatpak çalışma zamanı sürümü güncellendi"
-
-#: data/louper.metainfo.xml.in:60 data/louper.metainfo.xml.in:83
-#: data/louper.metainfo.xml.in:92
-msgid "Update translations"
-msgstr "Çeviriler güncellendi"
-
-#: data/louper.metainfo.xml.in:68
-msgid "Fixes for publising to AppCenter"
-msgstr "AppCenter'da yayınlama için düzeltmeler"
-
-#: data/louper.metainfo.xml.in:76
-msgid "Redesign to fit modern desktop environments"
-msgstr "Modern masaüstü ortamlarına uyacak şekilde yeniden tasarlandı"
-
-#: data/louper.metainfo.xml.in:77
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr "GTK'nın en son sürümü olan GTK 4'e geçiş yapıldı"
-
-#: data/louper.metainfo.xml.in:78
-msgid "Fix opening the context menu crashes the app"
-msgstr "Bağlam menüsü açarken uygulamanın çökertmesi düzeltildi"
-
-#: data/louper.metainfo.xml.in:79
-msgid ""
-"No longer swallow Ctrl+C in the app, so that you can copy selected texts"
-msgstr ""
-"Seçilen metinleri kopyalayabilmeniz için artık uygulamada Ctrl+C yutulmuyor"
-
-#: data/louper.metainfo.xml.in:80
-msgid "Correctly show the app name in the Multitasking View on Pantheon"
-msgstr "Pantheon Çoklu Görev Görünümünde uygulama adını doğru şekilde göster"
-
-#: data/louper.metainfo.xml.in:81
-msgid "Show the close button in the app window"
-msgstr "Uygulama penceresinde kapat düğmesini göster"
-
-#: data/louper.metainfo.xml.in:99 data/louper.metainfo.xml.in:112
-msgid "Translation updates:"
-msgstr "Çeviri güncellemeleri:"
-
-#: data/louper.metainfo.xml.in:101
-msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr "İtalyanca çeviri eklendi (Teşekkürler @albanobattistella)"
-
-#: data/louper.metainfo.xml.in:109
-msgid "Make sure the window width is narrow than the display width"
-msgstr "Pencere genişliğinin ekran genişliğinden daha dar olduğundan emin ol"
-
-#: data/louper.metainfo.xml.in:110
-msgid "Fix wrong OARS data"
-msgstr "Yanlış OARS verileri düzeltildi"
-
-#: data/louper.metainfo.xml.in:114
-msgid "Add Ainu translation"
-msgstr "Ainu çevirisi eklendi"
-
-#: data/louper.metainfo.xml.in:115
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr "Fransızca çeviri eklendi (teşekkürler @NathanBnm)"
-
-#: data/louper.metainfo.xml.in:116 data/louper.metainfo.xml.in:125
-msgid "Update Japanese translation"
-msgstr "Japonca çeviri güncellendi"
-
-#: data/louper.metainfo.xml.in:124
-msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr "Artık Ctrl+Q kısayol tuşu ile uygulamadan çıkabilirsiniz"
-
-#: data/louper.metainfo.xml.in:133
-msgid "Initial release"
-msgstr "İlk sürüm"
-
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
 msgstr "Metin Büyütme Uygulaması"
@@ -148,3 +72,62 @@ msgstr "Metin Büyütme Uygulaması"
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
 msgstr "Zoom;Copy;Yakınlaştır;Kopyala;"
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Flatpak çalışma zamanı sürümü güncellendi"
+
+#~ msgid "Update translations"
+#~ msgstr "Çeviriler güncellendi"
+
+#~ msgid "Fixes for publising to AppCenter"
+#~ msgstr "AppCenter'da yayınlama için düzeltmeler"
+
+#~ msgid "Redesign to fit modern desktop environments"
+#~ msgstr "Modern masaüstü ortamlarına uyacak şekilde yeniden tasarlandı"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "GTK'nın en son sürümü olan GTK 4'e geçiş yapıldı"
+
+#~ msgid "Fix opening the context menu crashes the app"
+#~ msgstr "Bağlam menüsü açarken uygulamanın çökertmesi düzeltildi"
+
+#~ msgid ""
+#~ "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
+#~ msgstr ""
+#~ "Seçilen metinleri kopyalayabilmeniz için artık uygulamada Ctrl+C "
+#~ "yutulmuyor"
+
+#~ msgid "Correctly show the app name in the Multitasking View on Pantheon"
+#~ msgstr ""
+#~ "Pantheon Çoklu Görev Görünümünde uygulama adını doğru şekilde göster"
+
+#~ msgid "Show the close button in the app window"
+#~ msgstr "Uygulama penceresinde kapat düğmesini göster"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Çeviri güncellemeleri:"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "İtalyanca çeviri eklendi (Teşekkürler @albanobattistella)"
+
+#~ msgid "Make sure the window width is narrow than the display width"
+#~ msgstr ""
+#~ "Pencere genişliğinin ekran genişliğinden daha dar olduğundan emin ol"
+
+#~ msgid "Fix wrong OARS data"
+#~ msgstr "Yanlış OARS verileri düzeltildi"
+
+#~ msgid "Add Ainu translation"
+#~ msgstr "Ainu çevirisi eklendi"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Fransızca çeviri eklendi (teşekkürler @NathanBnm)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Japonca çeviri güncellendi"
+
+#~ msgid "Now you can quit the app with the shortcut key Ctrl+Q"
+#~ msgstr "Artık Ctrl+Q kısayol tuşu ile uygulamadan çıkabilirsiniz"
+
+#~ msgid "Initial release"
+#~ msgstr "İlk sürüm"
