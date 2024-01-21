@@ -11,6 +11,13 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
     """;
 
+    /*
+     * As a member variable to avoid the following warning is shown:
+     *
+     * (com.github.ryonakano.louper:2): Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
+     */
+    private Gdk.Surface surface;
+
     [CCode (has_target = false)]
     private delegate bool KeyPressHandler (Object obj, uint keyval, uint keycode, Gdk.ModifierType state);
     private static Gee.HashMap<uint, KeyPressHandler> win_kp_handler;
@@ -23,7 +30,8 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     construct {
         // Get the area where we can draw the app window
-        unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (new Gdk.Surface.toplevel (display));
+        surface = new Gdk.Surface.toplevel (display);
+        unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (surface);
         unowned Gdk.Rectangle primary_monitor_rectangle = primary_monitor.get_geometry ();
         default_width = primary_monitor_rectangle.width / 2;
         default_height = primary_monitor_rectangle.height / 4;
@@ -110,10 +118,10 @@ public class MainWindow : Gtk.ApplicationWindow {
             }
 
             /*
-            * Hide first and then destroy the app window when unfocused
-            * because just destroying sometimes seems to cause the wm crashing.
-            * Borrowed from elementary/shortcut-overlay, src/Application.vala
-            */
+             * Hide first and then destroy the app window when unfocused
+             * because just destroying sometimes seems to cause the wm crashing.
+             * Borrowed from elementary/shortcut-overlay, src/Application.vala
+             */
             hide ();
             Timeout.add (250, () => {
                 destroy ();
