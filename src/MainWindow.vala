@@ -18,16 +18,6 @@ public class MainWindow : Gtk.ApplicationWindow {
      */
     private Gdk.Surface surface;
 
-    [CCode (has_target = false)]
-    private delegate bool KeyPressHandler (Object obj, uint keyval, uint keycode, Gdk.ModifierType state);
-    private static Gee.HashMap<uint, KeyPressHandler> win_kp_handler;
-
-    static construct {
-        win_kp_handler = new Gee.HashMap<uint, KeyPressHandler> ();
-        win_kp_handler[Gdk.Key.q] = win_kp_handler_q;
-        win_kp_handler[Gdk.Key.Escape] = win_kp_handler_esc;
-    }
-
     construct {
         // Get the area where we can draw the app window
         surface = new Gdk.Surface.toplevel (display);
@@ -91,23 +81,6 @@ public class MainWindow : Gtk.ApplicationWindow {
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
-
-        var event_controller = new Gtk.EventControllerKey ();
-        event_controller.key_pressed.connect ((keyval, keycode, state) => {
-            var handler = win_kp_handler[keyval];
-            // Unhandled key event
-            if (handler == null) {
-                return false;
-            }
-
-            return handler (this, keyval, keycode, state);
-        });
-        /*
-         * Gtk.Window inherits Gtk.Widget and Gtk.ShortcutManager
-         * and both of them overloads add_controller methods.
-         * So we need explicitly call the one in Gtk.Widget by casting
-         */
-        ((Gtk.Widget) this).add_controller (event_controller);
     }
 
     protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
@@ -128,27 +101,5 @@ public class MainWindow : Gtk.ApplicationWindow {
                 return false;
             });
         }
-    }
-
-    // ESC key press handler for MainWindow
-    private static bool win_kp_handler_esc (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
-                                            requires (obj is MainWindow) {
-        MainWindow window = obj as MainWindow;
-
-        window.destroy ();
-        return true;
-    }
-
-    // Q key press handler for MainWindow
-    private static bool win_kp_handler_q (Object obj, uint keyval, uint keycode, Gdk.ModifierType state)
-                                            requires (obj is MainWindow) {
-        MainWindow window = obj as MainWindow;
-
-        if (!(Gdk.ModifierType.CONTROL_MASK in state)) {
-            return false;
-        }
-
-        window.destroy ();
-        return true;
     }
 }
