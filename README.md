@@ -62,7 +62,7 @@ Go to **System Settings→Keyboard→Shortcuts→Custom**, click the `+` button 
 
 ## Contributing
 
-Please refer to [the contribution guideline](.github/CONTRIBUTING.md) if you would like to:
+Please refer to [the contribution guideline](CONTRIBUTING.md) if you would like to:
 
 - submit bug reports / feature requests
 - propose coding changes
