@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 21:43+0900\n"
+"POT-Creation-Date: 2024-03-21 21:20+0900\n"
 "PO-Revision-Date: 2024-01-27 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -18,11 +18,59 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.4-dev\n"
 
-#: src/Application.vala:29
+#: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
+msgid "Louper"
+msgstr ""
+
+#: data/louper.desktop.in:4
+msgid "Text Magnification App"
+msgstr ""
+
+#: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
+msgid "Magnify the selected text"
+msgstr ""
+
+#: data/louper.desktop.in:11
+msgid "Zoom;Copy;"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:13
+msgid "A text magnification app that helps you zoom the selected text."
+msgstr ""
+
+#: data/louper.metainfo.xml.in:16
+msgid ""
+"Select the text you want to magnify and just launch the app! The app shows "
+"the selected text in huge size."
+msgstr ""
+
+#: data/louper.metainfo.xml.in:19
+msgid "Other features include:"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:23
+msgid ""
+"Select some part of the magnified text and press Ctrl+C or perform secondary "
+"click to copy it"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:24
+msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:30
+msgid "Zoom in what you like to read"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:53
+msgid "Ryo Nakano"
+msgstr ""
+
+#: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr "Behold programvinduet åpent når det ikke er i fokus"
 
-#: src/Application.vala:33
+#: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Tekst å forstørre (utklippstavlen brukes hvis ingenting angis)."
 
