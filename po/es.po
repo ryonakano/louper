@@ -1,16 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Spanish translations for com.github.ryonakano.louper package.
+# Copyright (C) 2021 THE com.github.ryonakano.louper'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
 # gallegonovato <fran-carro@hotmail.es>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-03 21:43+0900\n"
+"POT-Creation-Date: 2024-03-21 21:43+0900\n"
 "PO-Revision-Date: 2023-10-04 23:11+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/louper-app/"
-"es/>\n"
+"Language-Team: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -18,11 +17,67 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.1-dev\n"
 
-#: src/Application.vala:29
-msgid "Keep the app window open when unfocused"
-msgstr "Mantener la ventana de la aplicación abierta cuando se está desenfocado"
+#: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
+msgid "Louper"
+msgstr ""
 
-#: src/Application.vala:33
+#: data/louper.desktop.in:4
+msgid "Text Magnification App"
+msgstr "Aplicación para ampliar el texto"
+
+#: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
+msgid "Magnify the selected text"
+msgstr "Ampliar el texto seleccionado"
+
+#: data/louper.desktop.in:11
+msgid "Zoom;Copy;"
+msgstr "Zoom;Copiar;"
+
+#: data/louper.metainfo.xml.in:13
+msgid "A text magnification app that helps you zoom the selected text."
+msgstr ""
+"Una aplicación de ampliación de texto que te ayuda a ampliar el texto "
+"seleccionado."
+
+#: data/louper.metainfo.xml.in:16
+msgid ""
+"Select the text you want to magnify and just launch the app! The app shows "
+"the selected text in huge size."
+msgstr ""
+"Selecciona el texto que deseas ampliar y ejecuta la aplicación. La "
+"aplicación muestra el texto seleccionado en gran tamaño."
+
+#: data/louper.metainfo.xml.in:19
+msgid "Other features include:"
+msgstr "Otras características son:"
+
+#: data/louper.metainfo.xml.in:23
+msgid ""
+"Select some part of the magnified text and press Ctrl+C or perform secondary "
+"click to copy it"
+msgstr ""
+"Selecciona cualquier parte del texto ampliado y presiona Ctrl+C o cópialo "
+"con un clic secundario"
+
+#: data/louper.metainfo.xml.in:24
+msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
+msgstr ""
+"Presiona Esc, o Ctrl+Q, o haz clic fuera de la aplicación para cerrarla"
+
+#: data/louper.metainfo.xml.in:30
+msgid "Zoom in what you like to read"
+msgstr "Amplía lo que quieras leer"
+
+#: data/louper.metainfo.xml.in:53
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
+#: src/Application.vala:13
+msgid "Keep the app window open when unfocused"
+msgstr ""
+"Mantener la ventana de la aplicación abierta cuando se está desenfocado"
+
+#: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "El texto para ampliar; el portapapeles se utiliza si no se especifica ninguno"
