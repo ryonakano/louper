@@ -1,16 +1,15 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Russian translations for com.github.ryonakano.louper package.
+# Copyright (C) 2021 THE com.github.ryonakano.louper'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
 # lenemter <lenemter@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 21:20+0900\n"
+"POT-Creation-Date: 2024-03-21 21:37+0900\n"
 "PO-Revision-Date: 2022-12-31 14:50+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
-"Language-Team: Russian <https://hosted.weblate.org/projects/rosp/louper-app/"
-"ru/>\n"
+"Language-Team: \n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,51 +20,58 @@ msgstr ""
 
 #: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
 msgid "Louper"
-msgstr ""
+msgstr "Louper"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "Приложение для увеличения текста"
 
 #: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "Увеличивает выделенный текст"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "Увеличение;Копирование;"
 
 #: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
+"Приложение для увеличения текста, которое поможет вам увеличить выделенный "
+"текст."
 
 #: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"Выберите текст, который хотите увеличить, и просто запустите приложение! "
+"Приложение показывает выделенный текст в огромном размере."
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
-msgstr ""
+msgstr "Другие функции включают в себя:"
 
 #: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
+"Выберите какую-нибудь часть приближенного текста и нажмите Ctrl+C или "
+"выполните щелчок второй кнопкой мыши, чтобы скопировать её"
 
 #: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
+"Нажмите Esc, или Ctrl+Q, или расфокусируйте окно, чтобы закрыть приложение"
 
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
-msgstr ""
+msgstr "Приближайте что хотите прочитать"
 
 #: data/louper.metainfo.xml.in:53
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
@@ -82,3 +88,64 @@ msgstr ""
 
 #~ msgid "Open the app after selecting some text."
 #~ msgstr "Откройте это приложение после выделения какого-нибудь текста."
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Обновлена версия Flatpak runtime"
+
+#~ msgid "Update translations"
+#~ msgstr "Обновлены переводы"
+
+#~ msgid "Fixes for publising to AppCenter"
+#~ msgstr "Исправления для публикации в AppCenter"
+
+#~ msgid "Redesign to fit modern desktop environments"
+#~ msgstr ""
+#~ "Переработан дизайн для соответствия современным средам рабочего стола"
+
+#~ msgid "Migrate to GTK 4, the latest version of GTK"
+#~ msgstr "Переход на GTK4, последнюю версию GTK"
+
+#~ msgid "Fix opening the context menu crashes the app"
+#~ msgstr "Исправлен вылет при открытии контекстного меню"
+
+#~ msgid ""
+#~ "No longer swallow Ctrl+C in the app, so that you can copy selected texts"
+#~ msgstr ""
+#~ "Не останавливать Ctrl+C в приложении, чтобы можно было копировать "
+#~ "выделенные тексты"
+
+#~ msgid "Correctly show the app name in the Multitasking View on Pantheon"
+#~ msgstr ""
+#~ "Правильное отображение имени приложения в режиме многозадачности на "
+#~ "Pantheon"
+
+#~ msgid "Show the close button in the app window"
+#~ msgstr "Исправлена кнопка закрытия окна приложения"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Обновления переводов:"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Добавлен итальянский перевод (спасибо @albanobattistella)"
+
+#~ msgid "Make sure the window width is narrow than the display width"
+#~ msgstr "Теперь ширина текста всегда меньше ширины дисплея"
+
+#~ msgid "Fix wrong OARS data"
+#~ msgstr "Исправлены неправильные OARS данные"
+
+#~ msgid "Add Ainu translation"
+#~ msgstr "Добавить айнский перевод"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Добавлен перевод на французский язык (спасибо @NathanBnm)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Обновлён японский перевод"
+
+#~ msgid "Now you can quit the app with the shortcut key Ctrl+Q"
+#~ msgstr ""
+#~ "Теперь вы можете выйти из приложения с помощью сочетания клавиш Ctrl+Q"
+
+#~ msgid "Initial release"
+#~ msgstr "Начальный выпуск"
