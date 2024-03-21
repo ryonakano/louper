@@ -1,5 +1,5 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Portuguese translations for com.github.ryonakano.louper package.
+# Copyright (C) 2021 THE com.github.ryonakano.louper'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
 # Hugo Carvalho <hugokarvalho@hotmail.com>, 2022.
 # ssantos <ssantos@web.de>, 2022.
@@ -8,11 +8,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 21:20+0900\n"
+"POT-Creation-Date: 2024-03-21 21:35+0900\n"
 "PO-Revision-Date: 2023-06-06 23:49+0000\n"
 "Last-Translator: Rui Barbosa <rpinhobarbosa@gmail.com>\n"
-"Language-Team: Portuguese <https://hosted.weblate.org/projects/rosp/louper-"
-"app/pt/>\n"
+"Language-Team: \n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,51 +21,57 @@ msgstr ""
 
 #: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
 msgid "Louper"
-msgstr ""
+msgstr "Louper"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "Aplicação de ampliação de texto"
 
 #: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "Amplia o texto selecionado"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "Zoom;Copy;Ampliar;Copiar;"
 
 #: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
+"Uma aplicação de ampliação de texto que o ajuda a ampliar o texto "
+"selecionado."
 
 #: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"Selecione o texto que deseja ampliar e inicie a aplicação! A aplicação "
+"mostra o texto selecionado em tamanho grande."
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
-msgstr ""
+msgstr "Outras características incluem:"
 
 #: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
+"Selecione alguma parte do texto ampliado e pressione Ctrl+C ou execute um "
+"clique secundário para copiá-lo"
 
 #: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
-msgstr ""
+msgstr "Prima Esc/Ctrl+Q ou desfoque a janela para fechar a aplicação"
 
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
-msgstr ""
+msgstr "Amplie o que gosta de ler"
 
 #: data/louper.metainfo.xml.in:53
 msgid "Ryo Nakano"
-msgstr ""
+msgstr "Ryo Nakano"
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
@@ -83,3 +88,45 @@ msgstr ""
 
 #~ msgid "Open the app after selecting some text."
 #~ msgstr "Abrir a aplicação depois de selecionar algum texto."
+
+#~ msgid "Update Flatpak runtime version"
+#~ msgstr "Atualização da versão em tempo de execução Flatpak"
+
+#~ msgid "Update translations"
+#~ msgstr "Atualização de tradução"
+
+#, fuzzy
+#~ msgid "Fixes for publising to AppCenter"
+#~ msgstr "Correções para publicação para o AppCenter"
+
+#~ msgid "Translation updates:"
+#~ msgstr "Atualizações de tradução:"
+
+#~ msgid "Add Italian translation (thanks to @albanobattistella)"
+#~ msgstr "Tradução Italiana adicionada (obrigado a @albanobattistella)"
+
+#~ msgid "Make sure the window width is narrow than the display width"
+#~ msgstr ""
+#~ "Certifique-se de que a largura da janela é mais estreita do que a largura "
+#~ "do ecrã"
+
+#~ msgid "Fix wrong OARS data"
+#~ msgstr "Corrige dados OARS incorretos"
+
+#~ msgid "Add Ainu translation"
+#~ msgstr "Tradução Ainu adicionada"
+
+#~ msgid "Add French translation (thanks to @NathanBnm)"
+#~ msgstr "Tradução Francesa adicionada (obrigado a @NathanBnm)"
+
+#~ msgid "Update Japanese translation"
+#~ msgstr "Tradução Japonesa atualizada"
+
+#~ msgid "Now you can quit the app with the shortcut key Ctrl+Q"
+#~ msgstr "Agora pode sair da aplicação com a tecla de atalho Ctrl+Q"
+
+#~ msgid "Initial release"
+#~ msgstr "Versão inicial"
+
+#~ msgid "com.github.ryonakano.louper"
+#~ msgstr "com.github.ryonakano.louper"
