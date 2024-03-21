@@ -21,10 +21,7 @@ Thank you for getting interested in contribution to this project! We really appr
 
 ## Translate the Project
 
-We accept translations through Weblate:
-
-- [louper-app](https://hosted.weblate.org/projects/rosp/louper-app/): Texts in the app itself
-- [louper-metainfo](https://hosted.weblate.org/projects/rosp/louper-metainfo/): Texts in the desktop entry and the software center
+We accept translations through [Weblate](https://hosted.weblate.org/projects/rosp/louper/).
 
 Alternatively, you can fork this repository, edit the `*.po` files directly, and submit changes through pull requests.
 
