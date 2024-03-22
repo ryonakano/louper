@@ -73,9 +73,3 @@ msgstr ""
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
-
-#~ msgid "No Text is Selected"
-#~ msgstr "Kein Text ist ausgewählt"
-
-#~ msgid "Open the app after selecting some text."
-#~ msgstr "Öffnen Sie die Anwendung, nachdem Sie einen Text ausgewählt haben."

@@ -78,9 +78,3 @@ msgstr "Behold programvinduet åpent når det ikke er i fokus"
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Tekst å forstørre (utklippstavlen brukes hvis ingenting angis)."
-
-#~ msgid "No Text is Selected"
-#~ msgstr "Ingen tekst valgt"
-
-#~ msgid "Open the app after selecting some text."
-#~ msgstr "Åpne programmet etter at du har valgt litt tekst."
