@@ -2,13 +2,14 @@
 # Copyright (C) 2021 THE com.github.ryonakano.louper'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
 # gallegonovato <fran-carro@hotmail.es>, 2023, 2024.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-21 21:43+0900\n"
 "PO-Revision-Date: 2024-03-22 06:45+0000\n"
-"Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
+"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/rosp/louper/es/>"
 "\n"
 "Language: es\n"
@@ -20,7 +21,7 @@ msgstr ""
 
 #: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
 msgid "Louper"
-msgstr ""
+msgstr "Louper"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
