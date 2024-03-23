@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 21:43+0900\n"
+"POT-Creation-Date: 2024-03-23 06:33+0000\n"
 "PO-Revision-Date: 2024-03-22 06:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/rosp/louper/pl/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
@@ -63,10 +63,6 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:53
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr "Utrzymuj okno otwarte kiedy jest nieaktywne"
@@ -74,3 +70,6 @@ msgstr "Utrzymuj okno otwarte kiedy jest nieaktywne"
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Tekst do powiększenia; schowek jest wykorzystywany gdy nie określono"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"

@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 21:43+0900\n"
+"POT-Creation-Date: 2024-03-23 06:33+0000\n"
 "PO-Revision-Date: 2024-03-22 06:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
-"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/louper/fi/>"
-"\n"
+"Language-Team: Finnish <https://hosted.weblate.org/projects/rosp/louper/fi/"
+">\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.5-dev\n"
 
-#: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
@@ -63,10 +63,6 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr ""
 
-#: data/louper.metainfo.xml.in:53
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr "Pidä sovellusikkuna auki vaikka siihen ei ole kohdistettu"
@@ -74,3 +70,6 @@ msgstr "Pidä sovellusikkuna auki vaikka siihen ei ole kohdistettu"
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Lähennettävä teksti; käytetään leikepöytää jos muuta ei valita"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"

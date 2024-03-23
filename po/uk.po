@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 21:43+0900\n"
+"POT-Creation-Date: 2024-03-23 06:33+0000\n"
 "PO-Revision-Date: 2023-06-30 17:51+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 5.0-dev\n"
 
-#: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
@@ -69,10 +69,6 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr "Збільшуйте те, що вам подобається читати"
 
-#: data/louper.metainfo.xml.in:53
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr "Лишати вікно застосунку відкритим, коли воно не в фокусі"
@@ -80,3 +76,6 @@ msgstr "Лишати вікно застосунку відкритим, кол�
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Текст для збільшення; якщо не вказано, використовується буфер обміну"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"

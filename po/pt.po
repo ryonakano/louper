@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-21 21:43+0900\n"
+"POT-Creation-Date: 2024-03-23 06:33+0000\n"
 "PO-Revision-Date: 2023-06-06 23:49+0000\n"
 "Last-Translator: Rui Barbosa <rpinhobarbosa@gmail.com>\n"
 "Language-Team: \n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.18-dev\n"
 
-#: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
@@ -69,10 +69,6 @@ msgstr "Prima Esc/Ctrl+Q ou desfoque a janela para fechar a aplicação"
 msgid "Zoom in what you like to read"
 msgstr "Amplie o que gosta de ler"
 
-#: data/louper.metainfo.xml.in:53
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr "Impedir que a janela da app feche automaticamente quando fora de foco"
@@ -82,3 +78,6 @@ msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "O texto a aumentar; a área de transferência é usada se nenhum for "
 "especificado"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
