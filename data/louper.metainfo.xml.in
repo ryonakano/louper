@@ -50,7 +50,11 @@
   <url type="help">https://github.com/ryonakano/louper/discussions</url>
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
+  <!-- developer_name has deprecated since AppStream 1.0 -->
   <developer_name>Ryo Nakano</developer_name>
+  <developer id="com.github.ryonakano">
+    <name>Ryo Nakano</name>
+  </developer>
 
   <releases>
     <release version="2.0.3" date="2024-01-20" urgency="low">
