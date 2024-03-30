@@ -7,7 +7,7 @@
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-3.0+</project_license>
 
-  <name translatable="no">Louper</name>
+  <name translate="no">Louper</name>
   <summary>Magnify the selected text</summary>
   <description>
     <p>
@@ -52,14 +52,14 @@
   <url type="translate">https://hosted.weblate.org/projects/rosp</url>
 
   <!-- developer_name has deprecated since AppStream 1.0 -->
-  <developer_name translatable="no">Ryo Nakano</developer_name>
+  <developer_name translate="no">Ryo Nakano</developer_name>
   <developer id="com.github.ryonakano">
-    <name translatable="no">Ryo Nakano</name>
+    <name translate="no">Ryo Nakano</name>
   </developer>
 
   <releases>
     <release version="2.0.3" date="2024-01-20" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Flatpak: Update platform version</li>
           <li>Metainfo: Mark release descriptions as untranslatable</li>
@@ -69,7 +69,7 @@
     </release>
 
     <release version="2.0.2" date="2023-04-15" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update Flatpak runtime version</li>
           <li>Update translations</li>
@@ -78,7 +78,7 @@
     </release>
 
     <release version="2.0.1" date="2022-12-30" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Fixes for publising to AppCenter</li>
         </ul>
@@ -86,7 +86,7 @@
     </release>
 
     <release version="2.0.0" date="2022-12-27" urgency="high">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Redesign to fit modern desktop environments</li>
           <li>Migrate to GTK 4, the latest version of GTK</li>
@@ -101,7 +101,7 @@
     </release>
 
     <release version="1.0.2" date="2022-06-18" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Update Flatpak runtime version</li>
           <li>Update translations</li>
@@ -110,7 +110,7 @@
     </release>
 
     <release version="1.0.1" date="2021-12-18" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <p>Translation updates:</p>
         <ul>
           <li>Add Italian translation (thanks to @albanobattistella)</li>
@@ -119,7 +119,7 @@
     </release>
 
     <release version="1.0.0" date="2021-10-08" urgency="high">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Make sure the window width is narrow than the display width</li>
           <li>Fix wrong OARS data</li>
@@ -134,7 +134,7 @@
     </release>
 
     <release version="0.1.1" date="2021-07-30" urgency="low">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Now you can quit the app with the shortcut key Ctrl+Q</li>
           <li>Update Japanese translation</li>
@@ -143,7 +143,7 @@
     </release>
 
     <release version="0.1.0" date="2021-06-09" urgency="medium">
-      <description translatable="no">
+      <description translate="no">
         <ul>
           <li>Initial release</li>
         </ul>
