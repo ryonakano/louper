@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-30 02:23+0000\n"
+"POT-Creation-Date: 2024-03-23 06:33+0000\n"
 "PO-Revision-Date: 2023-01-13 18:48+0000\n"
 "Last-Translator: rene-coty <irenee.thirion@e.email>\n"
 "Language-Team: \n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.15.1-dev\n"
 
-#: data/louper.desktop.in:3 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:3
 msgid "Louper"
 msgstr "Louper"
 
@@ -70,94 +70,6 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr "Zoomez sur ce que vous aimez lire"
 
-#. developer_name has deprecated since AppStream 1.0
-#: data/louper.metainfo.xml.in:55
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
-#: data/louper.metainfo.xml.in:64
-msgid "Flatpak: Update platform version"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:65
-msgid "Metainfo: Mark release descriptions as untranslatable"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:66 data/louper.metainfo.xml.in:75
-#: data/louper.metainfo.xml.in:98 data/louper.metainfo.xml.in:107
-msgid "Update translations"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:74 data/louper.metainfo.xml.in:97
-#: data/louper.metainfo.xml.in:106
-msgid "Update Flatpak runtime version"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:83
-msgid "Fixes for publising to AppCenter"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:91
-msgid "Redesign to fit modern desktop environments"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:92
-msgid "Migrate to GTK 4, the latest version of GTK"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:93
-msgid "Fix opening the context menu crashes the app"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:94
-msgid ""
-"No longer swallow Ctrl+C in the app, so that you can copy selected texts"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:95
-msgid "Correctly show the app name in the Multitasking View on Pantheon"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:96
-msgid "Show the close button in the app window"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:114 data/louper.metainfo.xml.in:127
-msgid "Translation updates:"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:116
-msgid "Add Italian translation (thanks to @albanobattistella)"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:124
-msgid "Make sure the window width is narrow than the display width"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:125
-msgid "Fix wrong OARS data"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:129
-msgid "Add Ainu translation"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:130
-msgid "Add French translation (thanks to @NathanBnm)"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:131 data/louper.metainfo.xml.in:140
-msgid "Update Japanese translation"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:139
-msgid "Now you can quit the app with the shortcut key Ctrl+Q"
-msgstr ""
-
-#: data/louper.metainfo.xml.in:148
-msgid "Initial release"
-msgstr ""
-
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr ""
@@ -167,3 +79,6 @@ msgstr ""
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "Texte à agrandir ; le presse-papiers est utilisé si rien n’est spécifié"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
