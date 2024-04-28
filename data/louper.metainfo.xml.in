@@ -33,9 +33,8 @@
   </screenshots>
 
   <branding>
-    <color type="primary">#d4d4d4</color>
-    <color type="primary" scheme_preference="light">#7e8087</color>
-    <color type="primary" scheme_preference="dark">#fafafa</color>
+    <color type="primary" scheme_preference="light">#fafafa</color>
+    <color type="primary" scheme_preference="dark">#d4d4d4</color>
   </branding>
 
   <content_rating type="oars-1.1" />
