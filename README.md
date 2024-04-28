@@ -68,7 +68,7 @@ com.github.ryonakano.louper
 
 It is recommended to assign a shortcut key to launch the app for daily use:
 
-1. [Open Custom Shortcuts settings in System Settings](settings://input/keyboard/shortcuts/custom)
+1. Go to **System Settings→Keyboard→Shortcuts→Custom**
 2. Click the `+ Add Shortcut` button at the bottom of the right pane
 3. Set `flatpak run com.github.ryonakano.louper` as a triggered command
 
