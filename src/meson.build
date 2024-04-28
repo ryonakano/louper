@@ -19,7 +19,7 @@ executable(
     dependencies: [
         dependency('glib-2.0', version: '>= 2.74'),
         dependency('granite-7'),
-        dependency('gtk4')
+        dependency('gtk4', version: '>= 4.12')
     ],
     install: true
 )

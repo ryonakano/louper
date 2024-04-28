@@ -22,7 +22,7 @@ You'll need the following dependencies to build:
 
 * libglib2.0-dev (>= 2.74)
 * libgranite-7-dev
-* libgtk-4-dev
+* libgtk-4-dev (>= 4.12)
 * meson (>= 0.57.0)
 * valac
 

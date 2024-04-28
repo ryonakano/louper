@@ -29,7 +29,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         title = "Louper";
 
         var cssprovider = new Gtk.CssProvider ();
-        cssprovider.load_from_data (CSS_DATA.data);
+        cssprovider.load_from_string (CSS_DATA);
         Gtk.StyleContext.add_provider_for_display (display, cssprovider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
 
         var title_bar = new Gtk.HeaderBar () {
@@ -38,8 +38,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             title_widget = new Gtk.Label (null)
         };
         title_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
-        // The 'titlebar' property requires gtk4 >= 4.6, so use the setter function instead
-        set_titlebar (title_bar);
+        titlebar = title_bar;
 
         var result_label = new Gtk.Label (null) {
             selectable = true,
