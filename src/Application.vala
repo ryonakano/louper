@@ -26,7 +26,7 @@ public class Application : Gtk.Application {
     public Application () {
         Object (
             application_id: "com.github.ryonakano.louper",
-            flags: ApplicationFlags.FLAGS_NONE
+            flags: ApplicationFlags.DEFAULT_FLAGS
         );
     }
 

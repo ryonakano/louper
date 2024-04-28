@@ -17,7 +17,7 @@ executable(
     config_file,
     sources,
     dependencies: [
-        dependency('glib-2.0', version: '>= 2.42'),
+        dependency('glib-2.0', version: '>= 2.74'),
         dependency('granite-7'),
         dependency('gtk4')
     ],
