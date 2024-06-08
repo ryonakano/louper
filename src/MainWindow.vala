@@ -127,7 +127,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             hide ();
             Timeout.add (250, () => {
                 destroy ();
-                return false;
+                return Source.REMOVE;
             });
         }
     }
