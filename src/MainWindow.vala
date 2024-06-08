@@ -11,11 +11,8 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
     """;
 
-    /*
-     * As a member variable to avoid the following warning is shown:
-     *
-     * (com.github.ryonakano.louper:2): Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
-     */
+    // Member variable to avoid the following warning is shown:
+    // Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
     private Gdk.Surface surface;
 
     construct {
@@ -26,6 +23,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         default_width = primary_monitor_rectangle.width / 2;
         default_height = primary_monitor_rectangle.height / 4;
         resizable = false;
+
         title = "Louper";
 
         var cssprovider = new Gtk.CssProvider ();
@@ -89,11 +87,9 @@ public class MainWindow : Gtk.ApplicationWindow {
                 return;
             }
 
-            /*
-             * Hide first and then destroy the app window when unfocused
-             * because just destroying sometimes seems to cause the wm crashing.
-             * Borrowed from elementary/shortcut-overlay, src/Application.vala
-             */
+            // Hide first and then destroy the app window when unfocused
+            // because just destroying sometimes seems to cause the wm crashing.
+            // Borrowed from shortcut-overlay by elementary.
             hide ();
             Timeout.add (250, () => {
                 destroy ();
