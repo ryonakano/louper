@@ -5,7 +5,7 @@
 
 public class Application : Gtk.Application {
     public static bool keep_open = false;
-    public static string text = "";
+    public static string? text = null;
 
     private OptionEntry[] options = {
         {
