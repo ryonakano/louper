@@ -60,6 +60,7 @@
     <release version="2.0.5" date="2024-06-10" urgency="high">
       <description translate="no">
         <ul>
+          <li>Fix clipboard is used if text specified with --text is empty</li>
           <li>Fix the app is not functional on Wayland</li>
           <li>Update Flatpak platform version</li>
           <li>Update translations</li>
