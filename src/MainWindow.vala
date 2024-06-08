@@ -14,6 +14,8 @@ public class MainWindow : Gtk.ApplicationWindow {
     // Member variable to avoid the following warning is shown:
     // Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
     private Gdk.Surface surface;
+
+    private bool result_label_updated = false;
     private Gtk.Label result_label;
 
     construct {
@@ -55,18 +57,25 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         child = main_box;
 
-        // Watch for focus change to update the label or close the app.
+        // Watch for focus change to update the label.
         notify["is-active"].connect (() => {
-            if (is_active) {
-                // When the window get focused, update the label with the specified text or clipboard content.
-                // NOTE: The reason to update the label after the window get focused is that
-                // getting clipboard content is not allowed until that happens on Wayland.
-                // See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
-                update_result_label.begin ();
-            } else {
-                // When the window get unfocused, close the window.
-                close_window ();
+            if (!is_active) {
+                // Do nothing when the window lost focus.
+                // NOTE: We don't close the window here because is-active also gets false when opening the context menu.
+                // So we handle it in state_flags_changed instead to allow users to use the context menu.
+                return;
             }
+
+            if (result_label_updated) {
+                // Do nothing if the label text is already set.
+                return;
+            }
+
+            // When the window get focused, update the label with the specified text or clipboard content.
+            // NOTE: The reason to update the label after the window get focused is that
+            // getting clipboard content is not allowed until that happens on Wayland.
+            // See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
+            update_result_label.begin ();
         });
 
         // Follow elementary OS-wide dark preference
@@ -81,6 +90,8 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     private async void update_result_label () {
+        result_label_updated = true;
+
         if (Application.text != "") {
             // Set the text passed by the command line option if specified
             result_label.label = Application.text;
@@ -103,18 +114,21 @@ public class MainWindow : Gtk.ApplicationWindow {
         return content;
     }
 
-    private void close_window () {
-        if (Application.keep_open) {
-            return;
-        }
+    protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
+        Gtk.StateFlags current_state_flags = get_state_flags ();
+        if (Gtk.StateFlags.BACKDROP in current_state_flags) {
+            if (Application.keep_open) {
+                return;
+            }
 
-        // Hide first and then destroy the app window when unfocused
-        // because just destroying sometimes seems to cause the wm crashing.
-        // Borrowed from shortcut-overlay by elementary.
-        hide ();
-        Timeout.add (250, () => {
-            destroy ();
-            return false;
-        });
+            // Hide first and then destroy the app window when unfocused
+            // because just destroying sometimes seems to cause the wm crashing.
+            // Borrowed from shortcut-overlay by elementary.
+            hide ();
+            Timeout.add (250, () => {
+                destroy ();
+                return false;
+            });
+        }
     }
 }
