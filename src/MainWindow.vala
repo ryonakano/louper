@@ -71,6 +71,8 @@ public class MainWindow : Gtk.ApplicationWindow {
                 return;
             }
 
+            is_label_updated = true;
+
             // When the window get focused, update the label with the specified text or clipboard content.
             // NOTE: The reason to update the label after the window get focused is that
             // getting clipboard content is not allowed until that happens on Wayland.
@@ -90,8 +92,6 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     private async void update_result_label () {
-        is_label_updated = true;
-
         if (Application.text != null) {
             // Set the text passed by the command line option if specified
             result_label.label = Application.text;
