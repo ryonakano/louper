@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-23 06:33+0000\n"
-"PO-Revision-Date: 2024-04-28 06:42+0000\n"
+"PO-Revision-Date: 2024-06-08 15:21+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/louper/ja/>"
 "\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.5.1\n"
+"X-Generator: Weblate 5.6-dev\n"
 
 #: data/louper.desktop.in:3
 msgid "Louper"
@@ -42,9 +42,8 @@ msgstr "選択したテキストを拡大するのに役立つ、テキスト拡
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
-msgstr ""
-"拡大したいテキストを選択してアプリを起動するだけ。アプリが選択されたテキスト"
-"を大きく表示してくれます。"
+msgstr "拡大したいテキストを選択してアプリを起動するだけ! "
+"選択したテキストをアプリが大きく表示してくれます。"
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
@@ -69,11 +68,11 @@ msgstr "読みたいテキストを拡大します"
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
-msgstr "フォーカスが外れても、アプリのウィンドウを開いたままにします"
+msgstr "フォーカスが外れても、アプリのウィンドウを開いたままにする"
 
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
-msgstr "拡大するテキストです。未指定時はクリップボードが使用されます"
+msgstr "拡大するテキスト。未指定時はクリップボードが使用されます"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
