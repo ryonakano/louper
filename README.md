@@ -74,7 +74,7 @@ It is recommended to assign a shortcut key to launch the app for daily use:
 
 ![assign shortcut](data/assign-shortcut.png)
 
-You can also use the following command line options for debugging:
+You can also use the following command line options:
 
 ```
 -k, --keep-open            Keep the app window open when unfocused

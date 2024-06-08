@@ -92,7 +92,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     private async void update_result_label () {
         is_label_updated = true;
 
-        if (Application.text != "") {
+        if (Application.text != null) {
             // Set the text passed by the command line option if specified
             result_label.label = Application.text;
         } else {
@@ -127,7 +127,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             hide ();
             Timeout.add (250, () => {
                 destroy ();
-                return false;
+                return Source.REMOVE;
             });
         }
     }
