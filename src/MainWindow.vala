@@ -15,6 +15,9 @@ public class MainWindow : Gtk.ApplicationWindow {
     // Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
     private Gdk.Surface surface;
 
+    private bool is_label_updated = false;
+    private Gtk.Label result_label;
+
     construct {
         // Get the area where we can draw the app window
         surface = new Gdk.Surface.toplevel (display);
@@ -38,7 +41,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         title_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
         titlebar = title_bar;
 
-        var result_label = new Gtk.Label (null) {
+        result_label = new Gtk.Label (null) {
             selectable = true,
             margin_top = 24,
             margin_bottom = 24,
@@ -54,19 +57,25 @@ public class MainWindow : Gtk.ApplicationWindow {
 
         child = main_box;
 
-        unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
-        clipboard.read_text_async.begin (null, (obj, res) => {
-            // Use the target text passed by the cmd option if specified
-            if (Application.text != "") {
-                result_label.label = Application.text;
+        // Watch for focus change to update the label.
+        notify["is-active"].connect (() => {
+            if (!is_active) {
+                // Do nothing when the window lost focus.
+                // NOTE: We don't close the window here because is-active gets false also when opening the context menu.
+                // We handle it in state_flags_changed instead so that users can use the context menu.
                 return;
             }
 
-            try {
-                result_label.label = clipboard.read_text_async.end (res);
-            } catch (Error e) {
-                warning (e.message);
+            if (is_label_updated) {
+                // Do nothing if the label text is already set.
+                return;
             }
+
+            // When the window get focused, update the label with the specified text or clipboard content.
+            // NOTE: The reason to update the label after the window get focused is that
+            // getting clipboard content is not allowed until that happens on Wayland.
+            // See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
+            update_result_label.begin ();
         });
 
         // Follow elementary OS-wide dark preference
@@ -78,6 +87,31 @@ public class MainWindow : Gtk.ApplicationWindow {
         granite_settings.notify["prefers-color-scheme"].connect (() => {
             gtk_settings.gtk_application_prefer_dark_theme = granite_settings.prefers_color_scheme == Granite.Settings.ColorScheme.DARK;
         });
+    }
+
+    private async void update_result_label () {
+        is_label_updated = true;
+
+        if (Application.text != "") {
+            // Set the text passed by the command line option if specified
+            result_label.label = Application.text;
+        } else {
+            // Otherwise set the text loaded from clipboard
+            result_label.label = yield load_clipboard ();
+        }
+    }
+
+    private async string load_clipboard () {
+        unowned Gdk.Clipboard clipboard = get_primary_clipboard ();
+
+        string content = "";
+        try {
+            content = yield clipboard.read_text_async (null);
+        } catch (Error e) {
+            warning ("Failed to read text from clipboard: %s", e.message);
+        }
+
+        return content;
     }
 
     protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
