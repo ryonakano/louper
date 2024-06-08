@@ -15,7 +15,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     // Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
     private Gdk.Surface surface;
 
-    private bool result_label_updated = false;
+    private bool is_label_updated = false;
     private Gtk.Label result_label;
 
     construct {
@@ -61,12 +61,12 @@ public class MainWindow : Gtk.ApplicationWindow {
         notify["is-active"].connect (() => {
             if (!is_active) {
                 // Do nothing when the window lost focus.
-                // NOTE: We don't close the window here because is-active also gets false when opening the context menu.
-                // So we handle it in state_flags_changed instead to allow users to use the context menu.
+                // NOTE: We don't close the window here because is-active gets false also when opening the context menu.
+                // We handle it in state_flags_changed instead so that users can use the context menu.
                 return;
             }
 
-            if (result_label_updated) {
+            if (is_label_updated) {
                 // Do nothing if the label text is already set.
                 return;
             }
@@ -90,7 +90,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
 
     private async void update_result_label () {
-        result_label_updated = true;
+        is_label_updated = true;
 
         if (Application.text != "") {
             // Set the text passed by the command line option if specified
