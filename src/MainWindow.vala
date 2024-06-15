@@ -16,7 +16,6 @@ public class MainWindow : Gtk.ApplicationWindow {
     private Gdk.Surface surface;
 
     private bool is_label_updated = false;
-    private Gtk.Label magnified_label;
 
     construct {
         // Get the area where we can draw the app window
@@ -41,7 +40,7 @@ public class MainWindow : Gtk.ApplicationWindow {
         title_bar.add_css_class (Granite.STYLE_CLASS_FLAT);
         titlebar = title_bar;
 
-        magnified_label = new Gtk.Label (null) {
+        var magnified_label = new Gtk.Label (null) {
             selectable = true,
             margin_top = 24,
             margin_bottom = 24,
@@ -77,7 +76,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             // NOTE: The reason to update the label after the window get focused is that
             // getting clipboard content is not allowed until that happens on Wayland.
             // See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
-            update_magnified_label.begin ();
+            update_label_text.begin (magnified_label);
         });
 
         // Follow elementary OS-wide dark preference
@@ -91,13 +90,13 @@ public class MainWindow : Gtk.ApplicationWindow {
         });
     }
 
-    private async void update_magnified_label () {
+    private async void update_label_text (Gtk.Label label_widget) {
         if (Application.text != null) {
             // Set the text passed by the command line option if specified
-            magnified_label.label = Application.text;
+            label_widget.label = Application.text;
         } else {
             // Otherwise set the text loaded from clipboard
-            magnified_label.label = yield load_clipboard ();
+            label_widget.label = yield load_clipboard ();
         }
     }
 
