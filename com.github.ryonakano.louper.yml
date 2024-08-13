@@ -4,10 +4,10 @@ runtime-version: '8'
 sdk: io.elementary.Sdk
 command: com.github.ryonakano.louper
 finish-args:
-  - '--share=ipc'
-  - '--socket=wayland'
-  - '--socket=fallback-x11'
-  - '--device=dri'
+  - --share=ipc
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --device=dri
 modules:
   - name: louper
     buildsystem: meson
