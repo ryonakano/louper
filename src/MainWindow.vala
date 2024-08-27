@@ -18,14 +18,9 @@ public class MainWindow : Gtk.ApplicationWindow {
     private bool is_label_updated = false;
 
     construct {
-        // Get the area where we can draw the app window
-        surface = new Gdk.Surface.toplevel (display);
-        unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (surface);
-        unowned Gdk.Rectangle primary_monitor_rectangle = primary_monitor.get_geometry ();
-        default_width = primary_monitor_rectangle.width / 2;
-        default_height = primary_monitor_rectangle.height / 4;
-        resizable = false;
+        calculate_size ();
 
+        resizable = false;
         title = "Louper";
 
         var cssprovider = new Gtk.CssProvider ();
@@ -78,6 +73,17 @@ public class MainWindow : Gtk.ApplicationWindow {
             // See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
             update_label_text.begin (magnified_label);
         });
+    }
+
+    private void calculate_size () {
+        // Get the area where we can draw the app window
+        surface = new Gdk.Surface.toplevel (display);
+        unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (surface);
+        unowned Gdk.Rectangle primary_monitor_rectangle = primary_monitor.get_geometry ();
+
+        // Set reasonable window size
+        default_width = primary_monitor_rectangle.width / 2;
+        default_height = primary_monitor_rectangle.height / 4;
     }
 
     private async void update_label_text (Gtk.Label label_widget) {
