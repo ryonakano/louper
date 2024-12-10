@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-23 06:33+0000\n"
-"PO-Revision-Date: 2024-12-10 12:16+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2024-12-11 12:15+0000\n"
+"Last-Translator: Priit Jõerüüt <hwlate@joeruut.com>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/louper/et/>"
 "\n"
 "Language: et\n"
@@ -25,48 +25,53 @@ msgstr "Louper"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "Teksti suurendamise rakendus"
 
 #: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "Suurenda valitud teksti"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "zoom;suum;suumi;suurenda;vaata;luup;suurendusklaas;kopeeri;"
 
 #: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
+"Teksti suurendamise rakendus, mis aitab sul näha valitud teksti läbi "
+"piltliku suurendusklaasi."
 
 #: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"Vali tekst, mida soovid suurendada ning käivita rakendus! Kohe näedki sama "
+"teksti suures vaates."
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
-msgstr ""
+msgstr "Lisavõimalused:"
 
 #: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
+"Vali osa suurendatud tekstist ja Ctrl+C abil saad sellest osast koopia teha"
 
 #: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
-msgstr ""
+msgstr "Fookuse eemaldamiseks ja rakenduse sulgemiseks vajuta Esc või Ctrl+Q"
 
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
-msgstr ""
+msgstr "Suumi seda osa, mida soovid lugeda"
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
-msgstr ""
+msgstr "Hoia rakenduse aken avatuna ka siis, kui ta pole fookuses"
 
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
-msgstr ""
+msgstr "Suumitav tekst; kui midagi pole valitud, siis kasutame lõikelaua sisu"
