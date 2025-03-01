@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-23 06:33+0000\n"
-"PO-Revision-Date: 2025-02-23 21:16+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2025-03-02 06:40+0000\n"
+"Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/louper/ta/>\n"
 "Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.1-dev\n"
+"X-Generator: Weblate 5.10.3-dev\n"
 
 #: data/louper.desktop.in:3
 msgid "Louper"
@@ -24,48 +24,54 @@ msgstr "Louper"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "உரை உருப்பெருக்கம் பயன்பாடு"
 
 #: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்ட உரையை பெரிதாக்குங்கள்"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "சூம்; நகல்;"
 
 #: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
-msgstr ""
+msgstr "தேர்ந்தெடுக்கப்பட்ட உரையை பெரிதாக்க உதவும் உரை உருப்பெருக்கம் பயன்பாடு."
 
 #: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"நீங்கள் பெரிதாக்க விரும்பும் உரையைத் தேர்ந்தெடுத்து பயன்பாட்டைத் தொடங்கவும்! பயன்பாடு "
+"தேர்ந்தெடுக்கப்பட்ட உரையை பெரிய அளவில் காட்டுகிறது."
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
-msgstr ""
+msgstr "பிற நற்பொருத்தங்கள் பின்வருமாறு:"
 
 #: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
+"பெரிதாக்கப்பட்ட உரையின் சில பகுதியைத் தேர்ந்தெடுத்து CTRL+C ஐ அழுத்தவும் அல்லது அதை "
+"நகலெடுக்க இரண்டாம் நிலை சொடுக்கு செய்யவும்"
 
 #: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
+"பயன்பாட்டை மூடுவதற்கு தப்பி அல்லது CTRL+Q அல்லது சாளரத்தை ஐச்போகச் அழுத்தவும்"
 
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
-msgstr ""
+msgstr "நீங்கள் படிக்க விரும்புவதை பெரிதாக்கவும்"
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
-msgstr ""
+msgstr "கவனம் செலுத்தப்படாதபோது பயன்பாட்டு சாளரத்தைத் திறந்து வைக்கவும்"
 
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
+"பெரிதாக்க உரை; எதுவும் குறிப்பிடப்படவில்லை என்றால் இடைநிலைப்பலகை பயன்படுத்தப்படுகிறது"
