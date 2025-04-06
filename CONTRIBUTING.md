@@ -16,7 +16,7 @@ Alternatively, you can fork this repository, edit the `*.po` files directly, and
 ## Propose Code Changes
 We accept changes to the source code through pull requests. Even a small typo fix is welcome.
 
-We follow [the coding style by elementary](https://docs.elementary.io/develop/writing-apps/code-style). Try to respect them.
+We follow [the coding style by elementary](https://docs.elementary.io/develop/writing-apps/code-style) and [its Human Interface Guidelines](https://docs.elementary.io/hig/). Try to respect them.
 
 > [!TIP]
 > Again, [the guideline by elementary](https://docs.elementary.io/contributor-guide/development/prepare-code-for-review) would be helpful here too.
