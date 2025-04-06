@@ -10,7 +10,7 @@
     ```
 - Update screenshots if there are visual changes between releases
 - Create a pull request with the following changes and merge it once the build succeeds
-    - Write a release note in `data/louper.metainfo.xml.in.in`
+    - Write a release note in `data/louper.metainfo.xml.in`
         - Refer to [the Metainfo guidelines by Flathub](https://docs.flathub.org/docs/for-app-authors/metainfo-guidelines)
         - Credits contributors with their GitHub username
     - Bump `version` in `meson.build`  
