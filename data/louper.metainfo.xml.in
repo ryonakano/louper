@@ -57,6 +57,15 @@
   </developer>
 
   <releases>
+    <release version="2.0.6" date="2025-04-06" urgency="low">
+      <description translate="no">
+        <ul>
+          <li>Flatpak: Update elementary Platform to 8.1</li>
+          <li>Update translations</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="2.0.5" date="2024-06-09" urgency="high">
       <description translate="no">
         <ul>
