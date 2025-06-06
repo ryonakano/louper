@@ -1,4 +1,3 @@
 data/louper.desktop.in
 data/louper.metainfo.xml.in
 src/Application.vala
-src/MainWindow.vala
