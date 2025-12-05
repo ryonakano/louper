@@ -119,7 +119,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             // Hide first and then destroy the app window when unfocused
             // because just destroying sometimes seems to cause the wm crashing.
             // Borrowed from shortcut-overlay by elementary.
-            hide ();
+            visible = false;
             Timeout.add (250, () => {
                 destroy ();
                 return Source.REMOVE;
