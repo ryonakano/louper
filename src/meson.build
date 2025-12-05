@@ -18,7 +18,7 @@ executable(
     sources,
     dependencies: [
         dependency('glib-2.0', version: '>= 2.74'),
-        dependency('granite-7'),
+        dependency('granite-7', version: '>= 7.7.0'),
         dependency('gtk4', version: '>= 4.12')
     ],
     install: true
