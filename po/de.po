@@ -1,5 +1,5 @@
 # German translations for com.github.ryonakano.louper.
-# Copyright (C) 2021-2025 Ryo Nakano
+# Copyright (C) 2021-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
 # J. Lavoie <j.lavoie@net-c.ca>, 2022.
 # Fill read-only add-on <noreply-addon-fill@weblate.org>, 2024.
