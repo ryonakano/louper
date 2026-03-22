@@ -56,6 +56,11 @@
     <name translate="no">Ryo Nakano</name>
   </developer>
 
+  <!--
+    We intentionally don't support translation for the descriptions in release notes
+    because only a few past release notes would be often shown in the app store
+    even if translators translated all of them, which is not worthy.
+  -->
   <releases>
     <release version="2.0.6" date="2025-04-06" urgency="low">
       <description translate="no">
