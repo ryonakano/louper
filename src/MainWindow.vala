@@ -1,6 +1,6 @@
 /*
  * SPDX-License-Identifier: GPL-3.0-or-later
- * SPDX-FileCopyrightText: 2021-2025 Ryo Nakano <ryonakaknock3@gmail.com>
+ * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
@@ -119,7 +119,7 @@ public class MainWindow : Gtk.ApplicationWindow {
             // Hide first and then destroy the app window when unfocused
             // because just destroying sometimes seems to cause the wm crashing.
             // Borrowed from shortcut-overlay by elementary.
-            hide ();
+            visible = false;
             Timeout.add (250, () => {
                 destroy ();
                 return Source.REMOVE;
