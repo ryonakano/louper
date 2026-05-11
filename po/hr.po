@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-03-23 06:33+0000\n"
-"PO-Revision-Date: 2026-05-10 20:10+0000\n"
-"Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
+"PO-Revision-Date: 2026-05-12 11:11+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/louper/hr/>"
 "\n"
 "Language: hr\n"
@@ -26,48 +26,53 @@ msgstr "Louper"
 
 #: data/louper.desktop.in:4
 msgid "Text Magnification App"
-msgstr ""
+msgstr "Aplikacija za povećanje teksta"
 
 #: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
-msgstr ""
+msgstr "Povećaj odabrani tekst"
 
 #: data/louper.desktop.in:11
 msgid "Zoom;Copy;"
-msgstr ""
+msgstr "Zumiraj;Kopiraj;"
 
 #: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
-msgstr ""
+msgstr "Aplikacija za povećanje teksta koja pomaže zumirati odabrani tekst."
 
 #: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
+"Odaberi tekst koji želi povećati i pokreni aplikaciju! Aplikacija prikazuje "
+"odabrani tekst u velikoj veličini."
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
-msgstr ""
+msgstr "Ostale funkcije uključuju:"
 
 #: data/louper.metainfo.xml.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
+"Odaberi neki dio povećanog teksta i pritisni Ctrl+C ili izvedi sekundarni "
+"klik za kopiranje"
 
 #: data/louper.metainfo.xml.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
-msgstr ""
+msgstr "Pritisni Esc ili Ctrl+Q ili odmakni prozor za zatvaranje aplikacije"
 
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
-msgstr ""
+msgstr "Zumiraj tekst koji želiš čitati"
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
-msgstr ""
+msgstr "Zadrži prozor aplikacije otvorenim kada nije fokusiran"
 
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
+"Tekst za zumiranje; Međuspremnik se koristi ako nijedan nije specificiran"
