@@ -44,7 +44,6 @@ You'll need the following dependencies to build:
 * libgranite-7-dev
 * libgtk-4-dev (>= 4.12)
 * meson (>= 0.57.0)
-* valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:
 

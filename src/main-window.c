@@ -3,7 +3,6 @@
  * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-#include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include <granite-7/granite-7.h>
 #include "main-window.h"
