@@ -3,6 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+#include <locale.h>
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
 #include "config.h"
@@ -15,6 +16,7 @@ main (int    argc,
     g_autoptr(LouperApplication) app;
     int ret;
 
+    setlocale (LC_ALL, "");
     bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
     bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
     textdomain (GETTEXT_PACKAGE);
