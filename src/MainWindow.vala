@@ -4,16 +4,15 @@
  */
 
 public class MainWindow : Gtk.ApplicationWindow {
+    public bool keep_open { get; set; }
+    public unowned string? text { get; set; }
+
     private const string CSS_DATA = """
     .magnified-text {
         font-size: 128px;
         font-weight: bold;
     }
     """;
-
-    // Member variable to avoid the following warning is shown:
-    // Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
-    private Gdk.Surface surface;
 
     private bool is_label_updated = false;
 
@@ -77,19 +76,21 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     private void calculate_size () {
         // Get the area where we can draw the app window
-        surface = new Gdk.Surface.toplevel (display);
+        var surface = new Gdk.Surface.toplevel (display);
         unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (surface);
         unowned Gdk.Rectangle primary_monitor_rectangle = primary_monitor.get_geometry ();
 
         // Set reasonable window size
         default_width = primary_monitor_rectangle.width / 2;
         default_height = primary_monitor_rectangle.height / 4;
+
+        surface.destroy ();
     }
 
     private async void update_label_text (Gtk.Label label_widget) {
-        if (Application.text != null) {
+        if (text != null) {
             // Set the text passed by the command line option if specified
-            label_widget.label = Application.text;
+            label_widget.label = text;
         } else {
             // Otherwise set the text loaded from clipboard
             label_widget.label = yield load_clipboard ();
@@ -112,7 +113,7 @@ public class MainWindow : Gtk.ApplicationWindow {
     protected override void state_flags_changed (Gtk.StateFlags previous_state_flags) {
         Gtk.StateFlags current_state_flags = get_state_flags ();
         if (Gtk.StateFlags.BACKDROP in current_state_flags) {
-            if (Application.keep_open) {
+            if (keep_open) {
                 return;
             }
 
@@ -120,9 +121,8 @@ public class MainWindow : Gtk.ApplicationWindow {
             // because just destroying sometimes seems to cause the wm crashing.
             // Borrowed from shortcut-overlay by elementary.
             visible = false;
-            Timeout.add (250, () => {
+            Timeout.add_once (250, () => {
                 destroy ();
-                return Source.REMOVE;
             });
         }
     }
