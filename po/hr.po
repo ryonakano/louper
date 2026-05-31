@@ -1,21 +1,24 @@
-# Dutch translations for com.github.ryonakano.louper.
-# Copyright (C) 2021-2026 Ryo Nakano
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
-# Heimen Stoffels <vistausss@fastmail.com>, 2021, 2022.
+# Milo Ivir <mail@milotype.de>, 2026.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-05-31 08:33+0200\n"
-"PO-Revision-Date: 2023-07-10 02:25+0000\n"
-"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
-"Language-Team: \n"
-"Language: nl\n"
+"PO-Revision-Date: 2026-05-12 11:11+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/louper/hr/"
+">\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
 
 #: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
 msgid "Louper"
@@ -23,59 +26,53 @@ msgstr "Louper"
 
 #: data/louper.desktop.in:3
 msgid "Text Magnification App"
-msgstr "Tekstvergrotingstoepassing"
+msgstr "Aplikacija za povećanje teksta"
 
 #: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
-msgstr "Vergroot geselecteerde tekst"
+msgstr "Povećaj odabrani tekst"
 
 #: data/louper.desktop.in:10
 msgid "Zoom;Copy;"
-msgstr "Zoom;Kopiëren;Vergroten;Loep;"
+msgstr "Zumiraj;Kopiraj;"
 
 #: data/louper.metainfo.xml.in:13
 msgid "A text magnification app that helps you zoom the selected text."
-msgstr "Een vergrootglastoepassing om geselecteerde tekst mee te vergroten."
+msgstr "Aplikacija za povećanje teksta koja pomaže zumirati odabrani tekst."
 
 #: data/louper.metainfo.xml.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
 msgstr ""
-"Start de toepassing (het is aanbevolen om een sneltoets in te stellen in de "
-"toetsenbordinstellingen). De toepassing vergroot vervolgens de geselecteerde "
-"tekst."
+"Odaberi tekst koji želi povećati i pokreni aplikaciju! Aplikacija prikazuje "
+"odabrani tekst u velikoj veličini."
 
 #: data/louper.metainfo.xml.in:19
 msgid "Other features include:"
-msgstr "Overige functies:"
+msgstr "Ostale funkcije uključuju:"
 
 #: data/louper.metainfo.xml.in:23
-#, fuzzy
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
-"Selecteer een deel van de vergrote tekst en rechtsklik of gebruik Ctrl+C om "
-"de selectie te kopiëren"
+"Odaberi neki dio povećanog teksta i pritisni Ctrl+C ili izvedi sekundarni "
+"klik za kopiranje"
 
 #: data/louper.metainfo.xml.in:24
-#, fuzzy
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
-msgstr ""
-"Druk op Esc, Ctrl+Q of klik buiten het venster om de toepassing te sluiten"
+msgstr "Pritisni Esc ili Ctrl+Q ili odmakni prozor za zatvaranje aplikacije"
 
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
-msgstr "Zoom in op het te lezen deel"
+msgstr "Zumiraj tekst koji želiš čitati"
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
-msgstr "Toepassingsvenster geopend houden als focus verdwijnt"
+msgstr "Zadrži prozor aplikacije otvorenim kada nije fokusiran"
 
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
-msgstr "De in te zoomen tekst; bij geen keuze wordt het klembord gebruikt"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
+msgstr ""
+"Tekst za zumiranje; Međuspremnik se koristi ako nijedan nije specificiran"

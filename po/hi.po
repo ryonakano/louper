@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:33+0000\n"
+"POT-Creation-Date: 2026-05-31 08:33+0200\n"
 "PO-Revision-Date: 2024-05-14 01:56+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/louper/hi/>\n"
@@ -18,19 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 5.5.5\n"
 
-#: data/louper.desktop.in:3
+#: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
 msgid "Louper"
 msgstr "Louper"
 
-#: data/louper.desktop.in:4
+#: data/louper.desktop.in:3
 msgid "Text Magnification App"
 msgstr "पाठ आवर्धन ऐप"
 
-#: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
 msgstr "चयनित पाठ को बड़ा करें"
 
-#: data/louper.desktop.in:11
+#: data/louper.desktop.in:10
 msgid "Zoom;Copy;"
 msgstr "जूम;कॉपी;"
 
