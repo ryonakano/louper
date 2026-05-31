@@ -37,7 +37,7 @@ calculate_size (LouperMainWindow    *self,
     primary_monitor = gdk_display_get_monitor_at_surface (display, surface);
     if (!primary_monitor) {
         g_warning ("Failed to gdk_display_get_monitor_at_surface()");
-        return;
+        goto destroy_surface;
     }
 
     gdk_monitor_get_geometry (primary_monitor, &primary_monitor_rectangle);
@@ -47,6 +47,7 @@ calculate_size (LouperMainWindow    *self,
     height = primary_monitor_rectangle.height / 4;
     gtk_window_set_default_size (GTK_WINDOW (self), width, height);
 
+destroy_surface:
     gdk_surface_destroy (surface);
 }
 
