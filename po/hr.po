@@ -1,0 +1,78 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.louper package.
+# Milo Ivir <mail@milotype.de>, 2026.
+# Fill read-only add-on <noreply-addon-fill@weblate.org>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.louper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-23 06:33+0000\n"
+"PO-Revision-Date: 2026-05-12 11:11+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/louper/hr/>"
+"\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.5-dev\n"
+
+#: data/louper.desktop.in:3
+msgid "Louper"
+msgstr "Louper"
+
+#: data/louper.desktop.in:4
+msgid "Text Magnification App"
+msgstr "Aplikacija za povećanje teksta"
+
+#: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
+msgid "Magnify the selected text"
+msgstr "Povećaj odabrani tekst"
+
+#: data/louper.desktop.in:11
+msgid "Zoom;Copy;"
+msgstr "Zumiraj;Kopiraj;"
+
+#: data/louper.metainfo.xml.in:13
+msgid "A text magnification app that helps you zoom the selected text."
+msgstr "Aplikacija za povećanje teksta koja pomaže zumirati odabrani tekst."
+
+#: data/louper.metainfo.xml.in:16
+msgid ""
+"Select the text you want to magnify and just launch the app! The app shows "
+"the selected text in huge size."
+msgstr ""
+"Odaberi tekst koji želi povećati i pokreni aplikaciju! Aplikacija prikazuje "
+"odabrani tekst u velikoj veličini."
+
+#: data/louper.metainfo.xml.in:19
+msgid "Other features include:"
+msgstr "Ostale funkcije uključuju:"
+
+#: data/louper.metainfo.xml.in:23
+msgid ""
+"Select some part of the magnified text and press Ctrl+C or perform secondary "
+"click to copy it"
+msgstr ""
+"Odaberi neki dio povećanog teksta i pritisni Ctrl+C ili izvedi sekundarni "
+"klik za kopiranje"
+
+#: data/louper.metainfo.xml.in:24
+msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
+msgstr "Pritisni Esc ili Ctrl+Q ili odmakni prozor za zatvaranje aplikacije"
+
+#: data/louper.metainfo.xml.in:30
+msgid "Zoom in what you like to read"
+msgstr "Zumiraj tekst koji želiš čitati"
+
+#: src/Application.vala:13
+msgid "Keep the app window open when unfocused"
+msgstr "Zadrži prozor aplikacije otvorenim kada nije fokusiran"
+
+#: src/Application.vala:17
+msgid "The text to zoom in; the clipboard is used if none specified"
+msgstr ""
+"Tekst za zumiranje; Međuspremnik se koristi ako nijedan nije specificiran"
