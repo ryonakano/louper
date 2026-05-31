@@ -118,9 +118,8 @@ public class MainWindow : Gtk.ApplicationWindow {
             // because just destroying sometimes seems to cause the wm crashing.
             // Borrowed from shortcut-overlay by elementary.
             visible = false;
-            Timeout.add (250, () => {
+            Timeout.add_once (250, () => {
                 destroy ();
-                return Source.REMOVE;
             });
         }
     }
