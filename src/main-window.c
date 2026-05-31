@@ -301,7 +301,6 @@ louper_main_window_set_text (LouperMainWindow   *self,
                              const GString      *text)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
-    g_return_if_fail (text != NULL);
 
     if (self->text == text) {
         return;

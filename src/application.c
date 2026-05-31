@@ -121,11 +121,7 @@ louper_application_activate (GApplication *application)
 
     self->window = louper_main_window_new ();
     louper_main_window_set_keep_open (self->window, self->keep_open);
-
-    if (self->text) {
-        louper_main_window_set_text (self->window, self->text);
-    }
-
+    louper_main_window_set_text (self->window, self->text);
     gtk_window_set_application (GTK_WINDOW (self->window), GTK_APPLICATION (application));
     gtk_window_present (GTK_WINDOW (self->window));
 }
