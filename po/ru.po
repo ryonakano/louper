@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:26+0000\n"
+"POT-Creation-Date: 2026-05-31 08:33+0200\n"
 "PO-Revision-Date: 2022-12-31 14:50+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: \n"
@@ -69,11 +69,6 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr "Приближайте что хотите прочитать"
 
-#. developer_name has deprecated since AppStream 1.0
-#: data/louper.metainfo.xml.in:54
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr "Оставлять окно открытым при его расфокусировании"
@@ -83,3 +78,6 @@ msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "Текст для приближения. Будет использован текст из буфера обмена, если другой "
 "не выбран"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"

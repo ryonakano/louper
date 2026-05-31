@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:26+0000\n"
+"POT-Creation-Date: 2026-05-31 08:33+0200\n"
 "PO-Revision-Date: 2024-05-14 01:56+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/louper/hi/>\n"
@@ -64,11 +64,6 @@ msgstr "ऐप बंद करने के लिए Esc या Ctrl+Q दब�
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
 msgstr "आप जो पढ़ना चाहते हैं उसे जूम करें"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/louper.metainfo.xml.in:54
-msgid "Ryo Nakano"
-msgstr ""
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"

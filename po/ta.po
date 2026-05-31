@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:26+0000\n"
+"POT-Creation-Date: 2026-05-31 08:33+0200\n"
 "PO-Revision-Date: 2025-03-02 06:40+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/louper/ta/>\n"
@@ -65,11 +65,6 @@ msgstr "பயன்பாட்டை மூடுவதற்கு தப்�
 #: data/louper.metainfo.xml.in:30
 msgid "Zoom in what you like to read"
 msgstr "நீங்கள் படிக்க விரும்புவதை பெரிதாக்கவும்"
-
-#. developer_name has deprecated since AppStream 1.0
-#: data/louper.metainfo.xml.in:54
-msgid "Ryo Nakano"
-msgstr ""
 
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"

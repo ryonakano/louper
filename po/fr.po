@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:26+0000\n"
+"POT-Creation-Date: 2026-05-31 08:33+0200\n"
 "PO-Revision-Date: 2025-05-20 12:02+0000\n"
 "Last-Translator: Stella and Charlie <littlepastelworld@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/louper/fr/>\n"
@@ -71,11 +71,6 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr "Zoomez sur ce que vous aimez lire"
 
-#. developer_name has deprecated since AppStream 1.0
-#: data/louper.metainfo.xml.in:54
-msgid "Ryo Nakano"
-msgstr "Ryo Nakano"
-
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr ""
@@ -85,3 +80,6 @@ msgstr ""
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "Texte à agrandir ; le presse-papiers est utilisé si rien n’est spécifié"
+
+#~ msgid "Ryo Nakano"
+#~ msgstr "Ryo Nakano"
