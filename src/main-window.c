@@ -48,7 +48,6 @@ calculate_size (LouperMainWindow    *self,
     height = primary_monitor_rectangle.height / 4;
     gtk_window_set_default_size (GTK_WINDOW (self), width, height);
 
-    // TODO: Backport to the current Vala code
     gdk_surface_destroy (surface);
 }
 
@@ -67,8 +66,7 @@ read_text_cb (GObject       *source_object,
 
     content = gdk_clipboard_read_text_finish (clipboard, res, &err);
     if (err) {
-        // TODO: Backport to the current Vala code
-        g_warning ("Failed to gdk_clipboard_read_text_finish(): %s", err->message);
+        g_warning ("Failed to read text from clipboard: %s", err->message);
         g_task_return_error (task, err);
         return;
     }
@@ -184,7 +182,6 @@ louper_main_window_state_flags_changed (GtkWidget       *widget,
     self = LOUPER_MAIN_WINDOW (widget);
 
     current_state_flags = gtk_widget_get_state_flags (widget);
-    // TODO: Backport to the current Vala code
     if (current_state_flags & GTK_STATE_FLAG_BACKDROP) {
         if (self->keep_open) {
             return;
@@ -194,7 +191,6 @@ louper_main_window_state_flags_changed (GtkWidget       *widget,
         // because just destroying sometimes seems to cause the wm crashing.
         // Borrowed from shortcut-overlay by elementary.
         gtk_widget_set_visible (widget, FALSE);
-        // TODO: Backport to the current Vala code
         g_timeout_add_once (250, (GSourceOnceFunc) gtk_window_destroy, GTK_WINDOW (widget));
     }
 }

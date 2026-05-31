@@ -115,7 +115,6 @@ louper_application_activate (GApplication *application)
     self = LOUPER_APPLICATION (application);
 
     if (self->window) {
-        // TODO: Backport to the current Vala code
         gtk_window_present (GTK_WINDOW (self->window));
         return;
     }
