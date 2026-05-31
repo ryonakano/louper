@@ -31,7 +31,7 @@ static const GOptionEntry options[] = {
     },
     {
         OPT_LONG_NAME_TEXT, 't', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, NULL,
-        N_("The text to zoom in; the clipboard is used if none specified"), "TEXT"
+        N_("The text to zoom in; the clipboard is used if none specified"), N_("TEXT")
     },
     { NULL } // terminate
 };
