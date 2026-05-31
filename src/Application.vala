@@ -66,6 +66,7 @@ public class Application : Gtk.Application {
 
     protected override void activate () {
         if (window != null) {
+            window.present ();
             return;
         }
 
