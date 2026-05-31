@@ -14,7 +14,6 @@ struct _LouperApplication {
 
     LouperMainWindow        *window;
 
-    // TODO: Backport to the current Vala code
     gboolean                 keep_open;
     GString                 *text;
 };
