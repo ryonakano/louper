@@ -10,11 +10,11 @@ public class Application : Gtk.Application {
     private OptionEntry[] options = {
         {
             "keep-open", 'k', OptionFlags.NONE, OptionArg.NONE, &keep_open,
-            _("Keep the app window open when unfocused"), null
+            N_("Keep the app window open when unfocused"), null
         },
         {
             "text", 't', OptionFlags.NONE, OptionArg.STRING, &text,
-            _("The text to zoom in; the clipboard is used if none specified"), "TEXT"
+            N_("The text to zoom in; the clipboard is used if none specified"), N_("TEXT")
         },
         { null } // This is a null-terminated list
     };
