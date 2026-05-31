@@ -11,10 +11,6 @@ public class MainWindow : Gtk.ApplicationWindow {
     }
     """;
 
-    // Member variable to avoid the following warning is shown:
-    // Gdk-WARNING **: 12:28:19.667: losing last reference to undestroyed surface
-    private Gdk.Surface surface;
-
     private bool is_label_updated = false;
 
     construct {
@@ -77,13 +73,15 @@ public class MainWindow : Gtk.ApplicationWindow {
 
     private void calculate_size () {
         // Get the area where we can draw the app window
-        surface = new Gdk.Surface.toplevel (display);
+        var surface = new Gdk.Surface.toplevel (display);
         unowned Gdk.Monitor primary_monitor = display.get_monitor_at_surface (surface);
         unowned Gdk.Rectangle primary_monitor_rectangle = primary_monitor.get_geometry ();
 
         // Set reasonable window size
         default_width = primary_monitor_rectangle.width / 2;
         default_height = primary_monitor_rectangle.height / 4;
+
+        surface.destroy ();
     }
 
     private async void update_label_text (Gtk.Label label_widget) {
