@@ -1,8 +1,11 @@
 project(
   'com.github.ryonakano.louper',
-  'vala', 'c',
+  'c',
   version: '2.0.6',
   meson_version: '>= 0.57.0',
+  default_options: [
+    'warning_level=2',
+  ],
 )
 
 gnome = import('gnome')
