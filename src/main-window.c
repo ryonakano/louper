@@ -3,9 +3,9 @@
  * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-#include <gtk/gtk.h>
-#include <granite-7/granite-7.h>
 #include "main-window.h"
+
+#include <granite-7/granite-7.h>
 
 struct _LouperMainWindow {
     GtkApplicationWindow            parent_instance;
@@ -13,6 +13,7 @@ struct _LouperMainWindow {
     gboolean                        keep_open;
     const GString                   *text;
     gboolean                        is_label_updated;
+    guint                           destroy_timeout_id;
 };
 
 G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_WINDOW);
@@ -26,6 +27,8 @@ static void
 calculate_size (LouperMainWindow    *self,
                 GdkDisplay          *display)
 {
+    // Can't use g_autoptr() because GdkSurface instances need to be destroyed instead of just unref
+    /* gobject-linter-ignore-next-line: use_auto_cleanup */
     GdkSurface *surface;
     GdkMonitor *primary_monitor;
     GdkRectangle primary_monitor_rectangle;
@@ -86,6 +89,7 @@ load_clipboard_async (LouperMainWindow      *self,
     clipboard = gtk_widget_get_primary_clipboard (GTK_WIDGET (self));
 
     task = g_task_new (self, cancellable, callback, user_data);
+    g_task_set_source_tag (task, load_clipboard_async);
 
     gdk_clipboard_read_text_async (clipboard, cancellable, read_text_cb, task);
 }
@@ -108,7 +112,7 @@ load_clipboard_cb (GObject          *source_object,
     LouperMainWindow *self;
     GtkLabel *label_widget;
     g_autofree char *content;
-    GError *err = NULL;
+    g_autoptr(GError) err = NULL;
 
     self = LOUPER_MAIN_WINDOW (source_object);
     label_widget = GTK_LABEL (data);
@@ -191,18 +195,36 @@ louper_main_window_state_flags_changed (GtkWidget       *widget,
         // because just destroying sometimes seems to cause the wm crashing.
         // Borrowed from shortcut-overlay by elementary.
         gtk_widget_set_visible (widget, FALSE);
-        g_timeout_add_once (250, (GSourceOnceFunc) gtk_window_destroy, GTK_WINDOW (widget));
+        self->destroy_timeout_id = g_timeout_add_once (250, (GSourceOnceFunc) gtk_window_destroy, GTK_WINDOW (widget));
     }
+}
+
+static void
+louper_main_window_dispose (GObject *object)
+{
+    LouperMainWindow *self;
+
+    self = LOUPER_MAIN_WINDOW (object);
+
+    if (self->destroy_timeout_id > 0) {
+        g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
+    }
+
+    G_OBJECT_CLASS (louper_main_window_parent_class)->dispose (object);
 }
 
 static void
 louper_main_window_class_init (LouperMainWindowClass *klass)
 {
     GtkWidgetClass *widget_class;
+    GObjectClass *object_class;
 
     widget_class = GTK_WIDGET_CLASS (klass);
+    object_class = G_OBJECT_CLASS (klass);
 
     widget_class->state_flags_changed = louper_main_window_state_flags_changed;
+
+    object_class->dispose = louper_main_window_dispose;
 }
 
 static void
@@ -220,8 +242,11 @@ louper_main_window_init (LouperMainWindow *self)
     self->keep_open = false;
     self->text = NULL;
     self->is_label_updated = FALSE;
+    self->destroy_timeout_id = 0;
 
     gtk_window_set_resizable (window, FALSE);
+    // Application name is a proper noun and thus should not be translated
+    /* gobject-linter-ignore-next-line: untranslated_string */
     gtk_window_set_title (window, "Louper");
 
     display = gtk_widget_get_display (GTK_WIDGET (self));

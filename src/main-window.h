@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define LOUPER_TYPE_MAIN_WINDOW         (louper_main_window_get_type ())

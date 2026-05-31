@@ -5,6 +5,8 @@
 
 #pragma once
 
+#include <gtk/gtk.h>
+
 G_BEGIN_DECLS
 
 #define LOUPER_TYPE_APPLICATION         (louper_application_get_type ())

@@ -3,10 +3,13 @@
  * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
+#include "config.h"
+
 #include <locale.h>
+
 #include <glib/gi18n.h>
 #include <gtk/gtk.h>
-#include "config.h"
+
 #include "application.h"
 
 int

@@ -1,0 +1,4 @@
+[rules.type_style]
+# Do not enforce consistent use of GLib or C standard type aliases
+# because we use both of them propertly
+level = "ignore"
