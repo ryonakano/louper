@@ -181,7 +181,7 @@ louper_application_dispose (GObject *object)
 
     self = LOUPER_APPLICATION (object);
 
-    // self->window should be already freeded by gtk_window_destroy()
+    // self->window should be already freed by gtk_window_destroy()
 
     if (self->text) {
         g_string_free (self->text, TRUE);
