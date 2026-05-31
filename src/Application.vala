@@ -4,8 +4,8 @@
  */
 
 public class Application : Gtk.Application {
-    public static bool keep_open = false;
-    public static string? text = null;
+    private static bool keep_open = false;
+    private static string? text = null;
 
     private OptionEntry[] options = {
         {
@@ -70,7 +70,10 @@ public class Application : Gtk.Application {
             return;
         }
 
-        window = new MainWindow ();
+        window = new MainWindow () {
+            keep_open = keep_open,
+            text = text
+        };
         window.set_application (this);
         window.present ();
     }
