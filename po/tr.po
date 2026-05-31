@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-23 06:33+0000\n"
+"POT-Creation-Date: 2026-05-31 08:19+0200\n"
 "PO-Revision-Date: 2023-01-04 18:49+0000\n"
 "Last-Translator: Oğuz Ersen <oguz@ersen.moe>\n"
 "Language-Team: \n"
@@ -18,19 +18,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.15.1-dev\n"
 
-#: data/louper.desktop.in:3
+#: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
 msgid "Louper"
 msgstr "Louper"
 
-#: data/louper.desktop.in:4
+#: data/louper.desktop.in:3
 msgid "Text Magnification App"
 msgstr "Metin Büyütme Uygulaması"
 
-#: data/louper.desktop.in:5 data/louper.metainfo.xml.in:11
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
 msgid "Magnify the selected text"
 msgstr "Seçili metni büyüt"
 
-#: data/louper.desktop.in:11
+#: data/louper.desktop.in:10
 msgid "Zoom;Copy;"
 msgstr "Zoom;Copy;Yakınlaştır;Kopyala;"
 
@@ -69,6 +69,11 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr "Okumak istediklerinizi yakınlaştırın"
 
+#. developer_name has deprecated since AppStream 1.0
+#: data/louper.metainfo.xml.in:54
+msgid "Ryo Nakano"
+msgstr "Ryo Nakano"
+
 #: src/Application.vala:13
 msgid "Keep the app window open when unfocused"
 msgstr "Odaklanılmadığında uygulama penceresini açık tut"
@@ -76,6 +81,3 @@ msgstr "Odaklanılmadığında uygulama penceresini açık tut"
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Yakınlaştırılacak metin; hiçbiri belirtilmezse pano kullanılır"
-
-#~ msgid "Ryo Nakano"
-#~ msgstr "Ryo Nakano"
