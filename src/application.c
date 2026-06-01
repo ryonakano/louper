@@ -14,6 +14,7 @@ struct _LouperApplication {
     GtkApplication           parent_instance;
 
     LouperMainWindow        *window;
+    GBinding                *color_scheme_binding;
 
     gboolean                 keep_open;
     GString                 *text;
@@ -81,7 +82,7 @@ granite_prop_to_gtk_prop (GBinding      *binding,
  * Follow elementary OS-wide dark preference
  */
 static void
-setup_style (void)
+setup_style (LouperApplication *self)
 {
     GraniteSettings *granite_settings;
     GtkSettings *gtk_settings;
@@ -98,13 +99,20 @@ setup_style (void)
         return;
     }
 
-    g_object_bind_property_full (granite_settings, "prefers-color-scheme",
-                                 gtk_settings, "gtk-application-prefer-dark-theme",
-                                 G_BINDING_SYNC_CREATE,
-                                 granite_prop_to_gtk_prop,
-                                 NULL,
-                                 NULL,
-                                 NULL);
+    /*
+     * The binding created by g_object_bind_property_full() will automatically be removed when either the source
+     * or the target instances are finalized.
+     * Here, however, both of the source (granite_settings) and the target (gtk_settings) instances are unowned
+     * references, thus neither of them are finalized during lifetime of a LouperApplication instance.
+     * So we hold a reference to the binding to remove the binding manually when finalizing LouperApplication.
+     */
+    self->color_scheme_binding = g_object_bind_property_full (granite_settings, "prefers-color-scheme",
+                                                              gtk_settings, "gtk-application-prefer-dark-theme",
+                                                              G_BINDING_SYNC_CREATE,
+                                                              granite_prop_to_gtk_prop,
+                                                              NULL,
+                                                              NULL,
+                                                              NULL);
 }
 
 static void
@@ -167,11 +175,14 @@ static void
 louper_application_startup (GApplication *application)
 {
     GApplicationClass *application_class;
+    LouperApplication *self;
 
     application_class = G_APPLICATION_CLASS (louper_application_parent_class);
     application_class->startup (application);
 
-    setup_style ();
+    self = LOUPER_APPLICATION (application);
+
+    setup_style (self);
 }
 
 static void
@@ -187,6 +198,8 @@ louper_application_dispose (GObject *object)
         g_string_free (self->text, TRUE);
         self->text = NULL;
     }
+
+    g_binding_unbind (self->color_scheme_binding);
 
     G_OBJECT_CLASS (louper_application_parent_class)->dispose (object);
 }
@@ -217,6 +230,7 @@ louper_application_init (LouperApplication *self)
     };
 
     self->window = NULL;
+    self->color_scheme_binding = NULL;
     self->keep_open = false;
     self->text = NULL;
 
