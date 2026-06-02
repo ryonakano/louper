@@ -22,12 +22,17 @@ public class Application : Gtk.Application {
         { "quit", on_quit_activate },
     };
     private MainWindow window;
+    private Binding color_scheme_binding;
 
     public Application () {
         Object (
             application_id: "com.github.ryonakano.louper",
             flags: ApplicationFlags.DEFAULT_FLAGS
         );
+    }
+
+    ~Application () {
+        color_scheme_binding.unbind ();
     }
 
     construct {
@@ -42,19 +47,29 @@ public class Application : Gtk.Application {
         set_accels_for_action ("app.quit", { "<Control>q", "Escape" });
     }
 
+    private static bool granite_prop_to_gtk_prop (Binding binding, Value granite_prop, ref Value gtk_prop) {
+        gtk_prop.set_boolean ((Granite.Settings.ColorScheme) granite_prop == Granite.Settings.ColorScheme.DARK);
+        return true;
+    }
+
     /**
      * Follow elementary OS-wide dark preference
      */
     private void setup_style () {
-        var granite_settings = Granite.Settings.get_default ();
-        var gtk_settings = Gtk.Settings.get_default ();
+        unowned var granite_settings = Granite.Settings.get_default ();
+        unowned var gtk_settings = Gtk.Settings.get_default ();
 
-        granite_settings.bind_property ("prefers-color-scheme", gtk_settings, "gtk-application-prefer-dark-theme",
+        /*
+         * The binding created by bind_property() will automatically be removed when either the source
+         * or the target instances are finalized.
+         * Here, however, both of the source (granite_settings) and the target (gtk_settings) instances are unowned
+         * references, thus neither of them are finalized during lifetime of the Application instance.
+         * So we hold a reference to the binding to remove it manually when finalizing Application.
+         */
+        color_scheme_binding = granite_settings.bind_property ("prefers-color-scheme",
+            gtk_settings, "gtk-application-prefer-dark-theme",
             BindingFlags.DEFAULT | BindingFlags.SYNC_CREATE,
-            ((binding, granite_prop, ref gtk_prop) => {
-                gtk_prop.set_boolean ((Granite.Settings.ColorScheme) granite_prop == Granite.Settings.ColorScheme.DARK);
-                return true;
-            })
+            (BindingTransformFunc) granite_prop_to_gtk_prop
         );
     }
 
