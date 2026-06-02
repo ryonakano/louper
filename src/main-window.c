@@ -207,7 +207,7 @@ louper_main_window_dispose (GObject *object)
     self = LOUPER_MAIN_WINDOW (object);
 
     if (self->destroy_timeout_id > 0) {
-        // Clear destroy timeout to avoid use-after-free of a LouperMainWindow instance
+        // Clear destroy timeout to avoid use-after-free of a MainWindow instance
         g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
 
         // No need to set self->destroy_timeout_id to 0 here; g_clear_handle_id() already did

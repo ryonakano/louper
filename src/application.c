@@ -103,8 +103,8 @@ setup_style (LouperApplication *self)
      * The binding created by g_object_bind_property_full() will automatically be removed when either the source
      * or the target instances are finalized.
      * Here, however, both of the source (granite_settings) and the target (gtk_settings) instances are unowned
-     * references, thus neither of them are finalized during lifetime of a LouperApplication instance.
-     * So we hold a reference to the binding to remove the binding manually when finalizing LouperApplication.
+     * references, thus neither of them are finalized during lifetime of the Application instance.
+     * So we hold a reference to the binding to remove it manually when finalizing Application.
      */
     self->color_scheme_binding = g_object_bind_property_full (granite_settings, "prefers-color-scheme",
                                                               gtk_settings, "gtk-application-prefer-dark-theme",
