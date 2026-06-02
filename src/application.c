@@ -63,17 +63,17 @@ static const GActionEntry action_entries[] = {
 
 static gboolean
 granite_prop_to_gtk_prop (GBinding      *binding,
-                          const GValue  *from_value,
-                          GValue        *to_value,
+                          const GValue  *granite_prop,
+                          GValue        *gtk_prop,
                           gpointer       user_data)
 {
-    gint granite_prop;
+    gint granite_prop_raw;
 
     (void) binding;
     (void) user_data;
 
-    granite_prop = g_value_get_enum (from_value);
-    g_value_set_boolean (to_value, (GraniteSettingsColorScheme) granite_prop == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
+    granite_prop_raw = g_value_get_enum (granite_prop);
+    g_value_set_boolean (gtk_prop, (GraniteSettingsColorScheme) granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
 
     return TRUE;
 }
