@@ -60,69 +60,31 @@ read_text_cb (GObject       *source_object,
               gpointer       data)
 {
     GdkClipboard *clipboard;
-    g_autoptr(GTask) task;
-    char *content;
-    GError *err = NULL;
+    GtkLabel *label;
+    g_autofree char *text;
+    g_autoptr(GError) err = NULL;
 
     clipboard = GDK_CLIPBOARD (source_object);
-    task = G_TASK (data);
+    label = GTK_LABEL (data);
 
-    content = gdk_clipboard_read_text_finish (clipboard, res, &err);
+    text = gdk_clipboard_read_text_finish (clipboard, res, &err);
     if (err) {
         g_warning ("Failed to read text from clipboard: %s", err->message);
-        g_task_return_error (task, err);
         return;
     }
 
-    g_task_return_pointer (task, content, g_free);
+    gtk_label_set_label (label, text);
 }
 
 static void
-load_clipboard_async (LouperMainWindow      *self,
-                      GCancellable          *cancellable,
-                      GAsyncReadyCallback    callback,
-                      gpointer               user_data)
+load_clipboard (LouperMainWindow      *self,
+                GtkLabel              *label_widget)
 {
-    GTask *task;
     GdkClipboard *clipboard;
 
     clipboard = gtk_widget_get_primary_clipboard (GTK_WIDGET (self));
 
-    task = g_task_new (self, cancellable, callback, user_data);
-    g_task_set_source_tag (task, load_clipboard_async);
-
-    gdk_clipboard_read_text_async (clipboard, cancellable, read_text_cb, task);
-}
-
-static char *
-load_clipboard_finish (LouperMainWindow      *self,
-                       GAsyncResult          *res,
-                       GError               **err)
-{
-    g_return_val_if_fail (g_task_is_valid (res, self), NULL);
-
-    return g_task_propagate_pointer (G_TASK (res), err);
-}
-
-static void
-load_clipboard_cb (GObject          *source_object,
-                   GAsyncResult     *res,
-                   gpointer          data)
-{
-    LouperMainWindow *self;
-    GtkLabel *label_widget;
-    g_autofree char *content;
-    g_autoptr(GError) err = NULL;
-
-    self = LOUPER_MAIN_WINDOW (source_object);
-    label_widget = GTK_LABEL (data);
-
-    content = load_clipboard_finish (self, res, &err);
-    if (err) {
-        return;
-    }
-
-    gtk_label_set_label (label_widget, content);
+    gdk_clipboard_read_text_async (clipboard, NULL, read_text_cb, label_widget);
 }
 
 static void
@@ -134,7 +96,7 @@ update_label_text (LouperMainWindow     *self,
         gtk_label_set_label (label_widget, self->text->str);
     } else {
         // Otherwise set the text loaded from clipboard
-        load_clipboard_async (self, NULL, load_clipboard_cb, label_widget);
+        load_clipboard (self, label_widget);
     }
 }
 
@@ -235,7 +197,7 @@ louper_main_window_init (LouperMainWindow *self)
 {
     GtkWindow *window;
     GdkDisplay *display;
-    GtkCssProvider *cssprovider;
+    g_autoptr(GtkCssProvider) cssprovider;
     GtkWidget *title_bar;
     GtkWidget *magnified_label;
     GtkWidget *main_box;
