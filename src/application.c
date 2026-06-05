@@ -189,8 +189,8 @@ static void
 __g_string_destroy_notify (gpointer data)
 {
     /*
-     * Ignore return value to comply with GDestroyNotify. Also g_string_free() returns NULL anyways
-     * because we're passing TRUE as the free_segment parameter of it.
+     * Ignore return value to comply with GDestroyNotify. Also g_string_free() returns NULL anyways here
+     * because we're passing TRUE to the free_segment parameter of it.
      */
     (void) g_string_free (data, TRUE);
 }
@@ -202,7 +202,7 @@ louper_application_dispose (GObject *object)
 
     self = LOUPER_APPLICATION (object);
 
-    // self->window should be already freed by gtk_window_destroy()
+    // self->window should be already freed
     g_clear_pointer (&(self->text), __g_string_destroy_notify);
     g_clear_pointer (&(self->color_scheme_binding), g_binding_unbind);
 
