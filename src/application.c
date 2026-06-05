@@ -25,7 +25,7 @@ G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION
 #define OPT_LONG_NAME_KEEP_OPEN         "keep-open"
 #define OPT_LONG_NAME_TEXT              "text"
 
-static const GOptionEntry options[] = {
+static const GOptionEntry app_options[] = {
     {
         OPT_LONG_NAME_KEEP_OPEN, 'k', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, NULL,
         N_("Keep the app window open when unfocused"), NULL
@@ -239,7 +239,7 @@ louper_application_init (LouperApplication *self)
     self->keep_open = false;
     self->text = NULL;
 
-    g_application_add_main_option_entries (G_APPLICATION (self), options);
+    g_application_add_main_option_entries (G_APPLICATION (self), app_options);
 
     g_action_map_add_action_entries (G_ACTION_MAP (self), action_entries, G_N_ELEMENTS (action_entries), self);
     gtk_application_set_accels_for_action (GTK_APPLICATION (self), "app.quit", app_quit_accels);
