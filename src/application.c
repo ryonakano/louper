@@ -20,7 +20,7 @@ struct _LouperApplication {
     GString                 *text;
 };
 
-G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION);
+G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
 
 #define OPT_LONG_NAME_KEEP_OPEN         "keep-open"
 #define OPT_LONG_NAME_TEXT              "text"

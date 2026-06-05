@@ -16,7 +16,7 @@ struct _LouperMainWindow {
     guint                           destroy_timeout_id;
 };
 
-G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_WINDOW);
+G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_WINDOW)
 
 #define CSS_DATA        ".magnified-text {" \
                         "    font-size: 128px;" \
