@@ -11,7 +11,7 @@ struct _LouperMainWindow {
     GtkApplicationWindow            parent_instance;
 
     gboolean                        keep_open;
-    const GString                   *text;
+    const gchar                    *text;
     gboolean                        is_label_updated;
     guint                           destroy_timeout_id;
 };
@@ -90,7 +90,7 @@ update_label_text (LouperMainWindow     *self,
 {
     if (self->text) {
         // Set the text passed by the command line option if specified
-        gtk_label_set_label (label_widget, self->text->str);
+        gtk_label_set_label (label_widget, self->text);
     } else {
         // Otherwise set the text loaded from clipboard
         load_clipboard (self, label_widget);
@@ -248,7 +248,7 @@ louper_main_window_set_keep_open (LouperMainWindow  *self,
 
 void
 louper_main_window_set_text (LouperMainWindow   *self,
-                             const GString      *text)
+                             const gchar        *text)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 

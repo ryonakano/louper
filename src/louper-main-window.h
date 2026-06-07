@@ -15,6 +15,6 @@ G_DECLARE_FINAL_TYPE (LouperMainWindow, louper_main_window, LOUPER, MAIN_WINDOW,
 extern LouperMainWindow *louper_main_window_new (void);
 
 extern void louper_main_window_set_keep_open (LouperMainWindow *self, gboolean keep_open);
-extern void louper_main_window_set_text (LouperMainWindow *self, const GString *text);
+extern void louper_main_window_set_text (LouperMainWindow *self, const gchar *text);
 
 G_END_DECLS

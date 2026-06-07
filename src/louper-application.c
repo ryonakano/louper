@@ -17,7 +17,7 @@ struct _LouperApplication {
     GBinding                *color_scheme_binding;
 
     gboolean                 keep_open;
-    GString                 *text;
+    gchar                   *text;
 };
 
 G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
@@ -158,7 +158,7 @@ louper_application_handle_local_options (GApplication   *application,
             return 1;
         }
 
-        self->text = g_string_new (g_variant_get_string (value, NULL));
+        self->text = g_strdup (g_variant_get_string (value, NULL));
         g_variant_unref (value);
     }
 
@@ -176,23 +176,13 @@ louper_application_startup (GApplication *application)
 }
 
 static void
-__g_string_destroy_notify (gpointer data)
-{
-    /*
-     * Ignore return value to comply with GDestroyNotify. Also g_string_free() returns NULL anyways here
-     * because we're passing TRUE to the free_segment parameter of it.
-     */
-    (void) g_string_free (data, TRUE);
-}
-
-static void
 louper_application_dispose (GObject *object)
 {
     LouperApplication *self = LOUPER_APPLICATION (object);
 
     // self->window should be already freed
 
-    g_clear_pointer (&(self->text), __g_string_destroy_notify);
+    g_clear_pointer (&(self->text), g_free);
     g_clear_pointer (&(self->color_scheme_binding), g_binding_unbind);
 
     G_OBJECT_CLASS (louper_application_parent_class)->dispose (object);
