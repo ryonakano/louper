@@ -8,12 +8,12 @@
 #include <granite-7/granite-7.h>
 
 struct _LouperMainWindow {
-    GtkApplicationWindow            parent_instance;
+    GtkApplicationWindow        parent_instance;
 
-    gboolean                        keep_open;
-    const gchar                    *text;
-    gboolean                        is_label_updated;
-    guint                           destroy_timeout_id;
+    gboolean                    keep_open;
+    const gchar                *text;
+    gboolean                    is_label_updated;
+    guint                       destroy_timeout_id;
 };
 
 G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_WINDOW)
@@ -24,8 +24,8 @@ G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_
                         "}"
 
 static void
-calculate_size (LouperMainWindow    *self,
-                GdkDisplay          *display)
+calculate_size (LouperMainWindow   *self,
+                GdkDisplay         *display)
 {
     // Can't use g_autoptr() because GdkSurface instances need to be destroyed instead of just unref
     /* gobject-linter-ignore-next-line: use_auto_cleanup */
@@ -55,9 +55,9 @@ destroy_surface:
 }
 
 static void
-read_text_cb (GObject       *source_object,
-              GAsyncResult  *res,
-              gpointer       data)
+read_text_cb (GObject      *source_object,
+              GAsyncResult *res,
+              gpointer      data)
 {
     GdkClipboard *clipboard = GDK_CLIPBOARD (source_object);
     GtkLabel *label = GTK_LABEL (data);
@@ -74,8 +74,8 @@ read_text_cb (GObject       *source_object,
 }
 
 static void
-load_clipboard (LouperMainWindow      *self,
-                GtkLabel              *label_widget)
+load_clipboard (LouperMainWindow   *self,
+                GtkLabel           *label_widget)
 {
     GdkClipboard *clipboard;
 
@@ -85,8 +85,8 @@ load_clipboard (LouperMainWindow      *self,
 }
 
 static void
-update_label_text (LouperMainWindow     *self,
-                   GtkLabel             *label_widget)
+update_label_text (LouperMainWindow    *self,
+                   GtkLabel            *label_widget)
 {
     if (self->text) {
         // Set the text passed by the command line option if specified
@@ -131,8 +131,8 @@ notify_is_active_cb (GtkWindow     *window,
 }
 
 static void
-louper_main_window_state_flags_changed (GtkWidget       *widget,
-                                        GtkStateFlags    previous_state_flags)
+louper_main_window_state_flags_changed (GtkWidget      *widget,
+                                        GtkStateFlags   previous_state_flags)
 {
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (widget);
     GtkStateFlags current_state_flags;
@@ -234,8 +234,8 @@ louper_main_window_init (LouperMainWindow *self)
 }
 
 void
-louper_main_window_set_keep_open (LouperMainWindow  *self,
-                                  gboolean           keep_open)
+louper_main_window_set_keep_open (LouperMainWindow *self,
+                                  gboolean          keep_open)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 
@@ -247,8 +247,8 @@ louper_main_window_set_keep_open (LouperMainWindow  *self,
 }
 
 void
-louper_main_window_set_text (LouperMainWindow   *self,
-                             const gchar        *text)
+louper_main_window_set_text (LouperMainWindow  *self,
+                             const gchar       *text)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 

@@ -11,13 +11,13 @@
 #include "louper-main-window.h"
 
 struct _LouperApplication {
-    GtkApplication           parent_instance;
+    GtkApplication          parent_instance;
 
-    LouperMainWindow        *window;
-    GBinding                *color_scheme_binding;
+    LouperMainWindow       *window;
+    GBinding               *color_scheme_binding;
 
-    gboolean                 keep_open;
-    gchar                   *text;
+    gboolean                keep_open;
+    gchar                  *text;
 };
 
 G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
@@ -38,9 +38,9 @@ static const GOptionEntry app_options[] = {
 };
 
 static void
-on_quit_activate (GSimpleAction     *action,
-                  GVariant          *parameter,
-                  gpointer           user_data)
+on_quit_activate (GSimpleAction    *action,
+                  GVariant         *parameter,
+                  gpointer          user_data)
 {
     LouperApplication *self = LOUPER_APPLICATION (user_data);
 
@@ -60,10 +60,10 @@ static const GActionEntry action_entries[] = {
 };
 
 static gboolean
-granite_prop_to_gtk_prop (GBinding      *binding,
-                          const GValue  *granite_prop,
-                          GValue        *gtk_prop,
-                          gpointer       user_data)
+granite_prop_to_gtk_prop (GBinding     *binding,
+                          const GValue *granite_prop,
+                          GValue       *gtk_prop,
+                          gpointer      user_data)
 {
     gint granite_prop_raw;
 
@@ -131,8 +131,8 @@ louper_application_activate (GApplication *application)
 }
 
 static gint
-louper_application_handle_local_options (GApplication   *application,
-                                         GVariantDict   *options)
+louper_application_handle_local_options (GApplication *application,
+                                         GVariantDict *options)
 {
     LouperApplication *self = LOUPER_APPLICATION (application);
     gboolean has_option;
