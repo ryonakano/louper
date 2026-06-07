@@ -16,7 +16,7 @@
     - Bump `version` in `meson.build`  
     ```meson
     project(
-      'com.github.ryonakano.louper',
+      'louper',
       'c',
       version: '2.0.6',
       meson_version: '>= 0.57.0',

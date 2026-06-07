@@ -53,11 +53,11 @@ meson setup builddir --prefix=/usr
 meson compile -C builddir
 ```
 
-To install, use `meson install`, then execute with `com.github.ryonakano.louper`:
+To install, use `meson install`, then execute with `louper`:
 
 ```bash
 meson install -C builddir
-com.github.ryonakano.louper
+louper
 ```
 
 ## Usage

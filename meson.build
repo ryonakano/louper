@@ -1,5 +1,5 @@
 project(
-  'com.github.ryonakano.louper',
+  'louper',
   'c',
   version: '2.0.6',
   meson_version: '>= 0.57.0',
@@ -7,6 +7,8 @@ project(
     'warning_level=2',
   ],
 )
+
+app_id = 'com.github.ryonakano.' + meson.project_name()
 
 gnome = import('gnome')
 i18n = import('i18n')
