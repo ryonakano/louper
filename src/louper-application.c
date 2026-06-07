@@ -3,12 +3,12 @@
  * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-#include "application.h"
+#include "louper-application.h"
 
 #include <glib/gi18n.h>
 #include <granite-7/granite-7.h>
 
-#include "main-window.h"
+#include "louper-main-window.h"
 
 struct _LouperApplication {
     GtkApplication           parent_instance;
@@ -34,7 +34,7 @@ static const GOptionEntry app_options[] = {
         OPT_LONG_NAME_TEXT, 't', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, NULL,
         N_("The text to zoom in; the clipboard is used if none specified"), N_("TEXT")
     },
-    { NULL } // terminate
+    { NULL }
 };
 
 static void
@@ -42,12 +42,10 @@ on_quit_activate (GSimpleAction     *action,
                   GVariant          *parameter,
                   gpointer           user_data)
 {
-    LouperApplication *self;
+    LouperApplication *self = LOUPER_APPLICATION (user_data);
 
     (void) action;
     (void) parameter;
-
-    self = LOUPER_APPLICATION (user_data);
 
     if (self->window) {
         gtk_window_destroy (GTK_WINDOW (self->window));
@@ -118,9 +116,7 @@ setup_style (LouperApplication *self)
 static void
 louper_application_activate (GApplication *application)
 {
-    LouperApplication *self;
-
-    self = LOUPER_APPLICATION (application);
+    LouperApplication *self = LOUPER_APPLICATION (application);
 
     if (self->window) {
         gtk_window_present (GTK_WINDOW (self->window));
@@ -138,11 +134,9 @@ static gint
 louper_application_handle_local_options (GApplication   *application,
                                          GVariantDict   *options)
 {
-    LouperApplication *self;
+    LouperApplication *self = LOUPER_APPLICATION (application);
     gboolean has_option;
     GVariant *value;
-
-    self = LOUPER_APPLICATION (application);
 
     has_option = g_variant_dict_contains (options, OPT_LONG_NAME_KEEP_OPEN);
     if (has_option) {
@@ -174,13 +168,9 @@ louper_application_handle_local_options (GApplication   *application,
 static void
 louper_application_startup (GApplication *application)
 {
-    GApplicationClass *application_class;
-    LouperApplication *self;
+    LouperApplication *self = LOUPER_APPLICATION (application);
 
-    application_class = G_APPLICATION_CLASS (louper_application_parent_class);
-    application_class->startup (application);
-
-    self = LOUPER_APPLICATION (application);
+    G_APPLICATION_CLASS (louper_application_parent_class)->startup (application);
 
     setup_style (self);
 }
@@ -198,11 +188,10 @@ __g_string_destroy_notify (gpointer data)
 static void
 louper_application_dispose (GObject *object)
 {
-    LouperApplication *self;
-
-    self = LOUPER_APPLICATION (object);
+    LouperApplication *self = LOUPER_APPLICATION (object);
 
     // self->window should be already freed
+
     g_clear_pointer (&(self->text), __g_string_destroy_notify);
     g_clear_pointer (&(self->color_scheme_binding), g_binding_unbind);
 
@@ -212,11 +201,8 @@ louper_application_dispose (GObject *object)
 static void
 louper_application_class_init (LouperApplicationClass *klass)
 {
-    GApplicationClass *application_class;
-    GObjectClass *object_class;
-
-    application_class = G_APPLICATION_CLASS (klass);
-    object_class = G_OBJECT_CLASS (klass);
+    GApplicationClass *application_class = G_APPLICATION_CLASS (klass);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     application_class->activate = louper_application_activate;
     application_class->handle_local_options = louper_application_handle_local_options;
@@ -231,7 +217,7 @@ louper_application_init (LouperApplication *self)
     const char * const app_quit_accels[] = {
         "<Control>q",
         "Escape",
-        NULL // terminate
+        NULL
     };
 
     self->window = NULL;

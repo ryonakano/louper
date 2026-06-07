@@ -3,7 +3,7 @@
  * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-#include "main-window.h"
+#include "louper-main-window.h"
 
 #include <granite-7/granite-7.h>
 
@@ -59,13 +59,10 @@ read_text_cb (GObject       *source_object,
               GAsyncResult  *res,
               gpointer       data)
 {
-    GdkClipboard *clipboard;
-    GtkLabel *label;
-    g_autofree char *text;
+    GdkClipboard *clipboard = GDK_CLIPBOARD (source_object);
+    GtkLabel *label = GTK_LABEL (data);
+    g_autofree char *text = NULL;
     g_autoptr(GError) err = NULL;
-
-    clipboard = GDK_CLIPBOARD (source_object);
-    label = GTK_LABEL (data);
 
     text = gdk_clipboard_read_text_finish (clipboard, res, &err);
     if (err) {
@@ -105,14 +102,11 @@ notify_is_active_cb (GtkWindow     *window,
                      GParamSpec    *pspec,
                      gpointer       user_data)
 {
-    LouperMainWindow *self;
-    GtkLabel *magnified_label;
+    LouperMainWindow *self = LOUPER_MAIN_WINDOW (window);
+    GtkLabel *magnified_label = GTK_LABEL (user_data);
     gboolean is_active;
 
     (void) pspec;
-
-    self = LOUPER_MAIN_WINDOW (window);
-    magnified_label = GTK_LABEL (user_data);
 
     is_active = gtk_window_is_active (window);
     if (!is_active) {
@@ -140,12 +134,10 @@ static void
 louper_main_window_state_flags_changed (GtkWidget       *widget,
                                         GtkStateFlags    previous_state_flags)
 {
-    LouperMainWindow *self;
+    LouperMainWindow *self = LOUPER_MAIN_WINDOW (widget);
     GtkStateFlags current_state_flags;
 
     (void) previous_state_flags;
-
-    self = LOUPER_MAIN_WINDOW (widget);
 
     current_state_flags = gtk_widget_get_state_flags (widget);
     if (current_state_flags & GTK_STATE_FLAG_BACKDROP) {
@@ -164,9 +156,7 @@ louper_main_window_state_flags_changed (GtkWidget       *widget,
 static void
 louper_main_window_dispose (GObject *object)
 {
-    LouperMainWindow *self;
-
-    self = LOUPER_MAIN_WINDOW (object);
+    LouperMainWindow *self = LOUPER_MAIN_WINDOW (object);
 
     if (self->destroy_timeout_id > 0) {
         // Clear destroy timeout to avoid use-after-free of a MainWindow instance
@@ -181,11 +171,8 @@ louper_main_window_dispose (GObject *object)
 static void
 louper_main_window_class_init (LouperMainWindowClass *klass)
 {
-    GtkWidgetClass *widget_class;
-    GObjectClass *object_class;
-
-    widget_class = GTK_WIDGET_CLASS (klass);
-    object_class = G_OBJECT_CLASS (klass);
+    GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     widget_class->state_flags_changed = louper_main_window_state_flags_changed;
 
@@ -195,14 +182,12 @@ louper_main_window_class_init (LouperMainWindowClass *klass)
 static void
 louper_main_window_init (LouperMainWindow *self)
 {
-    GtkWindow *window;
+    GtkWindow *window = GTK_WINDOW (self);
     GdkDisplay *display;
-    g_autoptr(GtkCssProvider) cssprovider;
+    g_autoptr(GtkCssProvider) cssprovider = NULL;
     GtkWidget *title_bar;
     GtkWidget *magnified_label;
     GtkWidget *main_box;
-
-    window = GTK_WINDOW (self);
 
     self->keep_open = false;
     self->text = NULL;

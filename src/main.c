@@ -9,13 +9,13 @@
 
 #include <glib/gi18n.h>
 
-#include "application.h"
+#include "louper-application.h"
 
 int
-main (int    argc,
-      char  *argv[])
+main (int   argc,
+      char *argv[])
 {
-    g_autoptr(LouperApplication) app;
+    g_autoptr(LouperApplication) app = NULL;
     int ret;
 
     setlocale (LC_ALL, "");
