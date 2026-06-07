@@ -16,10 +16,13 @@
     - Bump `version` in `meson.build`  
     ```meson
     project(
-        'com.github.ryonakano.louper',
-        'vala', 'c',
-        version: '2.0.5',
-        meson_version: '>=0.57.0'
+      'louper',
+      'c',
+      version: '2.0.6',
+      meson_version: '>= 0.57.0',
+      default_options: [
+        'warning_level=2',
+      ],
     )
     ```
 - [Create a new release on GitHub](https://github.com/ryonakano/louper/releases/new)

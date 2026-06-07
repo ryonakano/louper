@@ -40,11 +40,11 @@ flatpak run com.github.ryonakano.louper
 ### From Source Code (Native)
 You'll need the following dependencies to build:
 
+* gcc or its compatible C compiler
 * libglib2.0-dev (>= 2.74)
 * libgranite-7-dev
 * libgtk-4-dev (>= 4.12)
 * meson (>= 0.57.0)
-* valac
 
 Run `meson setup` to configure the build environment and run `meson compile` to build:
 
@@ -53,11 +53,11 @@ meson setup builddir --prefix=/usr
 meson compile -C builddir
 ```
 
-To install, use `meson install`, then execute with `com.github.ryonakano.louper`:
+To install, use `meson install`, then execute with `louper`:
 
 ```bash
 meson install -C builddir
-com.github.ryonakano.louper
+louper
 ```
 
 ## Usage
