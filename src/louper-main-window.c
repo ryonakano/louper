@@ -61,7 +61,7 @@ read_text_cb (GObject      *source_object,
 {
     GdkClipboard *clipboard = GDK_CLIPBOARD (source_object);
     GtkLabel *label = GTK_LABEL (data);
-    g_autofree char *text;
+    g_autofree char *text = NULL;
     g_autoptr(GError) err = NULL;
 
     text = gdk_clipboard_read_text_finish (clipboard, res, &err);
@@ -184,7 +184,7 @@ louper_main_window_init (LouperMainWindow *self)
 {
     GtkWindow *window = GTK_WINDOW (self);
     GdkDisplay *display;
-    g_autoptr(GtkCssProvider) cssprovider;
+    g_autoptr(GtkCssProvider) cssprovider = NULL;
     GtkWidget *title_bar;
     GtkWidget *magnified_label;
     GtkWidget *main_box;
