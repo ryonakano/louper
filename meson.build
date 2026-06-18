@@ -47,6 +47,7 @@ c_args = [
   '-Wignored-qualifiers',
   '-Wimplicit-function-declaration',
   '-Wlogical-op',
+  '-Wmaybe-uninitialized',
   '-Wmissing-declarations',
   '-Wmissing-format-attribute',
   '-Wmissing-include-dirs',
