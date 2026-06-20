@@ -9,7 +9,7 @@
 
 G_BEGIN_DECLS
 
-#define LOUPER_TYPE_APPLICATION         (louper_application_get_type ())
+#define LOUPER_TYPE_APPLICATION (louper_application_get_type ())
 G_DECLARE_FINAL_TYPE (LouperApplication, louper_application, LOUPER, APPLICATION, GtkApplication)
 
 extern LouperApplication *louper_application_new (void);

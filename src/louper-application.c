@@ -38,14 +38,11 @@ static const GOptionEntry app_options[] = {
 };
 
 static void
-on_quit_activate (GSimpleAction    *action,
-                  GVariant         *parameter,
-                  gpointer          user_data)
+on_quit_activate (GSimpleAction *action,
+                  GVariant      *parameter,
+                  gpointer       user_data)
 {
     LouperApplication *self = LOUPER_APPLICATION (user_data);
-
-    (void) action;
-    (void) parameter;
 
     if (self->window) {
         gtk_window_destroy (GTK_WINDOW (self->window));
@@ -66,9 +63,6 @@ granite_prop_to_gtk_prop (GBinding     *binding,
                           gpointer      user_data)
 {
     gint granite_prop_raw;
-
-    (void) binding;
-    (void) user_data;
 
     granite_prop_raw = g_value_get_enum (granite_prop);
     g_value_set_boolean (gtk_prop, (GraniteSettingsColorScheme) granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
@@ -179,8 +173,6 @@ static void
 louper_application_dispose (GObject *object)
 {
     LouperApplication *self = LOUPER_APPLICATION (object);
-
-    // self->window should be already freed
 
     g_clear_pointer (&(self->text), g_free);
     g_clear_pointer (&(self->color_scheme_binding), g_binding_unbind);

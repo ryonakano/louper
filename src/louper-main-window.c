@@ -24,8 +24,8 @@ G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_
                         "}"
 
 static void
-calculate_size (LouperMainWindow   *self,
-                GdkDisplay         *display)
+calculate_size (LouperMainWindow *self,
+                GdkDisplay       *display)
 {
     // Can't use g_autoptr() because GdkSurface instances need to be destroyed instead of just unref
     /* gobject-linter-ignore-next-line: use_auto_cleanup */
@@ -74,8 +74,8 @@ read_text_cb (GObject      *source_object,
 }
 
 static void
-load_clipboard (LouperMainWindow   *self,
-                GtkLabel           *label_widget)
+load_clipboard (LouperMainWindow *self,
+                GtkLabel         *label_widget)
 {
     GdkClipboard *clipboard;
 
@@ -85,8 +85,8 @@ load_clipboard (LouperMainWindow   *self,
 }
 
 static void
-update_label_text (LouperMainWindow    *self,
-                   GtkLabel            *label_widget)
+update_label_text (LouperMainWindow *self,
+                   GtkLabel         *label_widget)
 {
     if (self->text) {
         // Set the text passed by the command line option if specified
@@ -98,15 +98,13 @@ update_label_text (LouperMainWindow    *self,
 }
 
 static void
-notify_is_active_cb (GtkWindow     *window,
-                     GParamSpec    *pspec,
-                     gpointer       user_data)
+notify_is_active_cb (GtkWindow  *window,
+                     GParamSpec *pspec,
+                     gpointer    user_data)
 {
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (window);
     GtkLabel *magnified_label = GTK_LABEL (user_data);
     gboolean is_active;
-
-    (void) pspec;
 
     is_active = gtk_window_is_active (window);
     if (!is_active) {
@@ -131,13 +129,11 @@ notify_is_active_cb (GtkWindow     *window,
 }
 
 static void
-louper_main_window_state_flags_changed (GtkWidget      *widget,
-                                        GtkStateFlags   previous_state_flags)
+louper_main_window_state_flags_changed (GtkWidget     *widget,
+                                        GtkStateFlags  previous_state_flags)
 {
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (widget);
     GtkStateFlags current_state_flags;
-
-    (void) previous_state_flags;
 
     current_state_flags = gtk_widget_get_state_flags (widget);
     if (current_state_flags & GTK_STATE_FLAG_BACKDROP) {
@@ -158,12 +154,8 @@ louper_main_window_dispose (GObject *object)
 {
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (object);
 
-    if (self->destroy_timeout_id > 0) {
-        // Clear destroy timeout to avoid use-after-free of a MainWindow instance
-        g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
-
-        // No need to set self->destroy_timeout_id to 0 here; g_clear_handle_id() already did
-    }
+    // Clear destroy timeout to avoid use-after-free of a MainWindow instance
+    g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
 
     G_OBJECT_CLASS (louper_main_window_parent_class)->dispose (object);
 }
@@ -247,8 +239,8 @@ louper_main_window_set_keep_open (LouperMainWindow *self,
 }
 
 void
-louper_main_window_set_text (LouperMainWindow  *self,
-                             const gchar       *text)
+louper_main_window_set_text (LouperMainWindow *self,
+                             const gchar      *text)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 

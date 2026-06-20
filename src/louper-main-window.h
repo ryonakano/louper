@@ -9,7 +9,7 @@
 
 G_BEGIN_DECLS
 
-#define LOUPER_TYPE_MAIN_WINDOW         (louper_main_window_get_type ())
+#define LOUPER_TYPE_MAIN_WINDOW (louper_main_window_get_type ())
 G_DECLARE_FINAL_TYPE (LouperMainWindow, louper_main_window, LOUPER, MAIN_WINDOW, GtkApplicationWindow)
 
 extern LouperMainWindow *louper_main_window_new (void);
