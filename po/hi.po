@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 08:33+0200\n"
+"POT-Creation-Date: 2026-05-31 06:53+0000\n"
 "PO-Revision-Date: 2024-05-14 01:56+0000\n"
 "Last-Translator: Scrambled777 <weblate.scrambled777@simplelogin.com>\n"
 "Language-Team: Hindi <https://hosted.weblate.org/projects/rosp/louper/hi/>\n"
@@ -73,3 +73,7 @@ msgstr "विकेन्द्रित होने पर ऐप खिड�
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "जूम इन करने के लिए पाठ; यदि कोई निर्दिष्ट नहीं है तो क्लिपबोर्ड का उपयोग किया जाता है"
+
+#: src/Application.vala:17
+msgid "TEXT"
+msgstr ""

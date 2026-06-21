@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 08:33+0200\n"
+"POT-Creation-Date: 2026-05-31 06:53+0000\n"
 "PO-Revision-Date: 2024-03-22 06:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -74,6 +74,10 @@ msgstr "Behold programvinduet åpent når det ikke er i fokus"
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Tekst å forstørre (utklippstavlen brukes hvis ingenting angis)."
+
+#: src/Application.vala:17
+msgid "TEXT"
+msgstr ""
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
