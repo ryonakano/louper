@@ -1,7 +1,7 @@
 project(
   'com.github.ryonakano.louper',
   'vala', 'c',
-  version: '2.0.6',
+  version: '2.1.0',
   meson_version: '>= 0.57.0',
 )
 
