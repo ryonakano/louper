@@ -70,9 +70,7 @@ granite_prop_to_gtk_prop (GBinding     *binding,
     return TRUE;
 }
 
-/**
- * Follow elementary OS-wide dark preference
- */
+// Follow elementary OS-wide dark preference
 static void
 setup_style (LouperApplication *self)
 {
