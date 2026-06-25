@@ -60,6 +60,25 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
+    <release version="2.1.0" date="2026-06-23" urgency="low">
+      <description translate="no">
+        <p>
+          Improvements:
+        </p>
+        <ul>
+          <li>Present window if exists when trying to launch multiple instances</li>
+          <li>Make option string "TEXT" translatable</li>
+          <li>Update translations</li>
+        </ul>
+        <p>
+          Bugfixes:
+        </p>
+        <li>
+          <li>Fix multiple memory leaks</li>
+        </li>
+      </description>
+    </release>
+
     <release version="2.0.6" date="2025-04-06" urgency="low">
       <description translate="no">
         <ul>

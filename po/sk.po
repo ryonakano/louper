@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 08:33+0200\n"
+"POT-Creation-Date: 2026-05-31 06:53+0000\n"
 "PO-Revision-Date: 2023-08-11 10:46+0000\n"
 "Last-Translator: Milan Šalka <salka.milan@googlemail.com>\n"
 "Language-Team: \n"
@@ -75,6 +75,10 @@ msgstr "Ponechať okno aplikácie otvorené, keď nie je aktívne"
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Text, na ktorý sa má priblížiť; ak nie je zvolený, použije sa schránka"
+
+#: src/Application.vala:17
+msgid "TEXT"
+msgstr ""
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"
