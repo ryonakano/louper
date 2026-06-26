@@ -202,7 +202,7 @@ louper_application_init (LouperApplication *self)
 
     self->window = NULL;
     self->color_scheme_binding = NULL;
-    self->keep_open = false;
+    self->keep_open = FALSE;
     self->text = NULL;
 
     g_application_add_main_option_entries (G_APPLICATION (self), app_options);

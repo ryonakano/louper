@@ -110,7 +110,7 @@ notify_is_active_cb (GtkWindow  *window,
     if (!is_active) {
         /*
          * Do nothing when the window lost focus.
-         * NOTE: We don't close the window here because is-active gets false also when opening the context menu.
+         * NOTE: We don't close the window here because is-active gets FALSE also when opening the context menu.
          * We handle it in state_flags_changed instead so that users can use the context menu.
          */
         return;
@@ -187,7 +187,7 @@ louper_main_window_init (LouperMainWindow *self)
     GtkWidget *magnified_label;
     GtkWidget *main_box;
 
-    self->keep_open = false;
+    self->keep_open = FALSE;
     self->text = NULL;
     self->is_label_updated = FALSE;
     self->destroy_timeout_id = 0;
