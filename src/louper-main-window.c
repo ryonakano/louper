@@ -108,9 +108,11 @@ notify_is_active_cb (GtkWindow  *window,
 
     is_active = gtk_window_is_active (window);
     if (!is_active) {
-        // Do nothing when the window lost focus.
-        // NOTE: We don't close the window here because is-active gets false also when opening the context menu.
-        // We handle it in state_flags_changed instead so that users can use the context menu.
+        /*
+         * Do nothing when the window lost focus.
+         * NOTE: We don't close the window here because is-active gets false also when opening the context menu.
+         * We handle it in state_flags_changed instead so that users can use the context menu.
+         */
         return;
     }
 
@@ -121,10 +123,12 @@ notify_is_active_cb (GtkWindow  *window,
 
     self->is_label_updated = TRUE;
 
-    // When the window get focused, update the label with the specified text or clipboard content.
-    // NOTE: The reason to update the label after the window get focused is that
-    // getting clipboard content is not allowed until that happens on Wayland.
-    // See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
+    /*
+     * When the window get focused, update the label with the specified text or clipboard content.
+     * NOTE: The reason to update the label after the window get focused is that
+     * getting clipboard content is not allowed until that happens on Wayland.
+     * See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
+     */
     update_label_text (self, magnified_label);
 }
 
@@ -141,9 +145,11 @@ louper_main_window_state_flags_changed (GtkWidget     *widget,
             return;
         }
 
-        // Hide first and then destroy the app window when unfocused
-        // because just destroying sometimes seems to cause the wm crashing.
-        // Borrowed from shortcut-overlay by elementary.
+        /*
+         * Hide first and then destroy the app window when unfocused
+         * because just destroying sometimes seems to cause the wm crashing.
+         * Borrowed from shortcut-overlay by elementary.
+         */
         gtk_widget_set_visible (widget, FALSE);
         self->destroy_timeout_id = g_timeout_add_once (250, (GSourceOnceFunc) gtk_window_destroy, GTK_WINDOW (widget));
     }
