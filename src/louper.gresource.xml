@@ -2,6 +2,8 @@
 <gresources>
   <gresource prefix="/com/github/ryonakano/louper">
     <file alias="Application.css">../data/Application.css</file>
+
+    <file preprocess="xml-stripblanks">louper-main-window.ui</file>
   </gresource>
 </gresources>
 
