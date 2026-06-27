@@ -16,11 +16,9 @@
     - Bump `version` in `meson.build`  
     ```meson
     project(
-        'com.github.ryonakano.louper',
-        'vala', 'c',
-        version: '2.0.5',
-        meson_version: '>=0.57.0'
-    )
+      'com.github.ryonakano.louper',
+      'c',
+      version: '2.0.6',
     ```
 - [Create a new release on GitHub](https://github.com/ryonakano/louper/releases/new)
     - Create a new tag named `X.Y.Z`
