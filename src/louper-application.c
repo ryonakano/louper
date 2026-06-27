@@ -65,7 +65,7 @@ granite_prop_to_gtk_prop (GBinding     *binding,
     gint granite_prop_raw;
 
     granite_prop_raw = g_value_get_enum (granite_prop);
-    g_value_set_boolean (gtk_prop, (GraniteSettingsColorScheme) granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
+    g_value_set_boolean (gtk_prop, granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
 
     return TRUE;
 }
