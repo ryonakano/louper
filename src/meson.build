@@ -8,8 +8,8 @@ config_file = configure_file(
 
 sources = files(
   'main.c',
-  'application.c',
-  'main-window.c',
+  'louper-application.c',
+  'louper-main-window.c',
 )
 
 dependencies = [

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 08:33+0200\n"
+"POT-Creation-Date: 2026-05-31 06:53+0000\n"
 "PO-Revision-Date: 2023-07-02 13:48+0000\n"
 "Last-Translator: albanobattistella <albano_battistella@hotmail.com>\n"
 "Language-Team: \n"
@@ -74,6 +74,10 @@ msgstr "Mantieni aperta la finestra dell'app quando è sfuocata"
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Il testo da ingrandire; gli appunti vengono usati se non specificato"
+
+#: src/Application.vala:17
+msgid "TEXT"
+msgstr ""
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

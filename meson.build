@@ -1,10 +1,11 @@
 project(
   'louper',
   'c',
-  version: '2.0.6',
+  version: '2.1.0',
   meson_version: '>= 0.57.0',
   default_options: [
-    'warning_level=2',
+    'warning_level=2', # i.e. -Wall -Wextra
+    'c_std=gnu11',
   ],
 )
 
@@ -45,9 +46,11 @@ c_args = [
   '-Werror=undef',
   '-Werror=write-strings',
   '-Wformat-nonliteral',
+  '-Wformat-signedness',
   '-Wignored-qualifiers',
   '-Wimplicit-function-declaration',
   '-Wlogical-op',
+  '-Wmaybe-uninitialized',
   '-Wmissing-declarations',
   '-Wmissing-format-attribute',
   '-Wmissing-include-dirs',
@@ -63,7 +66,6 @@ c_args = [
   '-Wredundant-decls',
   '-Wstrict-prototypes',
   '-Wswitch-default',
-  '-Wswitch-enum',
   '-Wundef',
   '-Wuninitialized',
   '-Wunused',

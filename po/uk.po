@@ -2,21 +2,23 @@
 # Copyright (C) 2021-2026 Ryo Nakano
 # This file is distributed under the same license as the com.github.ryonakano.louper package.
 # Ihor Hordiichuk <igor_ck@outlook.com>, 2022.
+# Димко <Dymkovych@proton.me>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 08:33+0200\n"
-"PO-Revision-Date: 2023-06-30 17:51+0000\n"
-"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2026-05-31 06:53+0000\n"
+"PO-Revision-Date: 2026-06-25 18:01+0000\n"
+"Last-Translator: Димко <Dymkovych@proton.me>\n"
+"Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/louper/"
+"uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.0-dev\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Weblate 2026.7.dev0\n"
 
 #: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
 msgid "Louper"
@@ -76,6 +78,10 @@ msgstr "Лишати вікно застосунку відкритим, кол�
 #: src/Application.vala:17
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Текст для збільшення; якщо не вказано, використовується буфер обміну"
+
+#: src/Application.vala:17
+msgid "TEXT"
+msgstr "ТЕКСТ"
 
 #~ msgid "Ryo Nakano"
 #~ msgstr "Ryo Nakano"

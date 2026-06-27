@@ -3,17 +3,17 @@
  * SPDX-FileCopyrightText: 2021-2026 Ryo Nakano <ryonakaknock3@gmail.com>
  */
 
-#include "main-window.h"
+#include "louper-main-window.h"
 
 #include <granite-7/granite-7.h>
 
 struct _LouperMainWindow {
-    GtkApplicationWindow            parent_instance;
+    GtkApplicationWindow        parent_instance;
 
-    gboolean                        keep_open;
-    const GString                   *text;
-    gboolean                        is_label_updated;
-    guint                           destroy_timeout_id;
+    gboolean                    keep_open;
+    const gchar                *text;
+    gboolean                    is_label_updated;
+    guint                       destroy_timeout_id;
 };
 
 G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_WINDOW)
@@ -24,8 +24,8 @@ G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_
                         "}"
 
 static void
-calculate_size (LouperMainWindow    *self,
-                GdkDisplay          *display)
+calculate_size (LouperMainWindow *self,
+                GdkDisplay       *display)
 {
     // Can't use g_autoptr() because GdkSurface instances need to be destroyed instead of just unref
     /* gobject-linter-ignore-next-line: use_auto_cleanup */
@@ -55,17 +55,14 @@ destroy_surface:
 }
 
 static void
-read_text_cb (GObject       *source_object,
-              GAsyncResult  *res,
-              gpointer       data)
+read_text_cb (GObject      *source_object,
+              GAsyncResult *res,
+              gpointer      data)
 {
-    GdkClipboard *clipboard;
-    GtkLabel *label;
-    g_autofree char *text;
+    GdkClipboard *clipboard = GDK_CLIPBOARD (source_object);
+    GtkLabel *label = GTK_LABEL (data);
+    g_autofree char *text = NULL;
     g_autoptr(GError) err = NULL;
-
-    clipboard = GDK_CLIPBOARD (source_object);
-    label = GTK_LABEL (data);
 
     text = gdk_clipboard_read_text_finish (clipboard, res, &err);
     if (err) {
@@ -77,8 +74,8 @@ read_text_cb (GObject       *source_object,
 }
 
 static void
-load_clipboard (LouperMainWindow      *self,
-                GtkLabel              *label_widget)
+load_clipboard (LouperMainWindow *self,
+                GtkLabel         *label_widget)
 {
     GdkClipboard *clipboard;
 
@@ -88,12 +85,12 @@ load_clipboard (LouperMainWindow      *self,
 }
 
 static void
-update_label_text (LouperMainWindow     *self,
-                   GtkLabel             *label_widget)
+update_label_text (LouperMainWindow *self,
+                   GtkLabel         *label_widget)
 {
     if (self->text) {
         // Set the text passed by the command line option if specified
-        gtk_label_set_label (label_widget, self->text->str);
+        gtk_label_set_label (label_widget, self->text);
     } else {
         // Otherwise set the text loaded from clipboard
         load_clipboard (self, label_widget);
@@ -101,24 +98,21 @@ update_label_text (LouperMainWindow     *self,
 }
 
 static void
-notify_is_active_cb (GtkWindow     *window,
-                     GParamSpec    *pspec,
-                     gpointer       user_data)
+notify_is_active_cb (GtkWindow  *window,
+                     GParamSpec *pspec,
+                     gpointer    user_data)
 {
-    LouperMainWindow *self;
-    GtkLabel *magnified_label;
+    LouperMainWindow *self = LOUPER_MAIN_WINDOW (window);
+    GtkLabel *magnified_label = GTK_LABEL (user_data);
     gboolean is_active;
-
-    (void) pspec;
-
-    self = LOUPER_MAIN_WINDOW (window);
-    magnified_label = GTK_LABEL (user_data);
 
     is_active = gtk_window_is_active (window);
     if (!is_active) {
-        // Do nothing when the window lost focus.
-        // NOTE: We don't close the window here because is-active gets false also when opening the context menu.
-        // We handle it in state_flags_changed instead so that users can use the context menu.
+        /*
+         * Do nothing when the window lost focus.
+         * NOTE: We don't close the window here because is-active gets FALSE also when opening the context menu.
+         * We handle it in state_flags_changed instead so that users can use the context menu.
+         */
         return;
     }
 
@@ -129,23 +123,21 @@ notify_is_active_cb (GtkWindow     *window,
 
     self->is_label_updated = TRUE;
 
-    // When the window get focused, update the label with the specified text or clipboard content.
-    // NOTE: The reason to update the label after the window get focused is that
-    // getting clipboard content is not allowed until that happens on Wayland.
-    // See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
+    /*
+     * When the window get focused, update the label with the specified text or clipboard content.
+     * NOTE: The reason to update the label after the window get focused is that
+     * getting clipboard content is not allowed until that happens on Wayland.
+     * See https://gitlab.gnome.org/GNOME/gtk/-/issues/1874#note_509304
+     */
     update_label_text (self, magnified_label);
 }
 
 static void
-louper_main_window_state_flags_changed (GtkWidget       *widget,
-                                        GtkStateFlags    previous_state_flags)
+louper_main_window_state_flags_changed (GtkWidget     *widget,
+                                        GtkStateFlags  previous_state_flags)
 {
-    LouperMainWindow *self;
+    LouperMainWindow *self = LOUPER_MAIN_WINDOW (widget);
     GtkStateFlags current_state_flags;
-
-    (void) previous_state_flags;
-
-    self = LOUPER_MAIN_WINDOW (widget);
 
     current_state_flags = gtk_widget_get_state_flags (widget);
     if (current_state_flags & GTK_STATE_FLAG_BACKDROP) {
@@ -153,9 +145,11 @@ louper_main_window_state_flags_changed (GtkWidget       *widget,
             return;
         }
 
-        // Hide first and then destroy the app window when unfocused
-        // because just destroying sometimes seems to cause the wm crashing.
-        // Borrowed from shortcut-overlay by elementary.
+        /*
+         * Hide first and then destroy the app window when unfocused
+         * because just destroying sometimes seems to cause the wm crashing.
+         * Borrowed from shortcut-overlay by elementary.
+         */
         gtk_widget_set_visible (widget, FALSE);
         self->destroy_timeout_id = g_timeout_add_once (250, (GSourceOnceFunc) gtk_window_destroy, GTK_WINDOW (widget));
     }
@@ -164,16 +158,10 @@ louper_main_window_state_flags_changed (GtkWidget       *widget,
 static void
 louper_main_window_dispose (GObject *object)
 {
-    LouperMainWindow *self;
+    LouperMainWindow *self = LOUPER_MAIN_WINDOW (object);
 
-    self = LOUPER_MAIN_WINDOW (object);
-
-    if (self->destroy_timeout_id > 0) {
-        // Clear destroy timeout to avoid use-after-free of a MainWindow instance
-        g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
-
-        // No need to set self->destroy_timeout_id to 0 here; g_clear_handle_id() already did
-    }
+    // Clear destroy timeout to avoid use-after-free of a MainWindow instance
+    g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
 
     G_OBJECT_CLASS (louper_main_window_parent_class)->dispose (object);
 }
@@ -181,11 +169,8 @@ louper_main_window_dispose (GObject *object)
 static void
 louper_main_window_class_init (LouperMainWindowClass *klass)
 {
-    GtkWidgetClass *widget_class;
-    GObjectClass *object_class;
-
-    widget_class = GTK_WIDGET_CLASS (klass);
-    object_class = G_OBJECT_CLASS (klass);
+    GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
+    GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
     widget_class->state_flags_changed = louper_main_window_state_flags_changed;
 
@@ -195,16 +180,14 @@ louper_main_window_class_init (LouperMainWindowClass *klass)
 static void
 louper_main_window_init (LouperMainWindow *self)
 {
-    GtkWindow *window;
+    GtkWindow *window = GTK_WINDOW (self);
     GdkDisplay *display;
-    g_autoptr(GtkCssProvider) cssprovider;
+    g_autoptr(GtkCssProvider) cssprovider = NULL;
     GtkWidget *title_bar;
     GtkWidget *magnified_label;
     GtkWidget *main_box;
 
-    window = GTK_WINDOW (self);
-
-    self->keep_open = false;
+    self->keep_open = FALSE;
     self->text = NULL;
     self->is_label_updated = FALSE;
     self->destroy_timeout_id = 0;
@@ -249,8 +232,8 @@ louper_main_window_init (LouperMainWindow *self)
 }
 
 void
-louper_main_window_set_keep_open (LouperMainWindow  *self,
-                                  gboolean           keep_open)
+louper_main_window_set_keep_open (LouperMainWindow *self,
+                                  gboolean          keep_open)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 
@@ -262,8 +245,8 @@ louper_main_window_set_keep_open (LouperMainWindow  *self,
 }
 
 void
-louper_main_window_set_text (LouperMainWindow   *self,
-                             const GString      *text)
+louper_main_window_set_text (LouperMainWindow *self,
+                             const gchar      *text)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 
