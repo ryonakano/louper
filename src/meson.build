@@ -12,9 +12,26 @@ sources = files(
   'louper-main-window.c',
 )
 
+blueprints = custom_target('blueprints',
+  input: files(
+    'louper-main-window.blp',
+  ),
+  output: '.',
+  command: [
+    find_program('blueprint-compiler'),
+    'batch-compile',
+    '@OUTPUT@',
+    '@CURRENT_SOURCE_DIR@',
+    '@INPUT@',
+  ],
+)
+
 asresources = gnome.compile_resources(
   'as-resources',
   'louper.gresource.xml',
+  dependencies: [
+    blueprints,
+  ],
   source_dir: 'data',
   c_name: 'as',
 )

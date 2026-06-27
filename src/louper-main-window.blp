@@ -1,0 +1,32 @@
+using Gtk 4.0;
+
+template $LouperMainWindow : ApplicationWindow {
+    resizable: false;
+    title: "Louper";
+
+    [titlebar]
+    HeaderBar {
+        show-title-buttons: true;
+        // Create a dummy Gtk.Label for the blank title
+        title-widget: Label {};
+        css-classes: [ "flat" ];
+    }
+
+    Box {
+        orientation: vertical;
+        spacing: 0;
+
+        Label magnified_label {
+            margin-top: 24;
+            margin-bottom: 24;
+            margin-start: 12;
+            margin-end: 12;
+            css-classes: [ "magnified-text" ];
+            selectable: true;
+            wrap: true;
+            wrap-mode: word_char;
+        }
+    }
+
+    notify::is-active => $notify_is_active_cb ();
+}
