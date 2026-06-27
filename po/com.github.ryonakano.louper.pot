@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the com.github.ryonakano.louper package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:53+0000\n"
+"POT-Creation-Date: 2026-06-27 10:58+0900\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:2
 msgid "Louper"
 msgstr ""
 
@@ -61,14 +61,14 @@ msgstr ""
 msgid "Zoom in what you like to read"
 msgstr ""
 
-#: src/Application.vala:13
+#: src/louper-application.c:31
 msgid "Keep the app window open when unfocused"
 msgstr ""
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "TEXT"
 msgstr ""

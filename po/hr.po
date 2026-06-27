@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:53+0000\n"
+"POT-Creation-Date: 2026-06-27 10:58+0900\n"
 "PO-Revision-Date: 2026-05-12 11:11+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
 "Language-Team: Croatian <https://hosted.weblate.org/projects/rosp/louper/hr/"
@@ -20,7 +20,7 @@ msgstr ""
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Weblate 2026.5-dev\n"
 
-#: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:2
 msgid "Louper"
 msgstr "Louper"
 
@@ -68,15 +68,15 @@ msgstr "Pritisni Esc ili Ctrl+Q ili odmakni prozor za zatvaranje aplikacije"
 msgid "Zoom in what you like to read"
 msgstr "Zumiraj tekst koji želiš čitati"
 
-#: src/Application.vala:13
+#: src/louper-application.c:31
 msgid "Keep the app window open when unfocused"
 msgstr "Zadrži prozor aplikacije otvorenim kada nije fokusiran"
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "Tekst za zumiranje; Međuspremnik se koristi ako nijedan nije specificiran"
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "TEXT"
 msgstr ""

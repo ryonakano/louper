@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:53+0000\n"
+"POT-Creation-Date: 2026-06-27 10:58+0900\n"
 "PO-Revision-Date: 2025-03-02 06:40+0000\n"
 "Last-Translator: தமிழ்நேரம் <anishprabu.t@gmail.com>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/rosp/louper/ta/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 5.10.3-dev\n"
 
-#: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:2
 msgid "Louper"
 msgstr "Louper"
 
@@ -66,15 +66,15 @@ msgstr "பயன்பாட்டை மூடுவதற்கு தப்�
 msgid "Zoom in what you like to read"
 msgstr "நீங்கள் படிக்க விரும்புவதை பெரிதாக்கவும்"
 
-#: src/Application.vala:13
+#: src/louper-application.c:31
 msgid "Keep the app window open when unfocused"
 msgstr "கவனம் செலுத்தப்படாதபோது பயன்பாட்டு சாளரத்தைத் திறந்து வைக்கவும்"
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr ""
 "பெரிதாக்க உரை; எதுவும் குறிப்பிடப்படவில்லை என்றால் இடைநிலைப்பலகை பயன்படுத்தப்படுகிறது"
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "TEXT"
 msgstr ""
