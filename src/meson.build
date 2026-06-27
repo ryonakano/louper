@@ -12,6 +12,13 @@ sources = files(
   'louper-main-window.c',
 )
 
+asresources = gnome.compile_resources(
+  'as-resources',
+  'louper.gresource.xml',
+  source_dir: 'data',
+  c_name: 'as',
+)
+
 dependencies = [
   dependency('glib-2.0', version: '>= 2.74'),
   dependency('granite-7'),
@@ -20,6 +27,7 @@ dependencies = [
 
 executable(
   meson.project_name(),
+  asresources,
   config_file,
   sources,
   dependencies: dependencies,

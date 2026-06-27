@@ -18,11 +18,6 @@ struct _LouperMainWindow {
 
 G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_WINDOW)
 
-#define CSS_DATA        ".magnified-text {" \
-                        "    font-size: 128px;" \
-                        "    font-weight: bold;" \
-                        "}"
-
 static void
 calculate_size (LouperMainWindow *self,
                 GdkDisplay       *display)
@@ -202,7 +197,7 @@ louper_main_window_init (LouperMainWindow *self)
     calculate_size (self, display);
 
     cssprovider = gtk_css_provider_new ();
-    gtk_css_provider_load_from_string (cssprovider, CSS_DATA);
+    gtk_css_provider_load_from_resource (cssprovider, "/com/github/ryonakano/louper/Application.css");
     gtk_style_context_add_provider_for_display (display, GTK_STYLE_PROVIDER (cssprovider),
                                                 GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
 
