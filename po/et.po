@@ -8,11 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-05-31 06:53+0000\n"
+"POT-Creation-Date: 2026-06-27 10:58+0900\n"
 "PO-Revision-Date: 2026-06-01 07:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
-"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/louper/et/>"
-"\n"
+"Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/louper/et/"
+">\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2026.6\n"
 
-#: data/louper.desktop.in:2 data/louper.metainfo.xml.in:10
+#: data/louper.desktop.in:2
 msgid "Louper"
 msgstr "Louper"
 
@@ -69,14 +69,14 @@ msgstr "Fookuse eemaldamiseks ja rakenduse sulgemiseks vajuta Esc või Ctrl+Q"
 msgid "Zoom in what you like to read"
 msgstr "Suumi seda osa, mida soovid lugeda"
 
-#: src/Application.vala:13
+#: src/louper-application.c:31
 msgid "Keep the app window open when unfocused"
 msgstr "Hoia rakenduse aken avatuna ka siis, kui ta pole fookuses"
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "The text to zoom in; the clipboard is used if none specified"
 msgstr "Suumitav tekst; kui midagi pole valitud, siis kasutame lõikelaua sisu"
 
-#: src/Application.vala:17
+#: src/louper-application.c:35
 msgid "TEXT"
 msgstr "TEKST"

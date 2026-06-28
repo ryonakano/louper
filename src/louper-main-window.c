@@ -14,14 +14,11 @@ struct _LouperMainWindow {
     const gchar                *text;
     gboolean                    is_label_updated;
     guint                       destroy_timeout_id;
+
+    GtkWidget                  *magnified_label;
 };
 
 G_DEFINE_FINAL_TYPE (LouperMainWindow, louper_main_window, GTK_TYPE_APPLICATION_WINDOW)
-
-#define CSS_DATA        ".magnified-text {" \
-                        "    font-size: 128px;" \
-                        "    font-weight: bold;" \
-                        "}"
 
 static void
 calculate_size (LouperMainWindow *self,
@@ -103,7 +100,7 @@ notify_is_active_cb (GtkWindow  *window,
                      gpointer    user_data)
 {
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (window);
-    GtkLabel *magnified_label = GTK_LABEL (user_data);
+    GtkLabel *magnified_label = GTK_LABEL (self->magnified_label);
     gboolean is_active;
 
     is_active = gtk_window_is_active (window);
@@ -163,6 +160,8 @@ louper_main_window_dispose (GObject *object)
     // Clear destroy timeout to avoid use-after-free of a MainWindow instance
     g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
 
+    gtk_widget_dispose_template (GTK_WIDGET (object), LOUPER_TYPE_MAIN_WINDOW);
+
     G_OBJECT_CLASS (louper_main_window_parent_class)->dispose (object);
 }
 
@@ -174,61 +173,34 @@ louper_main_window_class_init (LouperMainWindowClass *klass)
 
     widget_class->state_flags_changed = louper_main_window_state_flags_changed;
 
+    gtk_widget_class_set_template_from_resource (widget_class, "/com/github/ryonakano/louper/louper-main-window.ui");
+    gtk_widget_class_bind_template_child (widget_class, LouperMainWindow, magnified_label);
+    gtk_widget_class_bind_template_callback (widget_class, notify_is_active_cb);
+
     object_class->dispose = louper_main_window_dispose;
 }
 
 static void
 louper_main_window_init (LouperMainWindow *self)
 {
-    GtkWindow *window = GTK_WINDOW (self);
     GdkDisplay *display;
     g_autoptr(GtkCssProvider) cssprovider = NULL;
-    GtkWidget *title_bar;
-    GtkWidget *magnified_label;
-    GtkWidget *main_box;
 
     self->keep_open = FALSE;
     self->text = NULL;
     self->is_label_updated = FALSE;
     self->destroy_timeout_id = 0;
 
-    gtk_window_set_resizable (window, FALSE);
-    // Application name is a proper noun and thus should not be translated
-    /* gobject-linter-ignore-next-line: untranslated_string */
-    gtk_window_set_title (window, "Louper");
+    gtk_widget_init_template (GTK_WIDGET (self));
 
     display = gtk_widget_get_display (GTK_WIDGET (self));
 
     calculate_size (self, display);
 
     cssprovider = gtk_css_provider_new ();
-    gtk_css_provider_load_from_string (cssprovider, CSS_DATA);
+    gtk_css_provider_load_from_resource (cssprovider, "/com/github/ryonakano/louper/Application.css");
     gtk_style_context_add_provider_for_display (display, GTK_STYLE_PROVIDER (cssprovider),
                                                 GTK_STYLE_PROVIDER_PRIORITY_APPLICATION);
-
-    title_bar = gtk_header_bar_new ();
-    gtk_header_bar_set_show_title_buttons (GTK_HEADER_BAR (title_bar), TRUE);
-    // Create a dummy Gtk.Label for the blank title
-    gtk_header_bar_set_title_widget (GTK_HEADER_BAR (title_bar), gtk_label_new (NULL));
-    gtk_widget_add_css_class (title_bar, GRANITE_STYLE_CLASS_FLAT);
-    gtk_window_set_titlebar (window, title_bar);
-
-    magnified_label = gtk_label_new (NULL);
-    gtk_widget_set_margin_top (magnified_label, 24);
-    gtk_widget_set_margin_bottom (magnified_label, 24);
-    gtk_widget_set_margin_start (magnified_label, 12);
-    gtk_widget_set_margin_end (magnified_label, 12);
-    gtk_widget_add_css_class (magnified_label, "magnified-text");
-    gtk_label_set_selectable (GTK_LABEL (magnified_label), TRUE);
-    gtk_label_set_wrap (GTK_LABEL (magnified_label), TRUE);
-    gtk_label_set_wrap_mode (GTK_LABEL (magnified_label), PANGO_WRAP_WORD_CHAR);
-
-    main_box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-    gtk_box_append (GTK_BOX (main_box), magnified_label);
-
-    gtk_window_set_child (window, main_box);
-
-    g_signal_connect (window, "notify::is-active", G_CALLBACK (notify_is_active_cb), magnified_label);
 }
 
 void

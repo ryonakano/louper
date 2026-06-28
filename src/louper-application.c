@@ -22,8 +22,8 @@ struct _LouperApplication {
 
 G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
 
-#define OPT_LONG_NAME_KEEP_OPEN         "keep-open"
-#define OPT_LONG_NAME_TEXT              "text"
+static const char OPT_LONG_NAME_KEEP_OPEN[] = "keep-open";
+static const char OPT_LONG_NAME_TEXT[] = "text";
 
 static const GOptionEntry app_options[] = {
     {
@@ -65,7 +65,7 @@ granite_prop_to_gtk_prop (GBinding     *binding,
     gint granite_prop_raw;
 
     granite_prop_raw = g_value_get_enum (granite_prop);
-    g_value_set_boolean (gtk_prop, (GraniteSettingsColorScheme) granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
+    g_value_set_boolean (gtk_prop, granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
 
     return TRUE;
 }
@@ -134,7 +134,7 @@ louper_application_handle_local_options (GApplication *application,
     if (has_option) {
         value = g_variant_dict_lookup_value (options, OPT_LONG_NAME_KEEP_OPEN, G_VARIANT_TYPE_BOOLEAN);
         if (!value) {
-            g_warning ("Failed to gtk_settings_get_default(). opt=" OPT_LONG_NAME_KEEP_OPEN);
+            g_warning ("Failed to gtk_settings_get_default(). opt=%s", OPT_LONG_NAME_KEEP_OPEN);
             return 1;
         }
 
@@ -146,7 +146,7 @@ louper_application_handle_local_options (GApplication *application,
     if (has_option) {
         value = g_variant_dict_lookup_value (options, OPT_LONG_NAME_TEXT, G_VARIANT_TYPE_STRING);
         if (!value) {
-            g_warning ("Failed to g_variant_dict_lookup_value(). opt=" OPT_LONG_NAME_TEXT);
+            g_warning ("Failed to g_variant_dict_lookup_value(). opt=%s", OPT_LONG_NAME_TEXT);
             return 1;
         }
 
