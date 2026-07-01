@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.github.ryonakano.louper package.
+# Pavel Borecki <pavel.borecki@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: com.github.ryonakano.louper\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-27 10:58+0900\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: data/louper.desktop.in:2
+msgid "Louper"
+msgstr ""
+
+#: data/louper.desktop.in:3
+msgid "Text Magnification App"
+msgstr ""
+
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
+msgid "Magnify the selected text"
+msgstr ""
+
+#: data/louper.desktop.in:10
+msgid "Zoom;Copy;"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:13
+msgid "A text magnification app that helps you zoom the selected text."
+msgstr ""
+
+#: data/louper.metainfo.xml.in:16
+msgid ""
+"Select the text you want to magnify and just launch the app! The app shows "
+"the selected text in huge size."
+msgstr ""
+
+#: data/louper.metainfo.xml.in:19
+msgid "Other features include:"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:23
+msgid ""
+"Select some part of the magnified text and press Ctrl+C or perform secondary "
+"click to copy it"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:24
+msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
+msgstr ""
+
+#: data/louper.metainfo.xml.in:30
+msgid "Zoom in what you like to read"
+msgstr ""
+
+#: src/louper-application.c:31
+msgid "Keep the app window open when unfocused"
+msgstr ""
+
+#: src/louper-application.c:35
+msgid "The text to zoom in; the clipboard is used if none specified"
+msgstr ""
+
+#: src/louper-application.c:35
+msgid "TEXT"
+msgstr ""
