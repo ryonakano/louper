@@ -16,9 +16,17 @@ i18n.merge_file(
   install_dir: get_option('datadir') / 'applications',
 )
 
+appstream_conf = configuration_data()
+appstream_conf.set('VERSION', meson.project_version())
+appstream_file_in = configure_file(
+  input: 'louper.metainfo.xml.in.in',
+  output: meson.project_name() + '.metainfo.xml.in',
+  configuration: appstream_conf,
+)
+
 i18n.merge_file(
-  input: 'louper.metainfo.xml.in',
-  output: meson.project_name() + '.metainfo.xml',
+  input: appstream_file_in,
+  output: '@BASENAME@.metainfo.xml',
   po_dir: meson.project_source_root() / 'po',
   install: true,
   install_dir: get_option('datadir') / 'metainfo',
