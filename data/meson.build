@@ -8,8 +8,8 @@ foreach i : icon_sizes
 endforeach
 
 i18n.merge_file(
-  input: 'louper.desktop.in',
-  output: app_id + '.desktop',
+  input: app_id + '.desktop.in',
+  output: '@BASENAME@.desktop',
   po_dir: meson.project_source_root() / 'po',
   type: 'desktop',
   install: true,
@@ -17,8 +17,8 @@ i18n.merge_file(
 )
 
 i18n.merge_file(
-  input: 'louper.metainfo.xml.in',
-  output: app_id + '.metainfo.xml',
+  input: app_id + '.metainfo.xml.in',
+  output: '@BASENAME@.metainfo.xml',
   po_dir: meson.project_source_root() / 'po',
   install: true,
   install_dir: get_option('datadir') / 'metainfo',

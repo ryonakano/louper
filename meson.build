@@ -9,7 +9,7 @@ project(
   ],
 )
 
-app_id = 'com.github.ryonakano.' + meson.project_name()
+app_id = 'com.github.ryonakano.louper'
 
 gnome = import('gnome')
 i18n = import('i18n')
