@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 10:58+0900\n"
+"POT-Creation-Date: 2026-07-07 22:01+0900\n"
 "PO-Revision-Date: 2025-05-20 12:02+0000\n"
 "Last-Translator: Stella and Charlie <littlepastelworld@gmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/rosp/louper/fr/>\n"
@@ -27,7 +27,7 @@ msgstr "Louper"
 msgid "Text Magnification App"
 msgstr "Application d'agrandissement du texte"
 
-#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in.in:11
 msgid "Magnify the selected text"
 msgstr "Agrandissez le texte sélectionné"
 
@@ -35,13 +35,13 @@ msgstr "Agrandissez le texte sélectionné"
 msgid "Zoom;Copy;"
 msgstr "Zoom;Copier;"
 
-#: data/louper.metainfo.xml.in:13
+#: data/louper.metainfo.xml.in.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 "Une application d’agrandissement de texte qui vous aide à rendre un texte "
 "sélectionné plus lisible."
 
-#: data/louper.metainfo.xml.in:16
+#: data/louper.metainfo.xml.in.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -49,11 +49,11 @@ msgstr ""
 "Sélectionnez le texte que vous souhaitez agrandir puis lancez "
 "l’application ! Elle vous montrera le texte sélectionné en grand."
 
-#: data/louper.metainfo.xml.in:19
+#: data/louper.metainfo.xml.in.in:19
 msgid "Other features include:"
 msgstr "Les autres fonctionnalités incluent :"
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
@@ -61,13 +61,13 @@ msgstr ""
 "Sélectionnez certaines parties du texte agrandi et pressez Ctrl+C ou "
 "effectuez un clic secondaire pour le copier"
 
-#: data/louper.metainfo.xml.in:24
+#: data/louper.metainfo.xml.in.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
 "Appuyez sur Échap, ou Ctrl + Q, ou cliquez en dehors de l’application pour "
 "la fermer"
 
-#: data/louper.metainfo.xml.in:30
+#: data/louper.metainfo.xml.in.in:30
 msgid "Zoom in what you like to read"
 msgstr "Zoomez sur ce que vous aimez lire"
 

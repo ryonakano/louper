@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 10:58+0900\n"
+"POT-Creation-Date: 2026-07-07 22:01+0900\n"
 "PO-Revision-Date: 2024-03-22 06:45+0000\n"
 "Last-Translator: Fill read-only add-on <noreply-addon-fill@weblate.org>\n"
 "Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/rosp/"
@@ -27,7 +27,7 @@ msgstr "Louper"
 msgid "Text Magnification App"
 msgstr "Tekstforstørrelsesprogram"
 
-#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in.in:11
 msgid "Magnify the selected text"
 msgstr "Forstørr valgt tekst"
 
@@ -35,11 +35,11 @@ msgstr "Forstørr valgt tekst"
 msgid "Zoom;Copy;"
 msgstr "Tekstforstørrelse;forstørrelse;kopier;lesehjelp"
 
-#: data/louper.metainfo.xml.in:13
+#: data/louper.metainfo.xml.in.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr "Et tekstforstørrelsesprogram som hjelper deg å lese valgt tekst."
 
-#: data/louper.metainfo.xml.in:16
+#: data/louper.metainfo.xml.in.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -47,11 +47,11 @@ msgstr ""
 "Velg teksten du ønsker å forstørre og start programmet. Programmet viser "
 "valgt tekst i stor størrelse."
 
-#: data/louper.metainfo.xml.in:19
+#: data/louper.metainfo.xml.in.in:19
 msgid "Other features include:"
 msgstr "Andre funksjoner:"
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
@@ -59,11 +59,11 @@ msgstr ""
 "Vleg en del av forstørret tekst og trykk Ctrl+C eller høyreklikk for å "
 "kopiere den."
 
-#: data/louper.metainfo.xml.in:24
+#: data/louper.metainfo.xml.in.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr "Trykk Esc eller Ctrl+Q eller avfokuser vinduet for å lukke programmet"
 
-#: data/louper.metainfo.xml.in:30
+#: data/louper.metainfo.xml.in.in:30
 msgid "Zoom in what you like to read"
 msgstr "Forstørr det du vil lese"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 10:58+0900\n"
+"POT-Creation-Date: 2026-07-07 22:01+0900\n"
 "PO-Revision-Date: 2026-06-01 07:01+0000\n"
 "Last-Translator: Priit Jõerüüt <jrthwlate@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Estonian <https://hosted.weblate.org/projects/rosp/louper/et/"
@@ -28,7 +28,7 @@ msgstr "Louper"
 msgid "Text Magnification App"
 msgstr "Teksti suurendamise rakendus"
 
-#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in.in:11
 msgid "Magnify the selected text"
 msgstr "Suurenda valitud teksti"
 
@@ -36,13 +36,13 @@ msgstr "Suurenda valitud teksti"
 msgid "Zoom;Copy;"
 msgstr "zoom;suum;suumi;suurenda;vaata;luup;suurendusklaas;kopeeri;"
 
-#: data/louper.metainfo.xml.in:13
+#: data/louper.metainfo.xml.in.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 "Teksti suurendamise rakendus, mis aitab sul näha valitud teksti läbi "
 "piltliku suurendusklaasi."
 
-#: data/louper.metainfo.xml.in:16
+#: data/louper.metainfo.xml.in.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -50,22 +50,22 @@ msgstr ""
 "Vali tekst, mida soovid suurendada ning käivita rakendus! Kohe näedki sama "
 "teksti suures vaates."
 
-#: data/louper.metainfo.xml.in:19
+#: data/louper.metainfo.xml.in.in:19
 msgid "Other features include:"
 msgstr "Lisavõimalused:"
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
 msgstr ""
 "Vali osa suurendatud tekstist ja Ctrl+C abil saad sellest osast koopia teha"
 
-#: data/louper.metainfo.xml.in:24
+#: data/louper.metainfo.xml.in.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr "Fookuse eemaldamiseks ja rakenduse sulgemiseks vajuta Esc või Ctrl+Q"
 
-#: data/louper.metainfo.xml.in:30
+#: data/louper.metainfo.xml.in.in:30
 msgid "Zoom in what you like to read"
 msgstr "Suumi seda osa, mida soovid lugeda"
 

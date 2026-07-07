@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 10:58+0900\n"
+"POT-Creation-Date: 2026-07-07 22:01+0900\n"
 "PO-Revision-Date: 2026-06-01 07:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/rosp/louper/ja/"
@@ -26,7 +26,7 @@ msgstr "Louper"
 msgid "Text Magnification App"
 msgstr "テキスト拡大アプリ"
 
-#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in.in:11
 msgid "Magnify the selected text"
 msgstr "選択したテキストを拡大します"
 
@@ -34,11 +34,11 @@ msgstr "選択したテキストを拡大します"
 msgid "Zoom;Copy;"
 msgstr "ズーム;コピー;Zoom;Copy;"
 
-#: data/louper.metainfo.xml.in:13
+#: data/louper.metainfo.xml.in.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr "選択したテキストを拡大するのに役立つ、テキスト拡大アプリです。"
 
-#: data/louper.metainfo.xml.in:16
+#: data/louper.metainfo.xml.in.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -46,11 +46,11 @@ msgstr ""
 "拡大したいテキストを選択してアプリを起動するだけ! 選択したテキストをアプリが"
 "大きく表示してくれます。"
 
-#: data/louper.metainfo.xml.in:19
+#: data/louper.metainfo.xml.in.in:19
 msgid "Other features include:"
 msgstr "そのほかの機能:"
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
@@ -58,12 +58,12 @@ msgstr ""
 "拡大したテキストの一部を選択して Ctrl+C キーを押すか副クリックすることで、コ"
 "ピーできます"
 
-#: data/louper.metainfo.xml.in:24
+#: data/louper.metainfo.xml.in.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
 "Esc/Ctrl+Q キーを押すかウィンドウを非アクティブにすると、アプリを終了します"
 
-#: data/louper.metainfo.xml.in:30
+#: data/louper.metainfo.xml.in.in:30
 msgid "Zoom in what you like to read"
 msgstr "読みたいテキストを拡大します"
 

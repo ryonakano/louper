@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: com.github.ryonakano.louper\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-27 10:58+0900\n"
+"POT-Creation-Date: 2026-07-07 22:01+0900\n"
 "PO-Revision-Date: 2026-06-25 18:01+0000\n"
 "Last-Translator: Димко <Dymkovych@proton.me>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/rosp/louper/uk/"
@@ -28,7 +28,7 @@ msgstr "Louper"
 msgid "Text Magnification App"
 msgstr "Застосунок для збільшення тексту"
 
-#: data/louper.desktop.in:4 data/louper.metainfo.xml.in:11
+#: data/louper.desktop.in:4 data/louper.metainfo.xml.in.in:11
 msgid "Magnify the selected text"
 msgstr "Збільшення вибраного тексту"
 
@@ -36,12 +36,12 @@ msgstr "Збільшення вибраного тексту"
 msgid "Zoom;Copy;"
 msgstr "Збільшити;Копіювати;Zoom;Copy;"
 
-#: data/louper.metainfo.xml.in:13
+#: data/louper.metainfo.xml.in.in:13
 msgid "A text magnification app that helps you zoom the selected text."
 msgstr ""
 "Застосунок для збільшення тексту, який допоможе вам збільшити вибраний текст."
 
-#: data/louper.metainfo.xml.in:16
+#: data/louper.metainfo.xml.in.in:16
 msgid ""
 "Select the text you want to magnify and just launch the app! The app shows "
 "the selected text in huge size."
@@ -49,11 +49,11 @@ msgstr ""
 "Виберіть текст, який потрібно збільшити, і просто запустіть застосунок! "
 "Вибраний текст збільшиться до величезного розміру."
 
-#: data/louper.metainfo.xml.in:19
+#: data/louper.metainfo.xml.in.in:19
 msgid "Other features include:"
 msgstr "Інші функції включають:"
 
-#: data/louper.metainfo.xml.in:23
+#: data/louper.metainfo.xml.in.in:23
 msgid ""
 "Select some part of the magnified text and press Ctrl+C or perform secondary "
 "click to copy it"
@@ -61,13 +61,13 @@ msgstr ""
 "Виділіть частину збільшеного тексту і натисніть Ctrl+C або повторно "
 "натисніть, щоб скопіювати його"
 
-#: data/louper.metainfo.xml.in:24
+#: data/louper.metainfo.xml.in.in:24
 msgid "Press Esc or Ctrl+Q or unfocus the window to close the app"
 msgstr ""
 "Натисніть Esc або Ctrl+Q або перенесіть фокус із вікна, щоб закрити "
 "застосунок"
 
-#: data/louper.metainfo.xml.in:30
+#: data/louper.metainfo.xml.in.in:30
 msgid "Zoom in what you like to read"
 msgstr "Збільшуйте те, що вам подобається читати"
 
