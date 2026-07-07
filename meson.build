@@ -1,7 +1,7 @@
 project(
   'com.github.ryonakano.louper',
   'c',
-  version: '2.1.0',
+  version: '3.0.0-rc.1',
   meson_version: '>= 0.57.0',
   default_options: [
     'warning_level=2', # i.e. -Wall -Wextra
