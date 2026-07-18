@@ -23,10 +23,10 @@ struct _LouperApplication {
 G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
 
 static const char OPT_KEEP_OPEN_LONG_NAME[] = "keep-open";
-static const char OPT_KEEP_OPEN_SHORT_NAME = 'k';
+static constexpr char OPT_KEEP_OPEN_SHORT_NAME = 'k';
 
 static const char OPT_TEXT_LONG_NAME[] = "text";
-static const char OPT_TEXT_SHORT_NAME = 't';
+static constexpr char OPT_TEXT_SHORT_NAME = 't';
 
 static const GOptionEntry app_options[] = {
     {
