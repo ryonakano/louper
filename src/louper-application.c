@@ -22,13 +22,16 @@ struct _LouperApplication {
 
 G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
 
-static const char OPT_LONG_NAME_KEEP_OPEN[] = "keep-open";
-static const char OPT_LONG_NAME_TEXT[] = "text";
+static const char OPT_KEEP_OPEN_LONG_NAME[] = "keep-open";
+static const char OPT_KEEP_OPEN_SHORT_NAME = 'k';
+
+static const char OPT_TEXT_LONG_NAME[] = "text";
+static const char OPT_TEXT_SHORT_NAME = 't';
 
 static const GOptionEntry app_options[] = {
     {
-        .long_name          = OPT_LONG_NAME_KEEP_OPEN,
-        .short_name         = 'k',
+        .long_name          = OPT_KEEP_OPEN_LONG_NAME,
+        .short_name         = OPT_KEEP_OPEN_SHORT_NAME,
         .flags              = G_OPTION_FLAG_NONE,
         .arg                = G_OPTION_ARG_NONE,
         .arg_data           = NULL,
@@ -36,8 +39,8 @@ static const GOptionEntry app_options[] = {
         .arg_description    = NULL,
     },
     {
-        .long_name          = OPT_LONG_NAME_TEXT,
-        .short_name         = 't',
+        .long_name          = OPT_TEXT_LONG_NAME,
+        .short_name         = OPT_TEXT_SHORT_NAME,
         .flags              = G_OPTION_FLAG_NONE,
         .arg                = G_OPTION_ARG_STRING,
         .arg_data           = NULL,
@@ -140,11 +143,11 @@ louper_application_handle_local_options (GApplication *application,
     gboolean has_option;
     GVariant *value;
 
-    has_option = g_variant_dict_contains (options, OPT_LONG_NAME_KEEP_OPEN);
+    has_option = g_variant_dict_contains (options, OPT_KEEP_OPEN_LONG_NAME);
     if (has_option) {
-        value = g_variant_dict_lookup_value (options, OPT_LONG_NAME_KEEP_OPEN, G_VARIANT_TYPE_BOOLEAN);
+        value = g_variant_dict_lookup_value (options, OPT_KEEP_OPEN_LONG_NAME, G_VARIANT_TYPE_BOOLEAN);
         if (!value) {
-            g_warning ("Failed to gtk_settings_get_default(). opt=%s", OPT_LONG_NAME_KEEP_OPEN);
+            g_warning ("Failed to gtk_settings_get_default(). opt=%s", OPT_KEEP_OPEN_LONG_NAME);
             return 1;
         }
 
@@ -152,11 +155,11 @@ louper_application_handle_local_options (GApplication *application,
         g_variant_unref (value);
     }
 
-    has_option = g_variant_dict_contains (options, OPT_LONG_NAME_TEXT);
+    has_option = g_variant_dict_contains (options, OPT_TEXT_LONG_NAME);
     if (has_option) {
-        value = g_variant_dict_lookup_value (options, OPT_LONG_NAME_TEXT, G_VARIANT_TYPE_STRING);
+        value = g_variant_dict_lookup_value (options, OPT_TEXT_LONG_NAME, G_VARIANT_TYPE_STRING);
         if (!value) {
-            g_warning ("Failed to g_variant_dict_lookup_value(). opt=%s", OPT_LONG_NAME_TEXT);
+            g_warning ("Failed to g_variant_dict_lookup_value(). opt=%s", OPT_TEXT_LONG_NAME);
             return 1;
         }
 
