@@ -27,12 +27,22 @@ static const char OPT_LONG_NAME_TEXT[] = "text";
 
 static const GOptionEntry app_options[] = {
     {
-        OPT_LONG_NAME_KEEP_OPEN, 'k', G_OPTION_FLAG_NONE, G_OPTION_ARG_NONE, NULL,
-        N_("Keep the app window open when unfocused"), NULL
+        .long_name          = OPT_LONG_NAME_KEEP_OPEN,
+        .short_name         = 'k',
+        .flags              = G_OPTION_FLAG_NONE,
+        .arg                = G_OPTION_ARG_NONE,
+        .arg_data           = NULL,
+        .description        = N_("Keep the app window open when unfocused"),
+        .arg_description    = NULL,
     },
     {
-        OPT_LONG_NAME_TEXT, 't', G_OPTION_FLAG_NONE, G_OPTION_ARG_STRING, NULL,
-        N_("The text to zoom in; the clipboard is used if none specified"), N_("TEXT")
+        .long_name          = OPT_LONG_NAME_TEXT,
+        .short_name         = 't',
+        .flags              = G_OPTION_FLAG_NONE,
+        .arg                = G_OPTION_ARG_STRING,
+        .arg_data           = NULL,
+        .description        = N_("The text to zoom in; the clipboard is used if none specified"),
+        .arg_description    = N_("TEXT"),
     },
     { NULL }
 };
