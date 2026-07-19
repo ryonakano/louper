@@ -11,9 +11,9 @@ struct _LouperMainWindow {
     GtkApplicationWindow        parent_instance;
 
     gboolean                    keep_open;
-    const gchar                *text;
+    const char                 *text;
     gboolean                    is_label_updated;
-    guint                       destroy_timeout_id;
+    unsigned int                destroy_timeout_id;
 
     GtkWidget                  *magnified_label;
 };
@@ -54,7 +54,7 @@ destroy_surface:
 static void
 read_text_cb (GObject      *source_object,
               GAsyncResult *res,
-              gpointer      data)
+              void         *data)
 {
     GdkClipboard *clipboard = GDK_CLIPBOARD (source_object);
     GtkLabel *label = GTK_LABEL (data);
@@ -97,7 +97,7 @@ update_label_text (LouperMainWindow *self,
 static void
 notify_is_active_cb (GtkWindow  *window,
                      GParamSpec *pspec,
-                     gpointer    user_data)
+                     void       *user_data)
 {
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (window);
     GtkLabel *magnified_label = GTK_LABEL (self->magnified_label);
@@ -218,7 +218,7 @@ louper_main_window_set_keep_open (LouperMainWindow *self,
 
 void
 louper_main_window_set_text (LouperMainWindow *self,
-                             const gchar      *text)
+                             const char       *text)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 

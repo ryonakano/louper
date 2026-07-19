@@ -17,7 +17,7 @@ struct _LouperApplication {
     GBinding               *color_scheme_binding;
 
     gboolean                keep_open;
-    gchar                  *text;
+    char                   *text;
 };
 
 G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
@@ -53,7 +53,7 @@ static const GOptionEntry app_options[] = {
 static void
 on_quit_activate (GSimpleAction *action,
                   GVariant      *parameter,
-                  gpointer       user_data)
+                  void          *user_data)
 {
     LouperApplication *self = LOUPER_APPLICATION (user_data);
 
@@ -73,9 +73,9 @@ static gboolean
 granite_prop_to_gtk_prop (GBinding     *binding,
                           const GValue *granite_prop,
                           GValue       *gtk_prop,
-                          gpointer      user_data)
+                          void         *user_data)
 {
-    gint granite_prop_raw;
+    int granite_prop_raw;
 
     granite_prop_raw = g_value_get_enum (granite_prop);
     g_value_set_boolean (gtk_prop, granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
@@ -135,7 +135,7 @@ louper_application_activate (GApplication *application)
     gtk_window_present (GTK_WINDOW (self->window));
 }
 
-static gint
+static int
 louper_application_handle_local_options (GApplication *application,
                                          GVariantDict *options)
 {
