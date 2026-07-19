@@ -185,8 +185,8 @@ louper_application_dispose (GObject *object)
 {
     LouperApplication *self = LOUPER_APPLICATION (object);
 
-    g_clear_pointer (&(self->text), g_free);
-    g_clear_pointer (&(self->color_scheme_binding), g_binding_unbind);
+    g_clear_pointer (&self->text, g_free);
+    g_clear_pointer (&self->color_scheme_binding, g_binding_unbind);
 
     G_OBJECT_CLASS (louper_application_parent_class)->dispose (object);
 }

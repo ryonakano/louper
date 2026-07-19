@@ -158,7 +158,7 @@ louper_main_window_dispose (GObject *object)
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (object);
 
     // Clear destroy timeout to avoid use-after-free of a MainWindow instance
-    g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
+    g_clear_handle_id (&self->destroy_timeout_id, g_source_remove);
 
     gtk_widget_dispose_template (GTK_WIDGET (object), LOUPER_TYPE_MAIN_WINDOW);
 
