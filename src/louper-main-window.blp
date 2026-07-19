@@ -14,7 +14,9 @@ template $LouperMainWindow : ApplicationWindow {
         show-title-buttons: true;
         // Create a dummy Gtk.Label for the blank title
         title-widget: Label {};
-        css-classes: [ "flat" ];
+        styles [
+            "flat",
+        ]
     }
 
     Box {
@@ -26,10 +28,12 @@ template $LouperMainWindow : ApplicationWindow {
             margin-bottom: 24;
             margin-start: 12;
             margin-end: 12;
-            css-classes: [ "magnified-text" ];
             selectable: true;
             wrap: true;
             wrap-mode: word_char;
+            styles [
+                "magnified-text",
+            ]
         }
     }
 
