@@ -11,9 +11,9 @@ struct _LouperMainWindow {
     GtkApplicationWindow        parent_instance;
 
     gboolean                    keep_open;
-    const gchar                *text;
+    const char                 *text;
     gboolean                    is_label_updated;
-    guint                       destroy_timeout_id;
+    unsigned int                destroy_timeout_id;
 
     GtkWidget                  *magnified_label;
 };
@@ -54,12 +54,12 @@ destroy_surface:
 static void
 read_text_cb (GObject      *source_object,
               GAsyncResult *res,
-              gpointer      data)
+              void         *data)
 {
     GdkClipboard *clipboard = GDK_CLIPBOARD (source_object);
     GtkLabel *label = GTK_LABEL (data);
-    g_autofree char *text = NULL;
-    g_autoptr(GError) err = NULL;
+    g_autofree char *text = nullptr;
+    g_autoptr(GError) err = nullptr;
 
     text = gdk_clipboard_read_text_finish (clipboard, res, &err);
     if (err) {
@@ -78,7 +78,7 @@ load_clipboard (LouperMainWindow *self,
 
     clipboard = gtk_widget_get_primary_clipboard (GTK_WIDGET (self));
 
-    gdk_clipboard_read_text_async (clipboard, NULL, read_text_cb, label_widget);
+    gdk_clipboard_read_text_async (clipboard, nullptr, read_text_cb, label_widget);
 }
 
 static void
@@ -97,7 +97,7 @@ update_label_text (LouperMainWindow *self,
 static void
 notify_is_active_cb (GtkWindow  *window,
                      GParamSpec *pspec,
-                     gpointer    user_data)
+                     void       *user_data)
 {
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (window);
     GtkLabel *magnified_label = GTK_LABEL (self->magnified_label);
@@ -158,7 +158,7 @@ louper_main_window_dispose (GObject *object)
     LouperMainWindow *self = LOUPER_MAIN_WINDOW (object);
 
     // Clear destroy timeout to avoid use-after-free of a MainWindow instance
-    g_clear_handle_id (&(self->destroy_timeout_id), g_source_remove);
+    g_clear_handle_id (&self->destroy_timeout_id, g_source_remove);
 
     gtk_widget_dispose_template (GTK_WIDGET (object), LOUPER_TYPE_MAIN_WINDOW);
 
@@ -184,10 +184,10 @@ static void
 louper_main_window_init (LouperMainWindow *self)
 {
     GdkDisplay *display;
-    g_autoptr(GtkCssProvider) cssprovider = NULL;
+    g_autoptr(GtkCssProvider) cssprovider = nullptr;
 
     self->keep_open = FALSE;
-    self->text = NULL;
+    self->text = nullptr;
     self->is_label_updated = FALSE;
     self->destroy_timeout_id = 0;
 
@@ -218,7 +218,7 @@ louper_main_window_set_keep_open (LouperMainWindow *self,
 
 void
 louper_main_window_set_text (LouperMainWindow *self,
-                             const gchar      *text)
+                             const char       *text)
 {
     g_return_if_fail (LOUPER_IS_MAIN_WINDOW (self));
 
@@ -233,5 +233,5 @@ LouperMainWindow *
 louper_main_window_new (void)
 {
     return g_object_new (LOUPER_TYPE_MAIN_WINDOW,
-                         NULL);
+                         nullptr);
 }

@@ -17,7 +17,7 @@ struct _LouperApplication {
     GBinding               *color_scheme_binding;
 
     gboolean                keep_open;
-    gchar                  *text;
+    char                   *text;
 };
 
 G_DEFINE_FINAL_TYPE (LouperApplication, louper_application, GTK_TYPE_APPLICATION)
@@ -34,26 +34,26 @@ static const GOptionEntry app_options[] = {
         .short_name         = OPT_KEEP_OPEN_SHORT_NAME,
         .flags              = G_OPTION_FLAG_NONE,
         .arg                = G_OPTION_ARG_NONE,
-        .arg_data           = NULL,
+        .arg_data           = nullptr,
         .description        = N_("Keep the app window open when unfocused"),
-        .arg_description    = NULL,
+        .arg_description    = nullptr,
     },
     {
         .long_name          = OPT_TEXT_LONG_NAME,
         .short_name         = OPT_TEXT_SHORT_NAME,
         .flags              = G_OPTION_FLAG_NONE,
         .arg                = G_OPTION_ARG_STRING,
-        .arg_data           = NULL,
+        .arg_data           = nullptr,
         .description        = N_("The text to zoom in; the clipboard is used if none specified"),
         .arg_description    = N_("TEXT"),
     },
-    { NULL }
+    { nullptr }
 };
 
 static void
 on_quit_activate (GSimpleAction *action,
                   GVariant      *parameter,
-                  gpointer       user_data)
+                  void          *user_data)
 {
     LouperApplication *self = LOUPER_APPLICATION (user_data);
 
@@ -73,9 +73,9 @@ static gboolean
 granite_prop_to_gtk_prop (GBinding     *binding,
                           const GValue *granite_prop,
                           GValue       *gtk_prop,
-                          gpointer      user_data)
+                          void         *user_data)
 {
-    gint granite_prop_raw;
+    int granite_prop_raw;
 
     granite_prop_raw = g_value_get_enum (granite_prop);
     g_value_set_boolean (gtk_prop, granite_prop_raw == GRANITE_SETTINGS_COLOR_SCHEME_DARK);
@@ -113,9 +113,9 @@ setup_style (LouperApplication *self)
                                                               gtk_settings, "gtk-application-prefer-dark-theme",
                                                               G_BINDING_SYNC_CREATE,
                                                               granite_prop_to_gtk_prop,
-                                                              NULL,
-                                                              NULL,
-                                                              NULL);
+                                                              nullptr,
+                                                              nullptr,
+                                                              nullptr);
 }
 
 static void
@@ -135,7 +135,7 @@ louper_application_activate (GApplication *application)
     gtk_window_present (GTK_WINDOW (self->window));
 }
 
-static gint
+static int
 louper_application_handle_local_options (GApplication *application,
                                          GVariantDict *options)
 {
@@ -163,7 +163,7 @@ louper_application_handle_local_options (GApplication *application,
             return 1;
         }
 
-        self->text = g_strdup (g_variant_get_string (value, NULL));
+        self->text = g_strdup (g_variant_get_string (value, nullptr));
         g_variant_unref (value);
     }
 
@@ -185,8 +185,8 @@ louper_application_dispose (GObject *object)
 {
     LouperApplication *self = LOUPER_APPLICATION (object);
 
-    g_clear_pointer (&(self->text), g_free);
-    g_clear_pointer (&(self->color_scheme_binding), g_binding_unbind);
+    g_clear_pointer (&self->text, g_free);
+    g_clear_pointer (&self->color_scheme_binding, g_binding_unbind);
 
     G_OBJECT_CLASS (louper_application_parent_class)->dispose (object);
 }
@@ -210,13 +210,13 @@ louper_application_init (LouperApplication *self)
     const char * const app_quit_accels[] = {
         "<Control>q",
         "Escape",
-        NULL
+        nullptr
     };
 
-    self->window = NULL;
-    self->color_scheme_binding = NULL;
+    self->window = nullptr;
+    self->color_scheme_binding = nullptr;
     self->keep_open = FALSE;
-    self->text = NULL;
+    self->text = nullptr;
 
     g_application_add_main_option_entries (G_APPLICATION (self), app_options);
 
@@ -230,5 +230,5 @@ louper_application_new (void)
     return g_object_new (LOUPER_TYPE_APPLICATION,
                          "application-id", "com.github.ryonakano.louper",
                          "flags", G_APPLICATION_DEFAULT_FLAGS,
-                         NULL);
+                         nullptr);
 }
