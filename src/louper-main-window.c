@@ -58,8 +58,8 @@ read_text_cb (GObject      *source_object,
 {
     GdkClipboard *clipboard = GDK_CLIPBOARD (source_object);
     GtkLabel *label = GTK_LABEL (data);
-    g_autofree char *text = NULL;
-    g_autoptr(GError) err = NULL;
+    g_autofree char *text = nullptr;
+    g_autoptr(GError) err = nullptr;
 
     text = gdk_clipboard_read_text_finish (clipboard, res, &err);
     if (err) {
@@ -78,7 +78,7 @@ load_clipboard (LouperMainWindow *self,
 
     clipboard = gtk_widget_get_primary_clipboard (GTK_WIDGET (self));
 
-    gdk_clipboard_read_text_async (clipboard, NULL, read_text_cb, label_widget);
+    gdk_clipboard_read_text_async (clipboard, nullptr, read_text_cb, label_widget);
 }
 
 static void
@@ -184,10 +184,10 @@ static void
 louper_main_window_init (LouperMainWindow *self)
 {
     GdkDisplay *display;
-    g_autoptr(GtkCssProvider) cssprovider = NULL;
+    g_autoptr(GtkCssProvider) cssprovider = nullptr;
 
     self->keep_open = FALSE;
-    self->text = NULL;
+    self->text = nullptr;
     self->is_label_updated = FALSE;
     self->destroy_timeout_id = 0;
 
@@ -233,5 +233,5 @@ LouperMainWindow *
 louper_main_window_new (void)
 {
     return g_object_new (LOUPER_TYPE_MAIN_WINDOW,
-                         NULL);
+                         nullptr);
 }
