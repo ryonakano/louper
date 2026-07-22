@@ -60,6 +60,14 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
+    <release version="3.0.1" date="2026-07-22" urgency="high">
+      <description translate="no">
+        <ul>
+          <li>Fixes the app can't be built</li>
+        </ul>
+      </description>
+    </release>
+
     <release version="3.0.0" date="2026-07-20" urgency="medium">
       <description translate="no">
         <p>
