@@ -26,7 +26,7 @@ appstream_file_in = configure_file(
 
 i18n.merge_file(
   input: appstream_file_in,
-  output: '@BASENAME@.metainfo.xml',
+  output: '@BASENAME@',
   po_dir: meson.project_source_root() / 'po',
   install: true,
   install_dir: get_option('datadir') / 'metainfo',
