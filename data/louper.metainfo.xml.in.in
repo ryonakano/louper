@@ -60,7 +60,7 @@
     even if translators translated all of them, which is not worthy.
   -->
   <releases>
-    <release version="3.0.2" date="2026-10-03" urgency="high">
+    <release version="3.0.2" date="2026-10-03" urgency="low">
       <description translate="no">
         <ul>
           <li>Flatpak: Update elementary Platform to 9.1</li>
